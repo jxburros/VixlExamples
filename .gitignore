@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.venv/
+.vixl-session.json
+.vixl-jobs/
+.vixl-cache/
+.vixl-cache.usage.json
+.vixl/rolls.json
+*.vixl.lock
+.env
+
+# film and promo build scratch
+movie/audio/
+movie/.film-*/
+promo/audio/
+promo/it-does-that/audio/
+promo/it-does-that/work/
+promo/it-does-that/.film-*/
