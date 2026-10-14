@@ -303,18 +303,21 @@ CARD_BAND = [(0, 6), (16, 8), (36, 10), (60, 12)]  # sunrise stripes (offset fro
 
 
 def build_card_front():
-    p = Project.sized("business-card", bleed=True, background="#F3E9DA")  # 1126 × 676 incl. 38px bleed
+    p = Project.sized("business-card", bleed=True, background="#F3E9DA")  # 1125 × 675 incl. 37.5px bleed
     brand_doc(p)
     add_masters(p)
     p.apply([{"type": "solid", "name": "paper", "color": "@crema"}])
-    g = {k: v["position"] for k, v in p.state["guides"].items()}
+    # The bleed is 37.5 px, so the guides fall on half pixels; snap them inward so text stays in the live area.
+    g = {k: (math.floor if k in ("safe-right", "safe-bottom") else math.ceil)(v["position"])
+         for k, v in p.state["guides"].items()}
+    w, h = p.state["canvas"]["width"], p.state["canvas"]["height"]
     # Sunrise stripes running off the bottom bleed edge.
     base = 548
     ops = []
-    for i, (dy, h) in enumerate(CARD_BAND):
+    for i, (dy, hb) in enumerate(CARD_BAND):
         ops.append({"type": "shape", "shape": "rectangle", "name": f"stripe{i}", "x": 0, "y": base + dy + i * 6,
-                    "width": 1126, "height": h, "fill": "@ember"})
-    ops[-1]["height"] = 676 - ops[-1]["y"]  # the last stripe runs into the bleed
+                    "width": w, "height": hb, "fill": "@ember"})
+    ops[-1]["height"] = h - ops[-1]["y"]  # the last stripe runs into the bleed
     p.apply(ops)
     # Mark + contact block inside the safe area.
     m = 250
@@ -350,7 +353,7 @@ def build_card_back(session):
     add_masters(p)
     p.apply({"type": "solid", "name": "paper", "color": "@roast"})
     p.save(WORK / "card-back.vixl")
-    w, h = 1126, 676
+    w, h = p.state["canvas"]["width"], p.state["canvas"]["height"]
     lw_, lh_ = measure_lockup("stacked", 250, 104, 26)
     x0, y0 = (w - lw_) // 2, (h - lh_) // 2
     keep_out = (x0 - 70, y0 - 50, x0 + lw_ + 70, y0 + lh_ + 50)
@@ -436,7 +439,7 @@ def build_board(previews):
         {"type": "solid", "name": "paper", "color": "@crema"},
         {"type": "grid", "name": "cols", "columns": 12, "margin": M, "gutter": 24},
         {"type": "text", "name": "hdr-left", "text": tracked("MORROW COFFEE ROASTERS"), "font": "work-600",
-         "size": 20, "color": "@roast", "x": M, "y": 52},
+         "size": 20, "color": "@roast", "x": M, "y": 64},
         {"type": "text", "name": "hdr-right", "text": tracked("BRAND IDENTITY · V1.0 · 2026"), "font": "work-600",
          "size": 20, "color": "@ember-deep"},
         {"type": "constrain", "target": "hdr-right", "constraints": {"right": "canvas.right-80", "top": "hdr-left.top"}},
@@ -532,7 +535,7 @@ def build_board(previews):
     for i, side in enumerate(("card-front", "card-back")):
         ops += [
             {"type": "add", "path": str(previews[side]), "name": f"app-{side}"},
-            # Trim the 38px bleed off the rendered card, then scale it down.
+            # Trim the bleed (37.5 px, rounded) off the rendered card, then scale it down.
             {"type": "crop", "target": f"app-{side}", "x": 38, "y": 38, "width": 1050, "height": 600},
             {"type": "resize", "target": f"app-{side}", "width": cw2},
             {"type": "move", "target": f"app-{side}", "x": ax + i * (cw2 + 24), "y": ty + 6},
@@ -574,7 +577,7 @@ def build_board(previews):
     p.apply([
         {"type": "text", "name": "footer", "text": "Morrow Coffee Roasters brand identity — built headless with Vixl; every element is an editable layer.",
          "font": "fraunces-italic", "size": 20, "color": "@ember-deep"},
-        {"type": "constrain", "target": "footer", "constraints": {"right": "canvas.right-80", "bottom": "canvas.bottom-40"}},
+        {"type": "constrain", "target": "footer", "constraints": {"right": "canvas.right-80", "bottom": "canvas.bottom-64"}},
         # HTML export titles the page with the first text layer in stack order; the tracked
         # (thin-space) header would read as "M O R R O W …", so make the footer come first.
         {"type": "reorder", "target": "footer", "above": "paper"},

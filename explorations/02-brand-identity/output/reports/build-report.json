@@ -5,7 +5,7 @@
   },
   "card-back-shape-place": 67,
   "export-icons": {
-    "directory": "/home/user/Vixl/explorations/02-brand-identity/output/icons/set",
+    "directory": "/home/user/VixlExamples/explorations/02-brand-identity/output/icons/set",
     "files": [
       "android-chrome-192x192.png",
       "android-chrome-512x512.png",
@@ -50,6 +50,16 @@
       "fix": [],
       "review": [],
       "informational": []
+    },
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "design checks"
+      ]
     },
     "issues": [],
     "checked": {

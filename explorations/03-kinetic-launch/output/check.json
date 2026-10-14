@@ -1,8 +1,8 @@
 {
   "passed": false,
-  "errors": 11,
-  "warnings": 73,
-  "info": 9,
+  "errors": 12,
+  "warnings": 61,
+  "info": 5,
   "by_action": {
     "fix": [
       11,
@@ -15,7 +15,8 @@
       21,
       22,
       23,
-      24
+      24,
+      27
     ],
     "review": [
       1,
@@ -31,6 +32,10 @@
       16,
       17,
       18,
+      26,
+      29,
+      30,
+      31,
       32,
       33,
       34,
@@ -49,6 +54,7 @@
       47,
       48,
       49,
+      50,
       51,
       52,
       53,
@@ -73,35 +79,62 @@
       72,
       73,
       74,
-      75,
-      76,
-      77,
-      78,
-      79,
-      80,
-      81,
-      82,
-      83,
-      84,
-      85,
-      86,
-      87,
-      88,
-      89,
-      90,
-      91,
-      92
+      75
     ],
     "informational": [
       0,
       25,
-      26,
-      27,
       28,
-      29,
-      30,
-      31,
-      50
+      76,
+      77
+    ]
+  },
+  "outcome": {
+    "state": "validation_failed",
+    "execution": "completed",
+    "validation": "failed",
+    "review": "required",
+    "review_reasons": [
+      "overlap.text-object: ticks, kicker",
+      "overlap.text-object: ticks, word-0",
+      "overlap.text-object: ticks, word-1",
+      "overlap.text-object: ticks, word-2",
+      "overlap.text-object: ring, kicker",
+      "overlap.text-object: ring, word-0",
+      "overlap.text-object: ring, word-1",
+      "overlap.text-object: ring, word-2",
+      "overlap.text-object: ring, badge-label",
+      "overlap.text-object: spark-3, word-2",
+      "overlap.text-object: word-2, chip-bg-0",
+      "overlap.text-object: word-2, chip-bg-1",
+      "overlap.text-object: word-2, chip-bg-2",
+      "safe_area.outside: ticks",
+      "composition.margin_drift: brandmark, track, progress",
+      "composition.margin_drift: kicker, sweep, word-0",
+      "composition.margin_drift: kicker, sweep, brandmark",
+      "composition.margin_drift: tagline, ring",
+      "composition.uneven_rhythm: spark-0, kicker, word-0",
+      "motion.linear-motion: ticks"
+    ],
+    "review_reasons_omitted": 32,
+    "accepted": [
+      {
+        "rule": "bounds.bleed",
+        "layers": [
+          "glow"
+        ],
+        "reason": "'glow' bleeds off the canvas edge (marked as an intentional crop)"
+      },
+      {
+        "rule": "safe_area.outside",
+        "layers": [
+          "glow"
+        ],
+        "reason": "'glow' extends outside the safe area (intentional crop or bleed)"
+      }
+    ],
+    "validated_by": [
+      "design checks"
     ]
   },
   "issues": [
@@ -112,6 +145,15 @@
         "glow"
       ],
       "message": "'glow' bleeds off the canvas edge (marked as an intentional crop)",
+      "layer_ids": [
+        "lyr_104a1130d0a2335f"
+      ],
+      "box": [
+        60,
+        -100,
+        960,
+        960
+      ],
       "bounds": [
         60.0,
         -100.0,
@@ -119,7 +161,9 @@
         960.0
       ],
       "intentional": true,
-      "action": "informational"
+      "code": "bleed",
+      "action": "informational",
+      "rule": "bounds.bleed"
     },
     {
       "check": "overlap",
@@ -129,13 +173,31 @@
         "kicker"
       ],
       "message": "'ticks' and 'kicker' overlap by 61 px (2.2% of the smaller layer)",
+      "layer_ids": [
+        "lyr_61520713fc6bf0c2",
+        "lyr_7b164ed109f600b1"
+      ],
+      "box": [
+        210,
+        50,
+        660,
+        660
+      ],
       "region": [
         210,
         236,
         290,
         19
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 61,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 61,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -144,14 +206,32 @@
         "ticks",
         "word-0"
       ],
-      "message": "'ticks' and 'word-0' overlap by 808 px (6.4% of the smaller layer)",
+      "message": "'ticks' and 'word-0' overlap by 805 px (6.4% of the smaller layer)",
+      "layer_ids": [
+        "lyr_61520713fc6bf0c2",
+        "lyr_758242bd468d251b"
+      ],
+      "box": [
+        210,
+        50,
+        660,
+        660
+      ],
       "region": [
         210,
         300,
         501,
         135
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 805,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 805,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -160,14 +240,32 @@
         "ticks",
         "word-1"
       ],
-      "message": "'ticks' and 'word-1' overlap by 701 px (5.5% of the smaller layer)",
+      "message": "'ticks' and 'word-1' overlap by 699 px (5.5% of the smaller layer)",
+      "layer_ids": [
+        "lyr_61520713fc6bf0c2",
+        "lyr_7d0d40fb84bbc6c2"
+      ],
+      "box": [
+        210,
+        50,
+        660,
+        660
+      ],
       "region": [
         210,
         476,
         491,
         135
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 699,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 699,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -176,14 +274,32 @@
         "ticks",
         "word-2"
       ],
-      "message": "'ticks' and 'word-2' overlap by 1249 px (9.8% of the smaller layer)",
+      "message": "'ticks' and 'word-2' overlap by 1246 px (9.8% of the smaller layer)",
+      "layer_ids": [
+        "lyr_61520713fc6bf0c2",
+        "lyr_eeaaeea69733a754"
+      ],
+      "box": [
+        210,
+        50,
+        660,
+        660
+      ],
       "region": [
         210,
         652,
         660,
         58
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 1246,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 1246,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -192,14 +308,32 @@
         "ring",
         "kicker"
       ],
-      "message": "'ring' and 'kicker' overlap by 535 px (19.6% of the smaller layer)",
+      "message": "'ring' and 'kicker' overlap by 429 px (15.7% of the smaller layer)",
+      "layer_ids": [
+        "lyr_22b622e5e39a3b67",
+        "lyr_7b164ed109f600b1"
+      ],
+      "box": [
+        260,
+        100,
+        560,
+        560
+      ],
       "region": [
         176,
         236,
         324,
         19
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 429,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 429,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -208,14 +342,32 @@
         "ring",
         "word-0"
       ],
-      "message": "'ring' and 'word-0' overlap by 2215 px (5.1% of the smaller layer)",
+      "message": "'ring' and 'word-0' overlap by 1259 px (2.9% of the smaller layer)",
+      "layer_ids": [
+        "lyr_22b622e5e39a3b67",
+        "lyr_758242bd468d251b"
+      ],
+      "box": [
+        260,
+        100,
+        560,
+        560
+      ],
       "region": [
         176,
         300,
         535,
         135
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 1259,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 1259,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -224,14 +376,32 @@
         "ring",
         "word-1"
       ],
-      "message": "'ring' and 'word-1' overlap by 7347 px (17.3% of the smaller layer)",
+      "message": "'ring' and 'word-1' overlap by 5252 px (12.3% of the smaller layer)",
+      "layer_ids": [
+        "lyr_22b622e5e39a3b67",
+        "lyr_7d0d40fb84bbc6c2"
+      ],
+      "box": [
+        260,
+        100,
+        560,
+        560
+      ],
       "region": [
         176,
         476,
         525,
         135
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 5252,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 5252,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -240,14 +410,32 @@
         "ring",
         "word-2"
       ],
-      "message": "'ring' and 'word-2' overlap by 338 px (0.5% of the smaller layer)",
+      "message": "'ring' and 'word-2' overlap by 1668 px (2.5% of the smaller layer)",
+      "layer_ids": [
+        "lyr_22b622e5e39a3b67",
+        "lyr_eeaaeea69733a754"
+      ],
+      "box": [
+        260,
+        100,
+        560,
+        560
+      ],
       "region": [
         176,
         652,
         728,
         92
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 1668,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 1668,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -256,14 +444,32 @@
         "ring",
         "badge-label"
       ],
-      "message": "'ring' and 'badge-label' overlap by 39 px (5.9% of the smaller layer)",
+      "message": "'ring' and 'badge-label' overlap by 205 px (33.1% of the smaller layer)",
+      "layer_ids": [
+        "lyr_22b622e5e39a3b67",
+        "lyr_a0589fa3be8dbce9"
+      ],
+      "box": [
+        260,
+        100,
+        560,
+        560
+      ],
       "region": [
         748,
         185,
         78,
         20
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 205,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 205,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -273,13 +479,31 @@
         "word-2"
       ],
       "message": "'spark-3' and 'word-2' overlap by 69 px (100.0% of the smaller layer)",
+      "layer_ids": [
+        "lyr_b88a99316d7aaac4",
+        "lyr_eeaaeea69733a754"
+      ],
+      "box": [
+        880,
+        760,
+        9,
+        9
+      ],
       "region": [
         880,
         760,
         9,
         9
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 69,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 69,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -289,13 +513,37 @@
         "letter-H"
       ],
       "message": "'word-0' and 'letter-H' overlap by 2062 px (32.9% of the smaller layer)",
+      "layer_ids": [
+        "lyr_758242bd468d251b",
+        "lyr_57b138b8d617b24a"
+      ],
+      "box": [
+        66,
+        300,
+        645,
+        135
+      ],
       "region": [
         332,
         326,
         114,
         103
       ],
-      "action": "fix"
+      "code": "text-text",
+      "pixels": 2062,
+      "action": "fix",
+      "rule": "overlap.text-text",
+      "measured": {
+        "actual": 2062,
+        "expected": null,
+        "unit": "px"
+      },
+      "repair": {
+        "kind": null,
+        "available": false,
+        "operations": [],
+        "reason": "no mechanical repair for this rule; see the message for the next step"
+      }
     },
     {
       "check": "overlap",
@@ -305,13 +553,37 @@
         "letter-A"
       ],
       "message": "'word-0' and 'letter-A' overlap by 2229 px (37.9% of the smaller layer)",
+      "layer_ids": [
+        "lyr_758242bd468d251b",
+        "lyr_3d250492e969508e"
+      ],
+      "box": [
+        66,
+        300,
+        645,
+        135
+      ],
       "region": [
         446,
         326,
         112,
         103
       ],
-      "action": "fix"
+      "code": "text-text",
+      "pixels": 2229,
+      "action": "fix",
+      "rule": "overlap.text-text",
+      "measured": {
+        "actual": 2229,
+        "expected": null,
+        "unit": "px"
+      },
+      "repair": {
+        "kind": null,
+        "available": false,
+        "operations": [],
+        "reason": "no mechanical repair for this rule; see the message for the next step"
+      }
     },
     {
       "check": "overlap",
@@ -321,13 +593,37 @@
         "letter-L"
       ],
       "message": "'word-0' and 'letter-L' overlap by 2293 px (64.4% of the smaller layer)",
+      "layer_ids": [
+        "lyr_758242bd468d251b",
+        "lyr_2bea2a9e7d717476"
+      ],
+      "box": [
+        66,
+        300,
+        645,
+        135
+      ],
       "region": [
         557,
         326,
         80,
         103
       ],
-      "action": "fix"
+      "code": "text-text",
+      "pixels": 2293,
+      "action": "fix",
+      "rule": "overlap.text-text",
+      "measured": {
+        "actual": 2293,
+        "expected": null,
+        "unit": "px"
+      },
+      "repair": {
+        "kind": null,
+        "available": false,
+        "operations": [],
+        "reason": "no mechanical repair for this rule; see the message for the next step"
+      }
     },
     {
       "check": "overlap",
@@ -337,13 +633,37 @@
         "letter-O"
       ],
       "message": "'word-0' and 'letter-O' overlap by 1567 px (25.1% of the smaller layer)",
+      "layer_ids": [
+        "lyr_758242bd468d251b",
+        "lyr_6ab32aa3a3ba61e2"
+      ],
+      "box": [
+        66,
+        300,
+        645,
+        135
+      ],
       "region": [
         637,
         326,
         74,
         108
       ],
-      "action": "fix"
+      "code": "text-text",
+      "pixels": 1567,
+      "action": "fix",
+      "rule": "overlap.text-text",
+      "measured": {
+        "actual": 1567,
+        "expected": null,
+        "unit": "px"
+      },
+      "repair": {
+        "kind": null,
+        "available": false,
+        "operations": [],
+        "reason": "no mechanical repair for this rule; see the message for the next step"
+      }
     },
     {
       "check": "overlap",
@@ -352,14 +672,38 @@
         "word-2",
         "tagline"
       ],
-      "message": "'word-2' and 'tagline' overlap by 2569 px (43.5% of the smaller layer)",
+      "message": "'word-2' and 'tagline' overlap by 2388 px (43.4% of the smaller layer)",
+      "layer_ids": [
+        "lyr_eeaaeea69733a754",
+        "lyr_c625bc8968f07834"
+      ],
+      "box": [
+        66,
+        652,
+        972,
+        135
+      ],
       "region": [
         269,
         706,
         542,
         42
       ],
-      "action": "fix"
+      "code": "text-text",
+      "pixels": 2388,
+      "action": "fix",
+      "rule": "overlap.text-text",
+      "measured": {
+        "actual": 2388,
+        "expected": null,
+        "unit": "px"
+      },
+      "repair": {
+        "kind": null,
+        "available": false,
+        "operations": [],
+        "reason": "no mechanical repair for this rule; see the message for the next step"
+      }
     },
     {
       "check": "overlap",
@@ -368,14 +712,32 @@
         "word-2",
         "chip-bg-0"
       ],
-      "message": "'word-2' and 'chip-bg-0' overlap by 255 px (21.8% of the smaller layer)",
+      "message": "'word-2' and 'chip-bg-0' overlap by 270 px (22.7% of the smaller layer)",
+      "layer_ids": [
+        "lyr_eeaaeea69733a754",
+        "lyr_2b475011ca497bed"
+      ],
+      "box": [
+        66,
+        652,
+        972,
+        135
+      ],
       "region": [
         250,
         778,
         244,
         9
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 270,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 270,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -384,14 +746,32 @@
         "word-2",
         "chip-bg-1"
       ],
-      "message": "'word-2' and 'chip-bg-1' overlap by 175 px (19.9% of the smaller layer)",
+      "message": "'word-2' and 'chip-bg-1' overlap by 192 px (21.2% of the smaller layer)",
+      "layer_ids": [
+        "lyr_eeaaeea69733a754",
+        "lyr_cf6348d1115e91ae"
+      ],
+      "box": [
+        66,
+        652,
+        972,
+        135
+      ],
       "region": [
         512,
         778,
         172,
         9
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 192,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 192,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "overlap",
@@ -400,14 +780,32 @@
         "word-2",
         "chip-bg-2"
       ],
-      "message": "'word-2' and 'chip-bg-2' overlap by 165 px (23.4% of the smaller layer)",
+      "message": "'word-2' and 'chip-bg-2' overlap by 172 px (23.6% of the smaller layer)",
+      "layer_ids": [
+        "lyr_eeaaeea69733a754",
+        "lyr_33a5acdf0b23a0e6"
+      ],
+      "box": [
+        66,
+        652,
+        972,
+        135
+      ],
       "region": [
         702,
         778,
         128,
         9
       ],
-      "action": "review"
+      "code": "text-object",
+      "pixels": 172,
+      "action": "review",
+      "rule": "overlap.text-object",
+      "measured": {
+        "actual": 172,
+        "expected": null,
+        "unit": "px"
+      }
     },
     {
       "check": "contrast",
@@ -415,16 +813,44 @@
       "layers": [
         "kicker"
       ],
-      "message": "'kicker' contrast is 1.80:1 or lower for a tenth of its glyph pixels (minimum 1.03:1, weakest at x 314\u2013338, y 237\u2013253); needs 3:1",
+      "message": "'kicker' contrast is 2.70:1 or lower for a tenth of its glyph pixels (minimum 1.02:1, weakest at x 251\u2013325, y 237\u2013253); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+      "layer_ids": [
+        "lyr_7b164ed109f600b1"
+      ],
+      "box": [
+        78,
+        236,
+        422,
+        19
+      ],
       "region": [
-        314,
+        251,
         237,
-        25,
+        75,
         17
       ],
-      "contrast": 1.799,
+      "contrast": 2.696,
       "required": 3.0,
-      "action": "fix"
+      "code": "text-contrast",
+      "action": "fix",
+      "rule": "contrast.text-contrast",
+      "measured": {
+        "actual": 2.696,
+        "expected": 3.0,
+        "unit": ":1"
+      },
+      "repair": {
+        "kind": "contrast-ink",
+        "available": true,
+        "operations": [
+          {
+            "type": "text-set",
+            "target": "lyr_7b164ed109f600b1",
+            "color": "#c9bcff"
+          }
+        ],
+        "reason": "move the text colour 25% toward the role ink (white): about 7.0:1 against the backdrop, needs 3:1"
+      }
     },
     {
       "check": "contrast",
@@ -432,7 +858,16 @@
       "layers": [
         "letter-H"
       ],
-      "message": "'letter-H' contrast is 1.00:1 or lower for a tenth of its glyph pixels (minimum 1.00:1, weakest at x 343\u2013434, y 326\u2013428); needs 3:1",
+      "message": "'letter-H' contrast is 1.00:1 or lower for a tenth of its glyph pixels (minimum 1.00:1, weakest at x 343\u2013434, y 326\u2013428); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+      "layer_ids": [
+        "lyr_57b138b8d617b24a"
+      ],
+      "box": [
+        332,
+        326,
+        114,
+        103
+      ],
       "region": [
         343,
         326,
@@ -441,7 +876,26 @@
       ],
       "contrast": 1.0,
       "required": 3.0,
-      "action": "fix"
+      "code": "text-contrast",
+      "action": "fix",
+      "rule": "contrast.text-contrast",
+      "measured": {
+        "actual": 1.0,
+        "expected": 3.0,
+        "unit": ":1"
+      },
+      "repair": {
+        "kind": "contrast-ink",
+        "available": true,
+        "operations": [
+          {
+            "type": "text-set",
+            "target": "lyr_57b138b8d617b24a",
+            "color": "#f7f4ef"
+          }
+        ],
+        "reason": "move the text colour 25% toward the role ink (white): about 13.5:1 against the backdrop, needs 3:1"
+      }
     },
     {
       "check": "contrast",
@@ -449,7 +903,16 @@
       "layers": [
         "letter-A"
       ],
-      "message": "'letter-A' contrast is 1.00:1 or lower for a tenth of its glyph pixels (minimum 1.00:1, weakest at x 449\u2013533, y 326\u2013428); needs 3:1",
+      "message": "'letter-A' contrast is 1.00:1 or lower for a tenth of its glyph pixels (minimum 1.00:1, weakest at x 449\u2013533, y 326\u2013428); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+      "layer_ids": [
+        "lyr_3d250492e969508e"
+      ],
+      "box": [
+        446,
+        326,
+        112,
+        103
+      ],
       "region": [
         449,
         326,
@@ -458,7 +921,26 @@
       ],
       "contrast": 1.0,
       "required": 3.0,
-      "action": "fix"
+      "code": "text-contrast",
+      "action": "fix",
+      "rule": "contrast.text-contrast",
+      "measured": {
+        "actual": 1.0,
+        "expected": 3.0,
+        "unit": ":1"
+      },
+      "repair": {
+        "kind": "contrast-ink",
+        "available": true,
+        "operations": [
+          {
+            "type": "text-set",
+            "target": "lyr_3d250492e969508e",
+            "color": "#7a7875"
+          }
+        ],
+        "reason": "move the text colour 50% toward the role ink (black): about 3.9:1 against the backdrop, needs 3:1"
+      }
     },
     {
       "check": "contrast",
@@ -466,7 +948,16 @@
       "layers": [
         "letter-L"
       ],
-      "message": "'letter-L' contrast is 1.00:1 or lower for a tenth of its glyph pixels (minimum 1.00:1, weakest at x 568\u2013592, y 326\u2013428); needs 3:1",
+      "message": "'letter-L' contrast is 1.00:1 or lower for a tenth of its glyph pixels (minimum 1.00:1, weakest at x 568\u2013592, y 326\u2013428); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+      "layer_ids": [
+        "lyr_2bea2a9e7d717476"
+      ],
+      "box": [
+        557,
+        326,
+        80,
+        103
+      ],
       "region": [
         568,
         326,
@@ -475,7 +966,26 @@
       ],
       "contrast": 1.0,
       "required": 3.0,
-      "action": "fix"
+      "code": "text-contrast",
+      "action": "fix",
+      "rule": "contrast.text-contrast",
+      "measured": {
+        "actual": 1.0,
+        "expected": 3.0,
+        "unit": ":1"
+      },
+      "repair": {
+        "kind": "contrast-ink",
+        "available": true,
+        "operations": [
+          {
+            "type": "text-set",
+            "target": "lyr_2bea2a9e7d717476",
+            "color": "#7a7875"
+          }
+        ],
+        "reason": "move the text colour 50% toward the role ink (black): about 3.9:1 against the backdrop, needs 3:1"
+      }
     },
     {
       "check": "contrast",
@@ -483,7 +993,16 @@
       "layers": [
         "letter-O"
       ],
-      "message": "'letter-O' contrast is 1.04:1 or lower for a tenth of its glyph pixels (minimum 1.04:1, weakest at x 644\u2013704, y 336\u2013432); needs 3:1",
+      "message": "'letter-O' contrast is 1.04:1 or lower for a tenth of its glyph pixels (minimum 1.04:1, weakest at x 644\u2013704, y 336\u2013432); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+      "layer_ids": [
+        "lyr_6ab32aa3a3ba61e2"
+      ],
+      "box": [
+        637,
+        326,
+        114,
+        108
+      ],
       "region": [
         644,
         336,
@@ -492,7 +1011,26 @@
       ],
       "contrast": 1.044,
       "required": 3.0,
-      "action": "fix"
+      "code": "text-contrast",
+      "action": "fix",
+      "rule": "contrast.text-contrast",
+      "measured": {
+        "actual": 1.044,
+        "expected": 3.0,
+        "unit": ":1"
+      },
+      "repair": {
+        "kind": "contrast-ink",
+        "available": true,
+        "operations": [
+          {
+            "type": "text-set",
+            "target": "lyr_6ab32aa3a3ba61e2",
+            "color": "#f7f4ef"
+          }
+        ],
+        "reason": "move the text colour 25% toward the role ink (white): about 13.5:1 against the backdrop, needs 3:1"
+      }
     },
     {
       "check": "contrast",
@@ -500,86 +1038,478 @@
       "layers": [
         "tagline"
       ],
-      "message": "'tagline' contrast is 2.51:1 or lower for a tenth of its glyph pixels (minimum 2.39:1, weakest at x 272\u2013795, y 706\u2013746); needs 3:1",
-      "region": [
-        272,
+      "message": "'tagline' contrast is 2.51:1 or lower for a tenth of its glyph pixels (minimum 2.51:1, weakest at x 271\u2013796, y 707\u2013746); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+      "layer_ids": [
+        "lyr_c625bc8968f07834"
+      ],
+      "box": [
+        269,
         706,
-        524,
-        41
+        542,
+        42
+      ],
+      "region": [
+        271,
+        707,
+        526,
+        40
       ],
       "contrast": 2.509,
       "required": 3.0,
-      "action": "fix"
+      "code": "text-contrast",
+      "action": "fix",
+      "rule": "contrast.text-contrast",
+      "measured": {
+        "actual": 2.509,
+        "expected": 3.0,
+        "unit": ":1"
+      },
+      "repair": {
+        "available": null,
+        "reason": "only the first 10 fix findings get a suggestion; check fewer targets or fix these first"
+      }
     },
     {
-      "check": "legibility",
+      "check": "safe_area",
       "severity": "info",
       "layers": [
-        "brandmark"
+        "glow"
       ],
-      "message": "'brandmark' is 6.5 px tall at 320 px wide; aim for at least 10 px (font size 34+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-      "thumbnail_size": 6.52,
-      "action": "informational"
-    },
-    {
-      "check": "legibility",
-      "severity": "info",
-      "layers": [
-        "timecode"
+      "message": "'glow' extends outside the safe area (intentional crop or bleed)",
+      "layer_ids": [
+        "lyr_104a1130d0a2335f"
       ],
-      "message": "'timecode' is 6.5 px tall at 320 px wide; aim for at least 10 px (font size 34+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-      "thumbnail_size": 6.52,
-      "action": "informational"
-    },
-    {
-      "check": "legibility",
-      "severity": "info",
-      "layers": [
-        "kicker"
+      "box": [
+        60,
+        -100,
+        960,
+        960
       ],
-      "message": "'kicker' is 7.7 px tall at 320 px wide; aim for at least 10 px (font size 34+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-      "thumbnail_size": 7.7,
-      "action": "informational"
-    },
-    {
-      "check": "legibility",
-      "severity": "info",
-      "layers": [
-        "badge-label"
+      "bounds": [
+        60,
+        -100,
+        960,
+        960
       ],
-      "message": "'badge-label' is 7.7 px tall at 320 px wide; aim for at least 10 px (font size 34+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-      "thumbnail_size": 7.7,
-      "action": "informational"
-    },
-    {
-      "check": "legibility",
-      "severity": "info",
-      "layers": [
-        "chip-label-0"
+      "safe_area": [
+        54,
+        54,
+        972,
+        972
       ],
-      "message": "'chip-label-0' is 7.1 px tall at 320 px wide; aim for at least 10 px (font size 34+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-      "thumbnail_size": 7.11,
-      "action": "informational"
+      "code": "outside",
+      "intentional": true,
+      "action": "informational",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          60,
+          -100,
+          960,
+          960
+        ],
+        "expected": [
+          54,
+          54,
+          972,
+          972
+        ],
+        "unit": "box"
+      }
     },
     {
-      "check": "legibility",
-      "severity": "info",
+      "check": "safe_area",
+      "severity": "warning",
       "layers": [
-        "chip-label-1"
+        "ticks"
       ],
-      "message": "'chip-label-1' is 7.1 px tall at 320 px wide; aim for at least 10 px (font size 34+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-      "thumbnail_size": 7.11,
-      "action": "informational"
+      "message": "'ticks' extends outside the safe area",
+      "layer_ids": [
+        "lyr_61520713fc6bf0c2"
+      ],
+      "box": [
+        210,
+        50,
+        660,
+        660
+      ],
+      "bounds": [
+        210,
+        50,
+        660,
+        660
+      ],
+      "safe_area": [
+        54,
+        54,
+        972,
+        972
+      ],
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          210,
+          50,
+          660,
+          660
+        ],
+        "expected": [
+          54,
+          54,
+          972,
+          972
+        ],
+        "unit": "box"
+      }
+    },
+    {
+      "check": "safe_area",
+      "severity": "error",
+      "layers": [
+        "word-2"
+      ],
+      "message": "'word-2' extends outside the safe area",
+      "layer_ids": [
+        "lyr_eeaaeea69733a754"
+      ],
+      "box": [
+        66,
+        652,
+        972,
+        135
+      ],
+      "bounds": [
+        66,
+        652,
+        972,
+        135
+      ],
+      "safe_area": [
+        54,
+        54,
+        972,
+        972
+      ],
+      "code": "outside",
+      "action": "fix",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          66,
+          652,
+          972,
+          135
+        ],
+        "expected": [
+          54,
+          54,
+          972,
+          972
+        ],
+        "unit": "box"
+      },
+      "repair": {
+        "available": null,
+        "reason": "only the first 10 fix findings get a suggestion; check fewer targets or fix these first"
+      }
     },
     {
       "check": "legibility",
       "severity": "info",
       "layers": [
+        "brandmark",
+        "timecode",
+        "kicker",
+        "badge-label",
+        "chip-label-0",
+        "chip-label-1",
         "chip-label-2"
       ],
-      "message": "'chip-label-2' is 7.1 px tall at 320 px wide; aim for at least 10 px (font size 34+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-      "thumbnail_size": 7.11,
-      "action": "informational"
+      "message": "7 text layers are under 10 px tall at 320 px wide (the smallest, 'brandmark', is 6.5 px); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
+      "layer_ids": [
+        "lyr_9b5b9edb6a6a7b4b",
+        "lyr_be1e6b6a7979f0d5",
+        "lyr_7b164ed109f600b1",
+        "lyr_a0589fa3be8dbce9",
+        "lyr_0d34eb393b1cf11d",
+        "lyr_b01fb1d1530e0998",
+        "lyr_e3e484370099e5df"
+      ],
+      "box": [
+        72,
+        62,
+        264,
+        19
+      ],
+      "thumbnail_size": 6.52,
+      "action": "informational",
+      "rule": "legibility",
+      "measured": {
+        "actual": 6.52,
+        "expected": 10,
+        "unit": "px"
+      }
+    },
+    {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "brandmark",
+        "track",
+        "progress",
+        "word-0",
+        "word-1",
+        "word-2"
+      ],
+      "message": "'brandmark', 'track', 'progress' sit at left 72 px while 'word-0', 'word-1', 'word-2' sit at 66 px: 6 px apart, two left edges where one was meant. Snap them to one edge (align), or move them a clear step apart",
+      "layer_ids": [
+        "lyr_9b5b9edb6a6a7b4b",
+        "lyr_19d97902cf8618a3",
+        "lyr_8b6e1306e49c6df6",
+        "lyr_758242bd468d251b",
+        "lyr_7d0d40fb84bbc6c2",
+        "lyr_eeaaeea69733a754"
+      ],
+      "box": [
+        72,
+        62,
+        264,
+        19
+      ],
+      "code": "margin_drift",
+      "action": "review",
+      "region": [
+        66.0,
+        62.0,
+        972.0,
+        954.0
+      ],
+      "measured": {
+        "actual": 6.0,
+        "expected": 0,
+        "unit": "px"
+      },
+      "values": {
+        "axis": "left",
+        "edge": 72.0,
+        "margin": 66.0,
+        "offset": 6.0,
+        "stray_ids": [
+          "lyr_9b5b9edb6a6a7b4b",
+          "lyr_19d97902cf8618a3",
+          "lyr_8b6e1306e49c6df6"
+        ]
+      },
+      "threshold": {
+        "tolerance_px": 2.0,
+        "window_px": 28.0
+      },
+      "spacing_unit": 14.0,
+      "rule": "composition.margin_drift"
+    },
+    {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "kicker",
+        "sweep",
+        "word-0",
+        "word-1",
+        "word-2"
+      ],
+      "message": "'kicker', 'sweep' sit at left 78 px while 'word-0', 'word-1', 'word-2' sit at 66 px: 12 px apart, two left edges where one was meant. Snap them to one edge (align), or move them a clear step apart",
+      "layer_ids": [
+        "lyr_7b164ed109f600b1",
+        "lyr_be6ad1fb695fde04",
+        "lyr_758242bd468d251b",
+        "lyr_7d0d40fb84bbc6c2",
+        "lyr_eeaaeea69733a754"
+      ],
+      "box": [
+        78,
+        236,
+        422,
+        19
+      ],
+      "code": "margin_drift",
+      "action": "review",
+      "region": [
+        66.0,
+        236.0,
+        972.0,
+        642.0
+      ],
+      "measured": {
+        "actual": 12.0,
+        "expected": 0,
+        "unit": "px"
+      },
+      "values": {
+        "axis": "left",
+        "edge": 78.0,
+        "margin": 66.0,
+        "offset": 12.0,
+        "stray_ids": [
+          "lyr_7b164ed109f600b1",
+          "lyr_be6ad1fb695fde04"
+        ]
+      },
+      "threshold": {
+        "tolerance_px": 2.0,
+        "window_px": 28.0
+      },
+      "spacing_unit": 14.0,
+      "rule": "composition.margin_drift"
+    },
+    {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "kicker",
+        "sweep",
+        "brandmark",
+        "track",
+        "progress"
+      ],
+      "message": "'kicker', 'sweep' sit at left 78 px while 'brandmark', 'track', 'progress' sit at 72 px: 6 px apart, two left edges where one was meant. Snap them to one edge (align), or move them a clear step apart",
+      "layer_ids": [
+        "lyr_7b164ed109f600b1",
+        "lyr_be6ad1fb695fde04",
+        "lyr_9b5b9edb6a6a7b4b",
+        "lyr_19d97902cf8618a3",
+        "lyr_8b6e1306e49c6df6"
+      ],
+      "box": [
+        78,
+        236,
+        422,
+        19
+      ],
+      "code": "margin_drift",
+      "action": "review",
+      "region": [
+        72.0,
+        62.0,
+        936.0,
+        954.0
+      ],
+      "measured": {
+        "actual": 6.0,
+        "expected": 0,
+        "unit": "px"
+      },
+      "values": {
+        "axis": "left",
+        "edge": 78.0,
+        "margin": 72.0,
+        "offset": 6.0,
+        "stray_ids": [
+          "lyr_7b164ed109f600b1",
+          "lyr_be6ad1fb695fde04"
+        ]
+      },
+      "threshold": {
+        "tolerance_px": 2.0,
+        "window_px": 28.0
+      },
+      "spacing_unit": 14.0,
+      "rule": "composition.margin_drift"
+    },
+    {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "tagline",
+        "ring"
+      ],
+      "message": "'tagline' sits at left 269.5 px while 'ring' sits at 260 px: 9.5 px apart, two left edges where one was meant. Snap them to one edge (align), or move them a clear step apart",
+      "layer_ids": [
+        "lyr_c625bc8968f07834",
+        "lyr_22b622e5e39a3b67"
+      ],
+      "box": [
+        269,
+        706,
+        542,
+        42
+      ],
+      "code": "margin_drift",
+      "action": "review",
+      "region": [
+        260.0,
+        100.0,
+        560.0,
+        647.1
+      ],
+      "measured": {
+        "actual": 9.5,
+        "expected": 0,
+        "unit": "px"
+      },
+      "values": {
+        "axis": "left",
+        "edge": 269.5,
+        "margin": 260.0,
+        "offset": 9.5,
+        "stray_ids": [
+          "lyr_c625bc8968f07834"
+        ]
+      },
+      "threshold": {
+        "tolerance_px": 2.0,
+        "window_px": 28.0
+      },
+      "spacing_unit": 14.0,
+      "rule": "composition.margin_drift"
+    },
+    {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "spark-0",
+        "kicker",
+        "word-0"
+      ],
+      "message": "'kicker' floats midway: 56 px below 'spark-0' and 45 px above 'word-0', so it belongs to neither. Move it close to the block it goes with (about one spacing unit, 14 px) and let the larger gap separate the groups",
+      "layer_ids": [
+        "lyr_63c46c9b0edf5114",
+        "lyr_7b164ed109f600b1",
+        "lyr_758242bd468d251b"
+      ],
+      "box": [
+        110,
+        170,
+        10,
+        10
+      ],
+      "code": "uneven_rhythm",
+      "action": "review",
+      "region": [
+        66.0,
+        170.0,
+        645.0,
+        264.8
+      ],
+      "measured": {
+        "actual": 1.24,
+        "expected": 1.5,
+        "unit": "ratio"
+      },
+      "values": {
+        "gaps": [
+          56.0,
+          45.2
+        ],
+        "floating": "kicker"
+      },
+      "threshold": {
+        "max_ratio": 1.5,
+        "min_gap_px": 42.0
+      },
+      "spacing_unit": 14.0,
+      "rule": "composition.uneven_rhythm"
     },
     {
       "check": "motion",
@@ -587,247 +1517,20 @@
       "layers": [
         "ticks"
       ],
-      "message": "Two-key linear movement starts and stops instantly; consider easing, anticipation and settling unless constant speed is intended.",
+      "message": "Two-key linear rotation on 'ticks' starts and stops instantly; consider easing, anticipation and settling unless constant speed is intended.",
+      "layer_ids": [
+        "lyr_61520713fc6bf0c2"
+      ],
+      "box": [
+        210,
+        50,
+        660,
+        660
+      ],
       "code": "linear-motion",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "word-0"
-      ],
-      "message": "Loop seam: translate-y on lyr_f65e97faa9ac43f7 ends at -170.0 but starts at 150.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "word-1"
-      ],
-      "message": "Loop seam: translate-y on lyr_fb0456853fcf41fd ends at -170.0 but starts at 150.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "word-2"
-      ],
-      "message": "Loop seam: translate-y on lyr_47cc28197e614f19 ends at -170.0 but starts at 150.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "letter-H"
-      ],
-      "message": "Loop seam: translate-y on lyr_3c9b1bb59eb9485f ends at 0 but starts at -300, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "letter-A"
-      ],
-      "message": "Loop seam: translate-y on lyr_4b2cd75c75474946 ends at 0 but starts at -300, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "letter-L"
-      ],
-      "message": "Loop seam: translate-y on lyr_b4d609b8f3934674 ends at 0 but starts at -300, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "letter-O"
-      ],
-      "message": "Loop seam: translate-y on lyr_2b95d0958d2f4b17 ends at 0 but starts at -300, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "letter-H"
-      ],
-      "message": "Loop seam: opacity on lyr_3c9b1bb59eb9485f ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "letter-A"
-      ],
-      "message": "Loop seam: opacity on lyr_4b2cd75c75474946 ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "letter-L"
-      ],
-      "message": "Loop seam: opacity on lyr_b4d609b8f3934674 ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "letter-O"
-      ],
-      "message": "Loop seam: opacity on lyr_2b95d0958d2f4b17 ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "chip-0"
-      ],
-      "message": "Loop seam: scale on lyr_f3cede0bc1664c0c ends at 1.0 but starts at 0.6, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "chip-0"
-      ],
-      "message": "Loop seam: opacity on lyr_f3cede0bc1664c0c ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "chip-1"
-      ],
-      "message": "Loop seam: scale on lyr_bae1991681b84c27 ends at 1.0 but starts at 0.6, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "chip-1"
-      ],
-      "message": "Loop seam: opacity on lyr_bae1991681b84c27 ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "chip-2"
-      ],
-      "message": "Loop seam: scale on lyr_2a1c9019ad5b4f1e ends at 1.0 but starts at 0.6, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "chip-2"
-      ],
-      "message": "Loop seam: opacity on lyr_2a1c9019ad5b4f1e ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "info",
-      "layers": [
-        "spark-0"
-      ],
-      "message": "Loop seam: translate-y on lyr_9a4f6fd83db141a0 matches at the seam but its speed changes from -1.265 to 0.0 units/s there; ease the first and last segments (ease-in-out) or use constant speed to hide the kink.",
-      "code": "loop-seam-speed",
-      "action": "informational"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [],
-      "message": "Loop seam: background on canvas ends at '#160E36' but starts at '#0D0A1C', so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "kicker"
-      ],
-      "message": "Loop seam: text on lyr_33ec6e0ef8ad4826 ends at '01 \u2014 ONE RING TRACKS IT ALL' but starts at '', so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "kicker"
-      ],
-      "message": "Loop seam: opacity on lyr_33ec6e0ef8ad4826 ends at 0.0 but starts at 1.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "sweep"
-      ],
-      "message": "Loop seam: fill on lyr_9bd74dbe7bea4fdd ends at '#FF6A4D' but starts at '#C8FF3D', so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "word-1"
-      ],
-      "message": "Loop seam: color on lyr_fb0456853fcf41fd ends at '#B7A6FF' but starts at '#C8FF3D', so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "word-2"
-      ],
-      "message": "Loop seam: size on lyr_47cc28197e614f19 ends at 196 but starts at 150, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
+      "property": "rotation",
+      "action": "review",
+      "rule": "motion.linear-motion"
     },
     {
       "check": "motion",
@@ -835,229 +1538,20 @@
       "layers": [
         "glow"
       ],
-      "message": "Loop seam: opacity on lyr_6ce2bff9f92a49dc ends at 1 but starts at 0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "ring"
+      "message": "Loop seam: opacity on 'glow' ends at 1 but starts at 0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
+      "layer_ids": [
+        "lyr_104a1130d0a2335f"
       ],
-      "message": "Loop seam: opacity on lyr_ae7c7b6ac40941cf ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "ring"
+      "box": [
+        60,
+        -100,
+        960,
+        960
       ],
-      "message": "Loop seam: scale on lyr_ae7c7b6ac40941cf ends at 1 but starts at 0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
       "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "ring"
-      ],
-      "message": "Loop seam: effect:1 on lyr_ae7c7b6ac40941cf ends at 0 but starts at 40, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "ring"
-      ],
-      "message": "Loop seam: stroke on lyr_ae7c7b6ac40941cf ends at '#B7A6FF' but starts at '#C8FF3D', so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "ticks"
-      ],
-      "message": "Loop seam: opacity on lyr_dea327bc3de44e22 ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "ticks"
-      ],
-      "message": "Loop seam: rotation on lyr_dea327bc3de44e22 ends at 90.0 but starts at 0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "satellite"
-      ],
-      "message": "Loop seam: opacity on lyr_f71d677f3d4949cd ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "satellite"
-      ],
-      "message": "Loop seam: rotation on lyr_f71d677f3d4949cd ends at 500 but starts at -40, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "wordmark"
-      ],
-      "message": "Loop seam: effect:1 on lyr_dcb5e160dca041bb ends at 0 but starts at 22, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "badge"
-      ],
-      "message": "Loop seam: scale on lyr_e968c653b5164aa8 ends at 1.0 but starts at 0.6, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "badge"
-      ],
-      "message": "Loop seam: opacity on lyr_e968c653b5164aa8 ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "badge"
-      ],
-      "message": "Loop seam: rotation on lyr_e968c653b5164aa8 ends at -9 but starts at 0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "badge"
-      ],
-      "message": "Loop seam: translate-y on lyr_e968c653b5164aa8 ends at 0.0 but starts at -26.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "tagline"
-      ],
-      "message": "Loop seam: text on lyr_47f7c61c8c554d1e ends at 'Your whole day, in one ring.' but starts at '', so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "tagline"
-      ],
-      "message": "Loop seam: translate-y on lyr_47f7c61c8c554d1e ends at 0 but starts at 24, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "tagline"
-      ],
-      "message": "Loop seam: opacity on lyr_47f7c61c8c554d1e ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "chip-label-0"
-      ],
-      "message": "Loop seam: text on lyr_c0fc4a5b8866444e ends at '7-DAY BATTERY' but starts at '1-DAY BATTERY', so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "cta-pill"
-      ],
-      "message": "Loop seam: translate-y on lyr_cd8d768bcc164993 ends at 0.0 but starts at 140.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "cta-pill"
-      ],
-      "message": "Loop seam: opacity on lyr_cd8d768bcc164993 ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "cta-label"
-      ],
-      "message": "Loop seam: translate-y on lyr_1471233a1a4d49c8 ends at 0.0 but starts at 140.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "cta-label"
-      ],
-      "message": "Loop seam: opacity on lyr_1471233a1a4d49c8 ends at 1.0 but starts at 0.0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
-    },
-    {
-      "check": "motion",
-      "severity": "warning",
-      "layers": [
-        "cta-pill"
-      ],
-      "message": "Loop seam: fill on lyr_cd8d768bcc164993 ends at '#FF6A4D' but starts at '#C8FF3D', so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
+      "property": "opacity",
+      "action": "review",
+      "rule": "motion.loop-seam"
     },
     {
       "check": "motion",
@@ -1065,9 +1559,20 @@
       "layers": [
         "progress"
       ],
-      "message": "Loop seam: scale-x on lyr_606e48d9377b4830 ends at 1 but starts at 0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
+      "message": "Loop seam: scale-x on 'progress' ends at 1 but starts at 0, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
+      "layer_ids": [
+        "lyr_8b6e1306e49c6df6"
+      ],
+      "box": [
+        72,
+        1012,
+        936,
+        4
+      ],
       "code": "loop-seam",
-      "action": "review"
+      "property": "scale-x",
+      "action": "review",
+      "rule": "motion.loop-seam"
     },
     {
       "check": "motion",
@@ -1075,19 +1580,80 @@
       "layers": [
         "timecode"
       ],
-      "message": "Loop seam: text on lyr_517465d825e4489e ends at 'T+08.00' but starts at 'T+00.00', so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
+      "message": "Loop seam: text on 'timecode' ends at 'T+08.00' but starts at 'T+00.00', so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
+      "layer_ids": [
+        "lyr_be1e6b6a7979f0d5"
+      ],
+      "box": [
+        915,
+        62,
+        93,
+        16
+      ],
       "code": "loop-seam",
-      "action": "review"
+      "property": "text",
+      "action": "review",
+      "rule": "motion.loop-seam"
     },
     {
       "check": "motion",
       "severity": "warning",
       "layers": [
-        "finish"
+        "word-0"
       ],
-      "message": "Loop seam: effect:1 on lyr_f94529a9b4884e23 ends at 0.6 but starts at 0.2, so the loop jumps when it restarts. Add a closing key (close: true) or end the track where it began.",
-      "code": "loop-seam",
-      "action": "review"
+      "message": "Text 'word-0' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_758242bd468d251b"
+      ],
+      "box": [
+        66,
+        300,
+        645,
+        135
+      ],
+      "code": "text-hidden-at-poster",
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "word-1"
+      ],
+      "message": "Text 'word-1' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_7d0d40fb84bbc6c2"
+      ],
+      "box": [
+        66,
+        476,
+        635,
+        135
+      ],
+      "code": "text-hidden-at-poster",
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "word-2"
+      ],
+      "message": "Text 'word-2' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_eeaaeea69733a754"
+      ],
+      "box": [
+        66,
+        652,
+        972,
+        135
+      ],
+      "code": "text-hidden-at-poster",
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
     },
     {
       "check": "motion",
@@ -1095,9 +1661,19 @@
       "layers": [
         "letter-H"
       ],
-      "message": "Text 'letter-H' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible at the end.",
+      "message": "Text 'letter-H' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_57b138b8d617b24a"
+      ],
+      "box": [
+        332,
+        326,
+        114,
+        103
+      ],
       "code": "text-hidden-at-poster",
-      "action": "review"
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
     },
     {
       "check": "motion",
@@ -1105,9 +1681,19 @@
       "layers": [
         "letter-A"
       ],
-      "message": "Text 'letter-A' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible at the end.",
+      "message": "Text 'letter-A' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_3d250492e969508e"
+      ],
+      "box": [
+        446,
+        326,
+        112,
+        103
+      ],
       "code": "text-hidden-at-poster",
-      "action": "review"
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
     },
     {
       "check": "motion",
@@ -1115,9 +1701,19 @@
       "layers": [
         "letter-L"
       ],
-      "message": "Text 'letter-L' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible at the end.",
+      "message": "Text 'letter-L' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_2bea2a9e7d717476"
+      ],
+      "box": [
+        557,
+        326,
+        80,
+        103
+      ],
       "code": "text-hidden-at-poster",
-      "action": "review"
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
     },
     {
       "check": "motion",
@@ -1125,9 +1721,19 @@
       "layers": [
         "letter-O"
       ],
-      "message": "Text 'letter-O' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible at the end.",
+      "message": "Text 'letter-O' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_6ab32aa3a3ba61e2"
+      ],
+      "box": [
+        637,
+        326,
+        114,
+        108
+      ],
       "code": "text-hidden-at-poster",
-      "action": "review"
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
     },
     {
       "check": "motion",
@@ -1135,9 +1741,19 @@
       "layers": [
         "badge-label"
       ],
-      "message": "Text 'badge-label' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible at the end.",
+      "message": "Text 'badge-label' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_a0589fa3be8dbce9"
+      ],
+      "box": [
+        748,
+        185,
+        78,
+        20
+      ],
       "code": "text-hidden-at-poster",
-      "action": "review"
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
     },
     {
       "check": "motion",
@@ -1145,9 +1761,19 @@
       "layers": [
         "tagline"
       ],
-      "message": "Text 'tagline' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible at the end.",
+      "message": "Text 'tagline' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_c625bc8968f07834"
+      ],
+      "box": [
+        269,
+        706,
+        542,
+        42
+      ],
       "code": "text-hidden-at-poster",
-      "action": "review"
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
     },
     {
       "check": "motion",
@@ -1155,9 +1781,19 @@
       "layers": [
         "chip-label-0"
       ],
-      "message": "Text 'chip-label-0' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible at the end.",
+      "message": "Text 'chip-label-0' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_0d34eb393b1cf11d"
+      ],
+      "box": [
+        278,
+        794,
+        188,
+        18
+      ],
       "code": "text-hidden-at-poster",
-      "action": "review"
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
     },
     {
       "check": "motion",
@@ -1165,9 +1801,19 @@
       "layers": [
         "chip-label-1"
       ],
-      "message": "Text 'chip-label-1' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible at the end.",
+      "message": "Text 'chip-label-1' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_b01fb1d1530e0998"
+      ],
+      "box": [
+        540,
+        794,
+        116,
+        18
+      ],
       "code": "text-hidden-at-poster",
-      "action": "review"
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
     },
     {
       "check": "motion",
@@ -1175,9 +1821,19 @@
       "layers": [
         "chip-label-2"
       ],
-      "message": "Text 'chip-label-2' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible at the end.",
+      "message": "Text 'chip-label-2' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_e3e484370099e5df"
+      ],
+      "box": [
+        730,
+        794,
+        72,
+        18
+      ],
       "code": "text-hidden-at-poster",
-      "action": "review"
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
     },
     {
       "check": "motion",
@@ -1185,9 +1841,676 @@
       "layers": [
         "cta-label"
       ],
-      "message": "Text 'cta-label' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible at the end.",
+      "message": "Text 'cta-label' is hidden (transparent, empty, trimmed or off-canvas) at 0s, the poster frame, although it is visible during the animation.",
+      "layer_ids": [
+        "lyr_31c974b190ee7c9b"
+      ],
+      "box": [
+        379,
+        926,
+        322,
+        24
+      ],
       "code": "text-hidden-at-poster",
-      "action": "review"
+      "action": "review",
+      "rule": "motion.text-hidden-at-poster"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "letter-H"
+      ],
+      "message": "'letter-H' moves over the text 'word-0' between 4s and 7.5s (22 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_57b138b8d617b24a"
+      ],
+      "box": [
+        332,
+        326,
+        114,
+        103
+      ],
+      "code": "moving-over-text",
+      "text": "word-0",
+      "times": [
+        4000,
+        7500
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "letter-A"
+      ],
+      "message": "'letter-A' moves over the text 'word-0' between 2.333s and 7.5s (23 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_3d250492e969508e"
+      ],
+      "box": [
+        446,
+        326,
+        112,
+        103
+      ],
+      "code": "moving-over-text",
+      "text": "word-0",
+      "times": [
+        2333,
+        7500
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "letter-L"
+      ],
+      "message": "'letter-L' moves over the text 'word-0' between 4s and 7.5s (22 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_2bea2a9e7d717476"
+      ],
+      "box": [
+        557,
+        326,
+        80,
+        103
+      ],
+      "code": "moving-over-text",
+      "text": "word-0",
+      "times": [
+        4000,
+        7500
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "letter-O"
+      ],
+      "message": "'letter-O' moves over the text 'word-0' between 2.5s and 7.5s (23 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_6ab32aa3a3ba61e2"
+      ],
+      "box": [
+        637,
+        326,
+        114,
+        108
+      ],
+      "code": "moving-over-text",
+      "text": "word-0",
+      "times": [
+        2500,
+        7500
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "badge-bg"
+      ],
+      "message": "'badge-bg' moves over the text 'word-0' between 3.667s and 3.667s (1 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_3bc5bf2713d95302"
+      ],
+      "box": [
+        712,
+        168,
+        150,
+        54
+      ],
+      "code": "moving-over-text",
+      "text": "word-0",
+      "times": [
+        3667,
+        3667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "letter-H"
+      ],
+      "message": "'letter-H' moves over the text 'word-1' between 2.333s and 5.833s (22 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_57b138b8d617b24a"
+      ],
+      "box": [
+        332,
+        326,
+        114,
+        103
+      ],
+      "code": "moving-over-text",
+      "text": "word-1",
+      "times": [
+        2333,
+        5833
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "letter-A"
+      ],
+      "message": "'letter-A' moves over the text 'word-1' between 2.5s and 5.833s (21 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_3d250492e969508e"
+      ],
+      "box": [
+        446,
+        326,
+        112,
+        103
+      ],
+      "code": "moving-over-text",
+      "text": "word-1",
+      "times": [
+        2500,
+        5833
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "letter-L"
+      ],
+      "message": "'letter-L' moves over the text 'word-1' between 2.5s and 5.833s (21 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_2bea2a9e7d717476"
+      ],
+      "box": [
+        557,
+        326,
+        80,
+        103
+      ],
+      "code": "moving-over-text",
+      "text": "word-1",
+      "times": [
+        2500,
+        5833
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "letter-O"
+      ],
+      "message": "'letter-O' moves over the text 'word-1' between 2.667s and 6s (21 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_6ab32aa3a3ba61e2"
+      ],
+      "box": [
+        637,
+        326,
+        114,
+        108
+      ],
+      "code": "moving-over-text",
+      "text": "word-1",
+      "times": [
+        2667,
+        6000
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "tagline"
+      ],
+      "message": "'tagline' moves over the text 'word-1' between 7.5s and 7.667s (2 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_c625bc8968f07834"
+      ],
+      "box": [
+        269,
+        706,
+        542,
+        42
+      ],
+      "code": "moving-over-text",
+      "text": "word-1",
+      "times": [
+        7500,
+        7667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "letter-A"
+      ],
+      "message": "'letter-A' moves over the text 'word-2' between 2.5s and 2.5s (1 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_3d250492e969508e"
+      ],
+      "box": [
+        446,
+        326,
+        112,
+        103
+      ],
+      "code": "moving-over-text",
+      "text": "word-2",
+      "times": [
+        2500,
+        2500
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "tagline"
+      ],
+      "message": "'tagline' moves over the text 'word-2' between 5s and 7.333s (15 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_c625bc8968f07834"
+      ],
+      "box": [
+        269,
+        706,
+        542,
+        42
+      ],
+      "code": "moving-over-text",
+      "text": "word-2",
+      "times": [
+        5000,
+        7333
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-label-0"
+      ],
+      "message": "'chip-label-0' moves over the text 'word-2' between 7.5s and 7.667s (2 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_0d34eb393b1cf11d"
+      ],
+      "box": [
+        278,
+        794,
+        188,
+        18
+      ],
+      "code": "moving-over-text",
+      "text": "word-2",
+      "times": [
+        7500,
+        7667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-label-1"
+      ],
+      "message": "'chip-label-1' moves over the text 'word-2' between 7.5s and 7.667s (2 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_b01fb1d1530e0998"
+      ],
+      "box": [
+        540,
+        794,
+        116,
+        18
+      ],
+      "code": "moving-over-text",
+      "text": "word-2",
+      "times": [
+        7500,
+        7667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-bg-0"
+      ],
+      "message": "'chip-bg-0' moves over the text 'word-2' between 7.167s and 7.667s (4 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_2b475011ca497bed"
+      ],
+      "box": [
+        250,
+        778,
+        244,
+        50
+      ],
+      "code": "moving-over-text",
+      "text": "word-2",
+      "times": [
+        7167,
+        7667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-label-2"
+      ],
+      "message": "'chip-label-2' moves over the text 'word-2' between 7.5s and 7.667s (2 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_e3e484370099e5df"
+      ],
+      "box": [
+        730,
+        794,
+        72,
+        18
+      ],
+      "code": "moving-over-text",
+      "text": "word-2",
+      "times": [
+        7500,
+        7667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-bg-1"
+      ],
+      "message": "'chip-bg-1' moves over the text 'word-2' between 7.167s and 7.667s (4 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_cf6348d1115e91ae"
+      ],
+      "box": [
+        512,
+        778,
+        172,
+        50
+      ],
+      "code": "moving-over-text",
+      "text": "word-2",
+      "times": [
+        7167,
+        7667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-bg-2"
+      ],
+      "message": "'chip-bg-2' moves over the text 'word-2' between 7.167s and 7.667s (4 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_33a5acdf0b23a0e6"
+      ],
+      "box": [
+        702,
+        778,
+        128,
+        50
+      ],
+      "code": "moving-over-text",
+      "text": "word-2",
+      "times": [
+        7167,
+        7667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-bg-0"
+      ],
+      "message": "'chip-bg-0' moves over the text 'chip-label-0' between 5.167s and 7.667s (16 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_2b475011ca497bed"
+      ],
+      "box": [
+        250,
+        778,
+        244,
+        50
+      ],
+      "code": "moving-over-text",
+      "text": "chip-label-0",
+      "times": [
+        5167,
+        7667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-bg-1"
+      ],
+      "message": "'chip-bg-1' moves over the text 'chip-label-1' between 5.333s and 7.667s (15 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_cf6348d1115e91ae"
+      ],
+      "box": [
+        512,
+        778,
+        172,
+        50
+      ],
+      "code": "moving-over-text",
+      "text": "chip-label-1",
+      "times": [
+        5333,
+        7667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-bg-2"
+      ],
+      "message": "'chip-bg-2' moves over the text 'chip-label-2' between 5.5s and 7.667s (14 of 48 sampled frames); move its path, put it behind the text, or time it for when the text is hidden.",
+      "layer_ids": [
+        "lyr_33a5acdf0b23a0e6"
+      ],
+      "box": [
+        702,
+        778,
+        128,
+        50
+      ],
+      "code": "moving-over-text",
+      "text": "chip-label-2",
+      "times": [
+        5500,
+        7667
+      ],
+      "action": "review",
+      "rule": "motion.moving-over-text"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-label-1"
+      ],
+      "message": "Text 'chip-label-1' is hidden for 69% of the loop (33 of 48 sampled frames), so most viewers catch it missing; hold it on screen longer.",
+      "layer_ids": [
+        "lyr_b01fb1d1530e0998"
+      ],
+      "box": [
+        540,
+        794,
+        116,
+        18
+      ],
+      "code": "text-mostly-hidden",
+      "action": "review",
+      "rule": "motion.text-mostly-hidden"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "chip-label-2"
+      ],
+      "message": "Text 'chip-label-2' is hidden for 71% of the loop (34 of 48 sampled frames), so most viewers catch it missing; hold it on screen longer.",
+      "layer_ids": [
+        "lyr_e3e484370099e5df"
+      ],
+      "box": [
+        730,
+        794,
+        72,
+        18
+      ],
+      "code": "text-mostly-hidden",
+      "action": "review",
+      "rule": "motion.text-mostly-hidden"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "cta-label"
+      ],
+      "message": "Text 'cta-label' is hidden for 79% of the loop (38 of 48 sampled frames), so most viewers catch it missing; hold it on screen longer.",
+      "layer_ids": [
+        "lyr_31c974b190ee7c9b"
+      ],
+      "box": [
+        379,
+        926,
+        322,
+        24
+      ],
+      "code": "text-mostly-hidden",
+      "action": "review",
+      "rule": "motion.text-mostly-hidden"
+    },
+    {
+      "check": "motion",
+      "severity": "warning",
+      "layers": [
+        "cta-pill"
+      ],
+      "message": "'cta-pill' and 'cta-label' share a centre at 0s but are 11 px apart at 7.167s; animate them together (group them and animate the group) or give them the same keys.",
+      "layer_ids": [
+        "lyr_77c7a78bf7aa5681"
+      ],
+      "box": [
+        310,
+        896,
+        460,
+        84
+      ],
+      "code": "parts-drift",
+      "other": "cta-label",
+      "time": 7167,
+      "action": "review",
+      "rule": "motion.parts-drift"
+    },
+    {
+      "check": "legibility",
+      "severity": "info",
+      "layers": [
+        "brandmark"
+      ],
+      "message": "At the poster frame (0 s): 'brandmark' is 6.5 px tall at 320 px wide; aim for at least 10 px (font size 34+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
+      "layer_ids": [
+        "lyr_9b5b9edb6a6a7b4b"
+      ],
+      "box": [
+        72,
+        62,
+        264,
+        19
+      ],
+      "thumbnail_size": 6.52,
+      "action": "informational",
+      "rule": "legibility",
+      "measured": {
+        "actual": 6.52,
+        "expected": 10,
+        "unit": "px"
+      }
+    },
+    {
+      "check": "legibility",
+      "severity": "info",
+      "layers": [
+        "timecode"
+      ],
+      "message": "At the poster frame (0 s): 'timecode' is 6.5 px tall at 320 px wide; aim for at least 10 px (font size 34+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
+      "layer_ids": [
+        "lyr_be1e6b6a7979f0d5"
+      ],
+      "box": [
+        915,
+        62,
+        93,
+        16
+      ],
+      "thumbnail_size": 6.52,
+      "action": "informational",
+      "rule": "legibility",
+      "measured": {
+        "actual": 6.52,
+        "expected": 10,
+        "unit": "px"
+      }
     }
   ],
   "checked": {
@@ -1198,6 +2521,7 @@
       "safe_area",
       "legibility",
       "blanks",
+      "placeholders",
       "fonts",
       "brand",
       "content",
@@ -1205,6 +2529,8 @@
       "links",
       "diagram",
       "flow",
+      "codes",
+      "composition",
       "motion"
     ],
     "layers_checked": 41,

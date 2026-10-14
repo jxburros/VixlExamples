@@ -1,9 +1,9 @@
 {
  "version": 1,
  "suite_hash": "9c2a4cfa000f508719c03e8ac934fe84df82d1a9e8fcc333cb6f4bfdc21b0321",
- "passed": true,
- "status": "passed",
- "errors": 0,
+ "passed": false,
+ "status": "failed",
+ "errors": 3,
  "needs_review": 0,
  "coverage": {
   "mode": "times",
@@ -29,19 +29,77 @@
   },
   {
    "id": "end-contrast",
-   "status": "passed",
+   "status": "failed",
    "severity": "error",
    "time": 7200,
-   "passed": true,
-   "errors": 0,
+   "passed": false,
+   "errors": 1,
    "warnings": 0,
    "info": 0,
    "by_action": {
-    "fix": [],
+    "fix": [
+     0
+    ],
     "review": [],
     "informational": []
    },
-   "issues": [],
+   "outcome": {
+    "state": "validation_failed",
+    "execution": "completed",
+    "validation": "failed",
+    "review": "required",
+    "review_reasons": [],
+    "validated_by": [
+     "design checks"
+    ]
+   },
+   "issues": [
+    {
+     "check": "contrast",
+     "severity": "error",
+     "layers": [
+      "tagline"
+     ],
+     "message": "'tagline' contrast is 2.65:1 or lower for a tenth of its glyph pixels (minimum 2.65:1, weakest at x 424\u2013700, y 716\u2013746); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+     "layer_ids": [
+      "lyr_c625bc8968f07834"
+     ],
+     "box": [
+      269,
+      706,
+      542,
+      42
+     ],
+     "region": [
+      424,
+      716,
+      277,
+      31
+     ],
+     "contrast": 2.645,
+     "required": 3.0,
+     "code": "text-contrast",
+     "action": "fix",
+     "rule": "contrast.text-contrast",
+     "measured": {
+      "actual": 2.645,
+      "expected": 3.0,
+      "unit": ":1"
+     },
+     "repair": {
+      "kind": "contrast-ink",
+      "available": true,
+      "operations": [
+       {
+        "type": "text-set",
+        "target": "lyr_c625bc8968f07834",
+        "color": "#f7f4ef"
+       }
+      ],
+      "reason": "move the text colour 25% toward the role ink (white): about 4.2:1 against the backdrop, needs 3:1"
+     }
+    }
+   ],
    "checked": {
     "checks": [
      "contrast",
@@ -54,7 +112,7 @@
   },
   {
    "id": "cta-inside",
-   "status": "passed",
+   "status": "failed",
    "severity": "error",
    "time": 7900,
    "expected": "layer.cta-pill.bounds within canvas"
@@ -68,28 +126,97 @@
   },
   {
    "id": "end-contrast",
-   "status": "passed",
+   "status": "failed",
    "severity": "error",
    "time": 7900,
-   "passed": true,
-   "errors": 0,
+   "passed": false,
+   "errors": 1,
    "warnings": 0,
    "info": 0,
    "by_action": {
-    "fix": [],
+    "fix": [
+     0
+    ],
     "review": [],
     "informational": []
    },
-   "issues": [],
+   "outcome": {
+    "state": "validation_failed",
+    "execution": "completed",
+    "validation": "failed",
+    "review": "required",
+    "review_reasons": [],
+    "validated_by": [
+     "design checks"
+    ]
+   },
+   "issues": [
+    {
+     "check": "contrast",
+     "severity": "error",
+     "layers": [
+      "tagline"
+     ],
+     "message": "'tagline' contrast is 1.94:1 or lower for a tenth of its glyph pixels (minimum 1.93:1, weakest at x 271\u2013807, y 707\u2013746); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+     "layer_ids": [
+      "lyr_c625bc8968f07834"
+     ],
+     "box": [
+      269,
+      706,
+      542,
+      42
+     ],
+     "region": [
+      271,
+      707,
+      537,
+      40
+     ],
+     "contrast": 1.937,
+     "required": 3.0,
+     "code": "text-contrast",
+     "action": "fix",
+     "rule": "contrast.text-contrast",
+     "measured": {
+      "actual": 1.937,
+      "expected": 3.0,
+      "unit": ":1"
+     },
+     "repair": {
+      "kind": "contrast-ink",
+      "available": true,
+      "operations": [
+       {
+        "type": "text-set",
+        "target": "lyr_c625bc8968f07834",
+        "color": "#f7f4ef"
+       }
+      ],
+      "reason": "move the text colour 25% toward the role ink (white): about 17.2:1 against the backdrop, needs 3:1"
+     }
+    }
+   ],
    "checked": {
     "checks": [
      "contrast",
      "safe_area"
     ],
-    "layers_checked": 5,
-    "layers_total": 5,
-    "text_layers": 5
+    "layers_checked": 1,
+    "layers_total": 1,
+    "text_layers": 1
    }
   }
- ]
+ ],
+ "source": "document",
+ "outcome": {
+  "state": "validation_failed",
+  "execution": "completed",
+  "validation": "failed",
+  "review": "required",
+  "review_reasons": [],
+  "validated_by": [
+   "suite"
+  ]
+ }
 }

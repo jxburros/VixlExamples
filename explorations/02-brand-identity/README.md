@@ -1,7 +1,7 @@
 # 02 · Brand identity system: Morrow Coffee Roasters
 
 Morrow is a fictional Portland coffee roaster. This project builds its whole identity headlessly with Vixl.
-It was first built with 0.16.0; the committed outputs are rebuilt with 0.21.0. The mark is a coffee bean, drawn with the pen tool and split by a Bézier crease, set inside a disc
+It was first built with 0.16.0; the committed outputs are rebuilt with 0.27.0. The mark is a coffee bean, drawn with the pen tool and split by a Bézier crease, set inside a disc
 and rising over sunrise "reflection" bands. It is built only from vector geometry and pathfinder booleans.
 On top of that sit a palette generated from one ember colour (a tonal scale plus a split-complementary
 harmony, frozen with `palette-define`) and a Fraunces × Work Sans pairing. From there the script produces

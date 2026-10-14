@@ -134,6 +134,8 @@ def logo(name, variant, x, y, width=None, height=None):
     for operation in operations:
         operation["x"] += x
         operation["y"] += y
+        # The import keeps the SVG's layer names (v, x, ...); prefix them so two logos can share a page.
+        operation["name"] = f"{name}-{operation['name']}"
     operations.append({"type": "group", "name": name, "targets": [op["name"] for op in operations]})
     return operations
 

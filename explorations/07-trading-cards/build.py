@@ -278,7 +278,9 @@ for i, row in enumerate(rows):
     values["art"] = asset_ids[i]
     csv_rows.append(values)
 job_spec = {
-    "version": 1, "rows": csv_rows, "quality": "final", "format": "webp", "workers": 2,
+    # quality "final" also selects the final check profile, which blocks a card on any review finding
+    # (including stat text on its own panel); the review profile blocks only on findings to fix.
+    "version": 1, "rows": csv_rows, "quality": "final", "profile": "review", "format": "webp", "workers": 2,
     "suites": ["card-qa", "no-placeholders"], "repair_actions": ["fit-name", "fit-rules"],
 }
 submitted = dispatch(recipe_session, "submit", {
@@ -322,10 +324,14 @@ for result in csv_manifest["results"]:
     index = int(result["id"]) - 1
     problems = []
     for suite, report in (result.get("checks") or {}).items():
-        for rule in report["results"]:
+        for rule in report.get("results", []):
             if rule["status"] != "passed":
                 detail = {k: rule[k] for k in ("actual_size", "fits", "actual", "expected", "message") if k in rule}
                 problems.append(f"{suite}/{rule['id']}: {rule['status']} {json.dumps(detail, ensure_ascii=False)}")
+        # Design and placeholder checks report issues rather than suite rule results.
+        for issue in report.get("issues", []):
+            if issue["severity"] == "error":
+                problems.append(f"{suite}/{issue.get('rule', issue['check'])}: {issue['message']}")
     if result.get("error"):
         problems.append(f"error: {result['error'].get('error')}: {result['error'].get('message')}")
     qa.append({"row": index + 1, "name": rows[index]["name"], "status": result["status"],

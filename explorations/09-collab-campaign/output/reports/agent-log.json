@@ -9,27 +9,27 @@
   },
   {
     "agent": "art-director",
-    "what": "roll seed 11: right-margin / lora-source-sans / sky-umber / light"
+    "what": "roll seed 11: quiet-invitation / roboto-slab-roboto / linen-teal / light"
   },
   {
     "agent": "art-director",
-    "what": "roll seed 23: soft-panel / rubik-karla / chalk-indigo / light"
+    "what": "roll seed 23: asymmetric-balance / young-serif-rubik / peach / light"
   },
   {
     "agent": "art-director",
-    "what": "roll seed 42: asymmetric-note / roboto-material / cream-marigold / light"
+    "what": "roll seed 42: inset-editorial / ibm-plex-serif-sans / quiet-lilac / dark"
   },
   {
     "agent": "art-director",
-    "what": "roll seed 57: gallery-label / roboto-slab-roboto / porcelain-ink / dark"
+    "what": "roll seed 57: soft-panel / roboto-slab-roboto / warm-graphite / dark"
   },
   {
     "agent": "art-director",
-    "what": "roll seed 64: balanced-announcement / lora-source-sans / porcelain-ink / light"
+    "what": "roll seed 64: wide-statement / roboto-slab-roboto / accessible-blue / dark"
   },
   {
     "agent": "art-director",
-    "what": "roll seed 88: wide-statement / lexend-atkinson / cream-marigold / dark"
+    "what": "roll seed 88: soft-panel / lora-source-sans / ochre-umber / light"
   },
   {
     "agent": "art-director",
@@ -37,19 +37,19 @@
   },
   {
     "agent": "art-director",
-    "what": "locked re-roll 101: offset-column / perfect-fourth / rule"
+    "what": "locked re-roll 101: gallery-label / perfect-fifth / none"
   },
   {
     "agent": "art-director",
-    "what": "locked re-roll 202: quiet-invitation / major-third / none"
+    "what": "locked re-roll 202: story-vertical / perfect-fourth / block"
   },
   {
     "agent": "art-director",
-    "what": "locked re-roll 303: asymmetric-note / minor-third / outline"
+    "what": "locked re-roll 303: wide-statement / perfect-fifth / block"
   },
   {
     "agent": "art-director",
-    "what": "locked re-roll 404: balanced-announcement / golden / none"
+    "what": "locked re-roll 404: quiet-editorial / perfect-fourth / rule"
   },
   {
     "agent": "art-director",
@@ -106,7 +106,7 @@
   },
   {
     "agent": "layout-agent",
-    "what": "polished yt-banner.vixl (12 ops)"
+    "what": "polished yt-banner.vixl (14 ops)"
   },
   {
     "agent": "layout-agent",
@@ -115,7 +115,7 @@
   {
     "agent": "layout-agent",
     "what": "adapt-layout on the untouched med-rect stack",
-    "refused": "{\"error\": \"layout_overflow\", \"message\": \"Targets cannot fit within canvas\", \"operation_index\": 0, \"operation_type\": \"adapt-layout\"}"
+    "refused": null
   },
   {
     "agent": "layout-agent",
@@ -157,23 +157,23 @@
     "agent": "art-director",
     "what": "preview copy-agent merge: 1 conflict(s)",
     "paths": [
-      "/layers/lyr_70b9fa29f3644657/text"
+      "/layers/lyr_5e1c3984f207cafd/text"
     ]
   },
   {
     "agent": "art-director",
     "what": "merged copy-agent",
     "resolutions": {
-      "/layers/lyr_70b9fa29f3644657/text": "theirs"
+      "/layers/lyr_5e1c3984f207cafd/text": "theirs"
     }
   },
   {
     "agent": "art-director",
     "what": "preview design-agent merge: 3 conflict(s)",
     "paths": [
-      "/layers/lyr_a058058af08942e7/text",
-      "/layers/lyr_c4b873afb2e34bcf/text",
-      "/layers/lyr_c4b873afb2e34bcf/width"
+      "/layers/lyr_870934a84f812441/text",
+      "/layers/lyr_870934a84f812441/width",
+      "/layers/lyr_d17542a4ede094d8/text"
     ]
   },
   {
@@ -184,9 +184,9 @@
     "agent": "art-director",
     "what": "merged design-agent",
     "resolutions": {
-      "/layers/lyr_a058058af08942e7/text": "ours",
-      "/layers/lyr_c4b873afb2e34bcf/text": "ours",
-      "/layers/lyr_c4b873afb2e34bcf/width": "ours"
+      "/layers/lyr_870934a84f812441/text": "ours",
+      "/layers/lyr_870934a84f812441/width": "ours",
+      "/layers/lyr_d17542a4ede094d8/text": "ours"
     }
   },
   {
@@ -212,7 +212,7 @@
   },
   {
     "agent": "producer",
-    "what": "group-apply 'long headline' blocked by None: text_overflow"
+    "what": "group-apply 'long headline' blocked by flyer.vixl: check_failed"
   },
   {
     "agent": "art-director",
@@ -224,7 +224,7 @@
   },
   {
     "agent": "producer",
-    "what": "redefined flyer fit-headline box to 1969px so the headline clears the logo"
+    "what": "redefined flyer fit-headline box to 1970px so the headline clears the logo"
   },
   {
     "agent": "producer",

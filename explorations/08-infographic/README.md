@@ -10,7 +10,7 @@ and exports a 1080 × 1080 social crop of the donut through an artboard + comp. 
 QA pass (spacing assertions, validate rules, `check` including `color_vision`, a deuteranopia
 render and a custom chart-colour separation test) and exports PNG, SVG (appearance and strict),
 HTML and PDF (RGB and CMYK). It was first built with Vixl 0.16.0; the committed outputs are rebuilt
-with 0.20.0.
+with 0.27.0.
 
 > **The data is illustrative.** "Renewable share of electricity by country/region, 2015–2025"
 > numbers were invented to look plausible for a layout exploration. Do not cite them.

@@ -2,7 +2,7 @@
 
 A small, complete game asset pack built only with Vixl operations through the Python API
 (`build.py`, no external art). It was first built with Vixl 0.16.0; the committed outputs are
-rebuilt with 0.20.0. It has a 16×16 side-view hero rigged from swappable pixel layers:
+rebuilt with 0.27.0. It has a 16×16 side-view hero rigged from swappable pixel layers:
 a body, four leg poses, three sword poses and a slash arc. The hero has a 4-frame walk, a 2-frame
 idle and a 4-frame attack, saved with `frame-save`/`frame-apply`. There are palette-swapped
 monsters and hero variants made with `pixel-palette`. A 13-tile Sweetie-16 tileset is drawn only

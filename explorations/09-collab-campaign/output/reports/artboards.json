@@ -5,27 +5,59 @@
     "check": {
       "passed": true,
       "errors": 0,
-      "warnings": 1,
-      "info": 3,
+      "warnings": 3,
+      "info": 1,
       "by_action": {
         "fix": [],
         "review": [
-          0
-        ],
-        "informational": [
           1,
           2,
           3
+        ],
+        "informational": [
+          0
+        ]
+      },
+      "outcome": {
+        "state": "needs_review",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "required",
+        "review_reasons": [
+          "legibility.use-size: headline",
+          "legibility.use-size: subtitle",
+          "legibility.use-size: cta"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "background"
+            ],
+            "reason": "'background' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "design checks"
         ]
       },
       "issues": [
         {
           "check": "safe_area",
-          "severity": "warning",
+          "severity": "info",
           "layers": [
             "background"
           ],
-          "message": "'background' extends outside the safe area",
+          "message": "'background' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_e7457bd4911b37da"
+          ],
+          "box": [
+            0,
+            0,
+            728,
+            90
+          ],
           "bounds": [
             0,
             0,
@@ -38,37 +70,136 @@
             958,
             78
           ],
-          "action": "review"
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              0,
+              0,
+              728,
+              90
+            ],
+            "expected": [
+              6,
+              6,
+              958,
+              78
+            ],
+            "unit": "box"
+          }
         },
         {
           "check": "legibility",
-          "severity": "info",
+          "severity": "warning",
           "layers": [
             "headline"
           ],
-          "message": "'headline' is 6.6 px tall at 320 px wide; aim for at least 10 px (font size 30+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-          "thumbnail_size": 6.6,
-          "action": "informational"
+          "message": "'headline' is 7.6 px at 320 px wide (a feed thumbnail); at weight 600 it needs 8.5 px there: font size 26+",
+          "layer_ids": [
+            "lyr_c4673d6091cf092e"
+          ],
+          "box": [
+            96,
+            22,
+            462,
+            25
+          ],
+          "code": "use-size",
+          "action": "review",
+          "use": {
+            "seen": "thumbnail",
+            "width": "auto",
+            "as": "a feed thumbnail",
+            "source": "purpose social"
+          },
+          "font_size": 23.0,
+          "needed_size": 25.82,
+          "at_use": 7.5876,
+          "needed_at_use": 8.5167,
+          "weight": 600,
+          "contrast": 12.61,
+          "rule": "legibility.use-size",
+          "measured": {
+            "actual": 23.0,
+            "expected": 25.82,
+            "unit": "px"
+          }
         },
         {
           "check": "legibility",
-          "severity": "info",
+          "severity": "warning",
           "layers": [
             "subtitle"
           ],
-          "message": "'subtitle' is 3.3 px tall at 320 px wide; aim for at least 10 px (font size 30+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-          "thumbnail_size": 3.3,
-          "action": "informational"
+          "message": "'subtitle' is 7.6 px at 320 px wide (a feed thumbnail); at weight 400 it needs 10.0 px there: font size 30+",
+          "layer_ids": [
+            "lyr_6592d91150c5e29e"
+          ],
+          "box": [
+            96,
+            53,
+            462,
+            24
+          ],
+          "code": "use-size",
+          "action": "review",
+          "use": {
+            "seen": "thumbnail",
+            "width": "auto",
+            "as": "a feed thumbnail",
+            "source": "purpose social"
+          },
+          "font_size": 23.0,
+          "needed_size": 30.31,
+          "at_use": 7.5876,
+          "needed_at_use": 10.0,
+          "weight": 400,
+          "contrast": 12.61,
+          "rule": "legibility.use-size",
+          "measured": {
+            "actual": 23.0,
+            "expected": 30.31,
+            "unit": "px"
+          }
         },
         {
           "check": "legibility",
-          "severity": "info",
+          "severity": "warning",
           "layers": [
             "cta"
           ],
-          "message": "'cta' is 3.3 px tall at 320 px wide; aim for at least 10 px (font size 30+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-          "thumbnail_size": 3.3,
-          "action": "informational"
+          "message": "'cta' is 7.6 px at 320 px wide (a feed thumbnail); at weight 400 it needs 10.0 px there: font size 30+",
+          "layer_ids": [
+            "lyr_578741c8b4869018"
+          ],
+          "box": [
+            808,
+            33,
+            126,
+            24
+          ],
+          "code": "use-size",
+          "action": "review",
+          "use": {
+            "seen": "thumbnail",
+            "width": "auto",
+            "as": "a feed thumbnail",
+            "source": "purpose social"
+          },
+          "font_size": 23.0,
+          "needed_size": 30.31,
+          "at_use": 7.5876,
+          "needed_at_use": 10.0,
+          "weight": 400,
+          "contrast": 6.08,
+          "rule": "legibility.use-size",
+          "measured": {
+            "actual": 23.0,
+            "expected": 30.31,
+            "unit": "px"
+          }
         }
       ],
       "checked": {
@@ -79,13 +210,16 @@
           "safe_area",
           "legibility",
           "blanks",
+          "placeholders",
           "fonts",
           "brand",
           "content",
           "form",
           "links",
           "diagram",
-          "flow"
+          "flow",
+          "codes",
+          "composition"
         ],
         "layers_checked": 6,
         "layers_total": 6,
@@ -99,27 +233,61 @@
     "check": {
       "passed": true,
       "errors": 0,
-      "warnings": 1,
-      "info": 3,
+      "warnings": 4,
+      "info": 1,
       "by_action": {
         "fix": [],
         "review": [
-          0
-        ],
-        "informational": [
           1,
           2,
-          3
+          3,
+          4
+        ],
+        "informational": [
+          0
+        ]
+      },
+      "outcome": {
+        "state": "needs_review",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "required",
+        "review_reasons": [
+          "legibility.use-size: headline",
+          "legibility.use-size: subtitle",
+          "legibility.use-size: cta",
+          "composition.dead_band: logo"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "background"
+            ],
+            "reason": "'background' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "design checks"
         ]
       },
       "issues": [
         {
           "check": "safe_area",
-          "severity": "warning",
+          "severity": "info",
           "layers": [
             "background"
           ],
-          "message": "'background' extends outside the safe area",
+          "message": "'background' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_e7457bd4911b37da"
+          ],
+          "box": [
+            0,
+            0,
+            728,
+            90
+          ],
           "bounds": [
             0,
             0,
@@ -132,37 +300,180 @@
             958,
             238
           ],
-          "action": "review"
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              0,
+              0,
+              728,
+              90
+            ],
+            "expected": [
+              6,
+              6,
+              958,
+              238
+            ],
+            "unit": "box"
+          }
         },
         {
           "check": "legibility",
-          "severity": "info",
+          "severity": "warning",
           "layers": [
             "headline"
           ],
-          "message": "'headline' is 6.6 px tall at 320 px wide; aim for at least 10 px (font size 30+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-          "thumbnail_size": 6.6,
-          "action": "informational"
+          "message": "'headline' is 7.6 px at 320 px wide (a feed thumbnail); at weight 600 it needs 8.5 px there: font size 26+",
+          "layer_ids": [
+            "lyr_c4673d6091cf092e"
+          ],
+          "box": [
+            96,
+            102,
+            462,
+            25
+          ],
+          "code": "use-size",
+          "action": "review",
+          "use": {
+            "seen": "thumbnail",
+            "width": "auto",
+            "as": "a feed thumbnail",
+            "source": "purpose social"
+          },
+          "font_size": 23.0,
+          "needed_size": 25.82,
+          "at_use": 7.5876,
+          "needed_at_use": 8.5167,
+          "weight": 600,
+          "contrast": 12.61,
+          "rule": "legibility.use-size",
+          "measured": {
+            "actual": 23.0,
+            "expected": 25.82,
+            "unit": "px"
+          }
         },
         {
           "check": "legibility",
-          "severity": "info",
+          "severity": "warning",
           "layers": [
             "subtitle"
           ],
-          "message": "'subtitle' is 3.3 px tall at 320 px wide; aim for at least 10 px (font size 30+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-          "thumbnail_size": 3.3,
-          "action": "informational"
+          "message": "'subtitle' is 7.6 px at 320 px wide (a feed thumbnail); at weight 400 it needs 10.0 px there: font size 30+",
+          "layer_ids": [
+            "lyr_6592d91150c5e29e"
+          ],
+          "box": [
+            96,
+            133,
+            462,
+            24
+          ],
+          "code": "use-size",
+          "action": "review",
+          "use": {
+            "seen": "thumbnail",
+            "width": "auto",
+            "as": "a feed thumbnail",
+            "source": "purpose social"
+          },
+          "font_size": 23.0,
+          "needed_size": 30.31,
+          "at_use": 7.5876,
+          "needed_at_use": 10.0,
+          "weight": 400,
+          "contrast": 12.61,
+          "rule": "legibility.use-size",
+          "measured": {
+            "actual": 23.0,
+            "expected": 30.31,
+            "unit": "px"
+          }
         },
         {
           "check": "legibility",
-          "severity": "info",
+          "severity": "warning",
           "layers": [
             "cta"
           ],
-          "message": "'cta' is 3.3 px tall at 320 px wide; aim for at least 10 px (font size 30+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
-          "thumbnail_size": 3.3,
-          "action": "informational"
+          "message": "'cta' is 7.6 px at 320 px wide (a feed thumbnail); at weight 400 it needs 10.0 px there: font size 30+",
+          "layer_ids": [
+            "lyr_578741c8b4869018"
+          ],
+          "box": [
+            808,
+            113,
+            126,
+            24
+          ],
+          "code": "use-size",
+          "action": "review",
+          "use": {
+            "seen": "thumbnail",
+            "width": "auto",
+            "as": "a feed thumbnail",
+            "source": "purpose social"
+          },
+          "font_size": 23.0,
+          "needed_size": 30.31,
+          "at_use": 7.5876,
+          "needed_at_use": 10.0,
+          "weight": 400,
+          "contrast": 6.08,
+          "rule": "legibility.use-size",
+          "measured": {
+            "actual": 23.0,
+            "expected": 30.31,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "logo"
+          ],
+          "message": "An empty band 90 px tall (36% of the canvas height) sits between the content and the bottom edge; the document's typical gap is 7 px. Close it up (move the blocks below up, or grow the content into it) or give it a purpose",
+          "layer_ids": [
+            "lyr_5bc4a73f711c3f59"
+          ],
+          "box": [
+            10,
+            90,
+            70,
+            70
+          ],
+          "code": "dead_band",
+          "action": "review",
+          "region": [
+            0.0,
+            160.0,
+            970.0,
+            90.0
+          ],
+          "measured": {
+            "actual": 90.0,
+            "expected": 20.0,
+            "unit": "px"
+          },
+          "values": {
+            "height": 90.0,
+            "width": 970.0,
+            "typical_gap": 6.9,
+            "frame_share": 0.36,
+            "edge": "bottom"
+          },
+          "threshold": {
+            "min_height": 20.0,
+            "min_width_share": 0.33,
+            "edge_ratio": 1.75
+          },
+          "spacing_unit": 5.0,
+          "rule": "composition.dead_band"
         }
       ],
       "checked": {
@@ -173,13 +484,16 @@
           "safe_area",
           "legibility",
           "blanks",
+          "placeholders",
           "fonts",
           "brand",
           "content",
           "form",
           "links",
           "diagram",
-          "flow"
+          "flow",
+          "codes",
+          "composition"
         ],
         "layers_checked": 6,
         "layers_total": 6,

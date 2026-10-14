@@ -1,31 +1,125 @@
 {
   "passed": true,
   "errors": 0,
-  "warnings": 0,
+  "warnings": 2,
   "info": 1,
   "by_action": {
     "fix": [],
-    "review": [],
+    "review": [
+      0,
+      1
+    ],
     "informational": [
-      0
+      2
     ]
   },
   "outcome": {
-    "state": "validated",
+    "state": "needs_review",
     "execution": "completed",
     "validation": "passed",
-    "review": "not_required",
-    "review_reasons": [],
+    "review": "required",
+    "review_reasons": [
+      "composition.dead_band: logo-v, headline",
+      "composition.dead_band: headline, sub"
+    ],
     "validated_by": [
       "design checks"
     ]
   },
   "issues": [
     {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "logo-v",
+        "headline"
+      ],
+      "message": "An empty band 101 px tall (16% of the canvas height) sits between content blocks; the document's typical gap is 2 px. Close it up (move the blocks below up, or grow the content into it) or give it a purpose",
+      "layer_ids": [
+        "lyr_9ff477f25972ca16",
+        "lyr_fc46412023fe8b59"
+      ],
+      "box": [
+        98,
+        74,
+        53,
+        51
+      ],
+      "code": "dead_band",
+      "action": "review",
+      "region": [
+        0.0,
+        124.1,
+        674.0,
+        100.7
+      ],
+      "measured": {
+        "actual": 100.7,
+        "expected": 38.4,
+        "unit": "px"
+      },
+      "values": {
+        "height": 100.7,
+        "width": 674.0,
+        "typical_gap": 1.6,
+        "frame_share": 0.157
+      },
+      "threshold": {
+        "min_height": 38.4,
+        "min_width_share": 0.33
+      },
+      "spacing_unit": 8.0,
+      "rule": "composition.dead_band"
+    },
+    {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "headline",
+        "sub"
+      ],
+      "message": "An empty band 60 px tall (9% of the canvas height) sits between content blocks; the document's typical gap is 2 px. Close it up (move the blocks below up, or grow the content into it) or give it a purpose",
+      "layer_ids": [
+        "lyr_fc46412023fe8b59",
+        "lyr_7e4a569f08ae8c94"
+      ],
+      "box": [
+        64,
+        206,
+        512,
+        167
+      ],
+      "code": "dead_band",
+      "action": "review",
+      "region": [
+        0.0,
+        354.2,
+        674.0,
+        59.6
+      ],
+      "measured": {
+        "actual": 59.6,
+        "expected": 38.4,
+        "unit": "px"
+      },
+      "values": {
+        "height": 59.6,
+        "width": 674.0,
+        "typical_gap": 1.6,
+        "frame_share": 0.093
+      },
+      "threshold": {
+        "min_height": 38.4,
+        "min_width_share": 0.33
+      },
+      "spacing_unit": 8.0,
+      "rule": "composition.dead_band"
+    },
+    {
       "check": "fonts",
       "severity": "info",
       "layers": [],
-      "message": "1 embedded file(s), 112,204 bytes, are not used by the current design (fonts registered but unused: jetbrains-mono-500); the rest are kept so undo can restore them. Compacting (vixl_history action='compact', CLI vixl compact) drops them together with the undo history.",
+      "message": "1 embedded file(s), 112,204 bytes, are not used by the current design (fonts registered but unused: jetbrains-mono-500); the rest are kept so undo can restore them. Compacting (vixl_document(action='history') action='compact', CLI vixl compact) drops them together with the undo history.",
       "unused_assets": [
         {
           "asset": "fonts/3386a05f6ece969e4537de6be894170d20558e82f7d56c8c5d332972ef172160.ttf",
@@ -58,7 +152,8 @@
       "links",
       "diagram",
       "flow",
-      "codes"
+      "codes",
+      "composition"
     ],
     "layers_checked": 42,
     "layers_total": 42,

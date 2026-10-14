@@ -220,10 +220,10 @@ def logo_badge():
 
 def phase0():
     ill = illustration()
-    ill.save(WS / "hero-illustration.vixl")
+    ill.save(WS / "hero-illustration.vixl", overwrite=True)
     ill.export(WS / "hero-illustration.png")
     badge = logo_badge()
-    badge.save(WS / "logo-badge.vixl")
+    badge.save(WS / "logo-badge.vixl", overwrite=True)
     badge.export(WS / "logo-badge.png")
     note("illustration-agent", "drew hero-illustration.vixl and logo-badge.vixl with shapes and pen paths")
 
@@ -312,7 +312,7 @@ def apply_all_slots(doc, args, layout, *, image=True):
 
 
 def roll_into(doc, seed, locks=(), purpose="social", mood="friendly"):
-    """Preview with `vixl roll`, then commit with `vixl roll --apply`, every slot filled.
+    """Preview with `vixl roll`, then commit with `vixl roll --apply` on that layout, every slot filled.
 
     The preview reads the document's canvas and brand, so it picks the same layout as `--apply`.
     """
@@ -321,6 +321,10 @@ def roll_into(doc, seed, locks=(), purpose="social", mood="friendly"):
         base += ["--lock", lock]
     preview, _ = vixl(*base, doc=doc)
     layout = preview["direction"]["layout"]
+    # Lock the previewed layout: an unlocked --apply now rejects slots no rollable layout can place,
+    # while a locked one reports the unused slots for apply_all_slots to drop.
+    if not any(lock.startswith("layout=") for lock in locks):
+        base += ["--lock", f"layout={layout}"]
     applied, sets, dropped = apply_all_slots(doc, base + ["--apply"], layout)
     got = applied["applied"]["layout"]["name"]
     assert got == layout, (seed, layout, got)
@@ -398,7 +402,7 @@ def contact_sheet(rolls, path, title, subtitle, cols=3, cell=(432, 540), pad=36,
         ]
         sheet.apply(ops_cell)
     sheet.apply(ops)
-    sheet.save(WS / "contact-sheet.vixl")
+    sheet.save(WS / "contact-sheet.vixl", overwrite=True)
     sheet.export(path)
     return path
 
@@ -483,8 +487,12 @@ def polish(sizes):
                 {"type": "fit-text", "target": "subtitle", "width": 960, "height": 50, "minimum": 28, "maximum": 40},
                 {"type": "move", "target": "headline", "x": 760, "y": 560},
                 {"type": "move", "target": "subtitle", "x": 764, "y": 735},
+                # The banner layout sizes the button for the full canvas; keep it inside the centre safe zone.
+                {"type": "text-set", "target": "cta", "size": 40},
+                {"type": "resize", "target": "cta-button", "width": 284, "height": 82},
                 {"type": "move", "target": "cta-button", "x": 1740, "y": 610},
-                {"type": "move", "target": "cta", "x": 1781, "y": 632},
+                {"type": "constrain", "target": "cta", "constraints": {"center-x": "cta-button.center-x",
+                                                                        "center-y": "cta-button.center-y"}},
             ] + logo(560, 560, 170) + [{"type": "top", "target": "logo"}]
         elif key == "leaderboard":
             ops = logo(10, 10, 70) + [
@@ -947,7 +955,7 @@ def overview(files):
             {"type": "text", "name": f"cap-{key}", "text": cap, "font": typo["body"], "size": 22,
              "color": "#AFC3D0", "x": x, "y": y + h + 14},
         ])
-    sheet.save(WS / "overview.vixl")
+    sheet.save(WS / "overview.vixl", overwrite=True)
     sheet.export(OUT / "00-overview.png")
 
 

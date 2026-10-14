@@ -1,11 +1,13 @@
 {
   "version": 1,
   "quality": "final",
+  "profile": "review",
   "count": 13,
   "status": "needs_review",
   "results": [
     {
       "id": "0001",
+      "row": 1,
       "values": {
         "name": "Cinderwisp",
         "cost": "1",
@@ -25,13 +27,14 @@
         "spd": "4",
         "set_no": "001",
         "edition": "First Edition",
-        "art": "assets/424112c18b34af09dd39a33a9b53f04f1cbf739efb9b324e7130177b4c350e82.jpg"
+        "art": "assets/e4863a416d99c83f211235ea5d12dbe367f9618d7fc9add620729e6618183e10.jpg"
       },
       "artboard": null,
       "status": "completed",
-      "output": "0001-8e1eab3434f6c69f.webp",
-      "fingerprint": "8e1eab3434f6c69f61983ddb25e87d31b1be42482771a34df1105a3e1738e32a",
-      "sha256": "fd16d1b012f2b9f264a5ee5c5e25280d4c40b843e91061fb4aba4a583d63b325",
+      "output": "0001-1e8008a49d55f215.webp",
+      "fingerprint": "1e8008a49d55f215d4ef66815e5f31011a8eac22e84349972c901f885a01edb3",
+      "request_fingerprint": "4c99a40b8a21034982abe8ee0d451a1b755b5d4ba02081d52dbf388cb76f5378",
+      "sha256": "f6ae981199a5b192ba74d055b4c792019a30f53a734c626d209c772cb4d9c188",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -125,15 +128,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 364,
-              "outside_fraction": 0.0031804837131273593,
+              "outside_pixels": 360,
+              "outside_fraction": 0.003145533342653432,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8b895",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -159,6 +161,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -170,7 +182,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -200,6 +223,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -210,17 +243,472 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
+        },
+        "design": {
+          "passed": true,
+          "errors": 0,
+          "warnings": 7,
+          "info": 1,
+          "by_action": {
+            "fix": [],
+            "review": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6,
+              7
+            ],
+            "informational": [
+              4
+            ]
+          },
+          "outcome": {
+            "state": "needs_review",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "required",
+            "review_reasons": [
+              "overlap.text-object: panel, atk-value",
+              "overlap.text-object: panel, def-value",
+              "overlap.text-object: panel, spd-value",
+              "safe_area.outside: panel",
+              "legibility.runt: flavor",
+              "composition.crowding: type-bar, rarity",
+              "composition.crowding: rule-divider, flavor"
+            ],
+            "accepted": [
+              {
+                "rule": "safe_area.outside",
+                "layers": [
+                  "panel-glow"
+                ],
+                "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+              }
+            ],
+            "validated_by": [
+              "profile review",
+              "suite card-qa",
+              "suite no-placeholders"
+            ]
+          },
+          "issues": [
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "atk-value"
+              ],
+              "message": "'panel' and 'atk-value' overlap by 369 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_84ebf450495a2396"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                170,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 369,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 369,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "def-value"
+              ],
+              "message": "'panel' and 'def-value' overlap by 234 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_be439fa0daa7f13e"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                366,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 234,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 234,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "spd-value"
+              ],
+              "message": "'panel' and 'spd-value' overlap by 319 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_a48932f346db4cf1"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                562,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 319,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 319,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "warning",
+              "layers": [
+                "panel"
+              ],
+              "message": "'panel' extends outside the safe area",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "action": "review",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "info",
+              "layers": [
+                "panel-glow"
+              ],
+              "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+              "layer_ids": [
+                "lyr_14d0ddbfd282eea4"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "intentional": true,
+              "action": "informational",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "legibility",
+              "severity": "warning",
+              "layers": [
+                "flavor"
+              ],
+              "message": "'flavor' wraps with 'led.' alone on its last line (6% of the longest line); set text-layout wrap 'pretty' (or 'balance' for a heading), widen the box, add an explicit line break or run fit-text",
+              "layer_ids": [
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                78,
+                853,
+                594,
+                60
+              ],
+              "code": "runt",
+              "action": "review",
+              "line": "led.",
+              "share": 0.059,
+              "rule": "legibility.runt"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "type-bar",
+                "rarity"
+              ],
+              "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_83ffc0bcfa6774de",
+                "lyr_968ee05133c687a8"
+              ],
+              "box": [
+                40,
+                620,
+                670,
+                64
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                40.0,
+                620.0,
+                670.0,
+                88.7
+              ],
+              "measured": {
+                "actual": 2.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 2.0,
+                "kind": "band"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "rule-divider",
+                "flavor"
+              ],
+              "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_82b7b7e3af310301",
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                115,
+                846,
+                520,
+                2
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                78.0,
+                846.0,
+                594.0,
+                58.7
+              ],
+              "measured": {
+                "actual": 5.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 5.0,
+                "kind": "rule"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            }
+          ],
+          "checked": {
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          },
+          "profile": {
+            "name": "review",
+            "source": "built-in",
+            "fail_on": "fix",
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "failing": [],
+            "suites": {
+              "card-qa": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              },
+              "no-placeholders": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              }
+            }
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "needs_review",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "required",
+        "review_reasons": [
+          "overlap.text-object: panel, atk-value",
+          "overlap.text-object: panel, def-value",
+          "overlap.text-object: panel, spd-value",
+          "safe_area.outside: panel",
+          "legibility.runt: flavor",
+          "composition.crowding: type-bar, rarity",
+          "composition.crowding: rule-divider, flavor"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "panel-glow"
+            ],
+            "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders",
+          "profile review"
+        ]
+      },
       "cache": {
-        "hits": 5,
-        "misses": 28
+        "hits": 155,
+        "misses": 7
       }
     },
     {
       "id": "0002",
+      "row": 2,
       "values": {
         "name": "Tidecaller Maru",
         "cost": "3",
@@ -240,13 +728,14 @@
         "spd": "3",
         "set_no": "002",
         "edition": "First Edition",
-        "art": "assets/d40c0ac8dddc1a4eabe20e40daa82efee76ede237b7f03f00973a4d7a5376261.jpg"
+        "art": "assets/50f9fc49864e8006b5bc303a3c69daad2671bdffe4e09ca7b49c1dd65ffa8380.jpg"
       },
       "artboard": null,
       "status": "completed",
-      "output": "0002-161518da5085af5e.webp",
-      "fingerprint": "161518da5085af5e4a0f0c835772c216a7a6a2107195a4b656d9867426900839",
-      "sha256": "546392b6e2df929d72fc4d9a57c124b12bc3b4f5f3229062c8527c8a7963048e",
+      "output": "0002-b2d0f00aaf3fcb52.webp",
+      "fingerprint": "b2d0f00aaf3fcb521fbee5e734e30b29d6a7e106f0c32cce5b182b12890fe0c2",
+      "request_fingerprint": "a6bfa8e2176983679e4016bab89a15d55e54f58fbfede4e3f69a77556a28be14",
+      "sha256": "fb47cea44246b6f562acdd781c8ec16246996dadb638320be9ef80b0950d926f",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -340,15 +829,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 281,
-              "outside_fraction": 0.0024552635257933733,
+              "outside_pixels": 277,
+              "outside_fraction": 0.0024203131553194464,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 78,
+              "maximum_distance": 45,
               "examples": [
-                "#a6dbe4",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -374,6 +862,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -385,7 +883,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -415,6 +924,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -425,17 +944,447 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
+        },
+        "design": {
+          "passed": true,
+          "errors": 0,
+          "warnings": 6,
+          "info": 1,
+          "by_action": {
+            "fix": [],
+            "review": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            "informational": [
+              4
+            ]
+          },
+          "outcome": {
+            "state": "needs_review",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "required",
+            "review_reasons": [
+              "overlap.text-object: panel, atk-value",
+              "overlap.text-object: panel, def-value",
+              "overlap.text-object: panel, spd-value",
+              "safe_area.outside: panel",
+              "composition.crowding: type-bar, rarity",
+              "composition.crowding: rule-divider, flavor"
+            ],
+            "accepted": [
+              {
+                "rule": "safe_area.outside",
+                "layers": [
+                  "panel-glow"
+                ],
+                "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+              }
+            ],
+            "validated_by": [
+              "profile review",
+              "suite card-qa",
+              "suite no-placeholders"
+            ]
+          },
+          "issues": [
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "atk-value"
+              ],
+              "message": "'panel' and 'atk-value' overlap by 369 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_84ebf450495a2396"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                170,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 369,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 369,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "def-value"
+              ],
+              "message": "'panel' and 'def-value' overlap by 319 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_be439fa0daa7f13e"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                366,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 319,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 319,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "spd-value"
+              ],
+              "message": "'panel' and 'spd-value' overlap by 313 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_a48932f346db4cf1"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                562,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 313,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 313,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "warning",
+              "layers": [
+                "panel"
+              ],
+              "message": "'panel' extends outside the safe area",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "action": "review",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "info",
+              "layers": [
+                "panel-glow"
+              ],
+              "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+              "layer_ids": [
+                "lyr_14d0ddbfd282eea4"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "intentional": true,
+              "action": "informational",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "type-bar",
+                "rarity"
+              ],
+              "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_83ffc0bcfa6774de",
+                "lyr_968ee05133c687a8"
+              ],
+              "box": [
+                40,
+                620,
+                670,
+                64
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                40.0,
+                620.0,
+                670.0,
+                88.7
+              ],
+              "measured": {
+                "actual": 2.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 2.0,
+                "kind": "band"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "rule-divider",
+                "flavor"
+              ],
+              "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_82b7b7e3af310301",
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                115,
+                846,
+                520,
+                2
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                78.0,
+                846.0,
+                594.0,
+                31.0
+              ],
+              "measured": {
+                "actual": 5.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 5.0,
+                "kind": "rule"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            }
+          ],
+          "checked": {
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          },
+          "profile": {
+            "name": "review",
+            "source": "built-in",
+            "fail_on": "fix",
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "failing": [],
+            "suites": {
+              "card-qa": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              },
+              "no-placeholders": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              }
+            }
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "needs_review",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "required",
+        "review_reasons": [
+          "overlap.text-object: panel, atk-value",
+          "overlap.text-object: panel, def-value",
+          "overlap.text-object: panel, spd-value",
+          "safe_area.outside: panel",
+          "composition.crowding: type-bar, rarity",
+          "composition.crowding: rule-divider, flavor"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "panel-glow"
+            ],
+            "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders",
+          "profile review"
+        ]
+      },
       "cache": {
-        "hits": 1,
-        "misses": 30
+        "hits": 155,
+        "misses": 7
       }
     },
     {
       "id": "0003",
+      "row": 3,
       "values": {
         "name": "Mossback Elder",
         "cost": "4",
@@ -455,13 +1404,14 @@
         "spd": "1",
         "set_no": "003",
         "edition": "First Edition",
-        "art": "assets/599b2dee97bce947a28d4998ca95be9155f74f2a5dde018e7e64525a8c2eff6f.jpg"
+        "art": "assets/2960132cc29eafd4d59b2bb3fb62a17cb4da66d141f848be5bba7d2bdf41670d.jpg"
       },
       "artboard": null,
       "status": "completed",
-      "output": "0003-d1d4d823e967f09e.webp",
-      "fingerprint": "d1d4d823e967f09ebd6cb932638914641dad558d99d42d1c5a0b1b7748d3b995",
-      "sha256": "b3efbee62e58890f038f5af3894212c71bc688eef7ce81d75300b0a9b5422ba9",
+      "output": "0003-7af248f0c0cb0c08.webp",
+      "fingerprint": "7af248f0c0cb0c0816fd3209967b00b4fa51c85dc3db48293e43a6329cd0f489",
+      "request_fingerprint": "cf4f8762e597262190e06ca8765fdd90af80748236bd6c10e89a79aee312a6fa",
+      "sha256": "32b6bdf23effd9a2cdbab06baf889cbbbd6dffc085d2e3ebc68348f2c1a74f0b",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -555,14 +1505,13 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 323,
-              "outside_fraction": 0.002822242415769607,
+              "outside_pixels": 319,
+              "outside_fraction": 0.00278729204529568,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 52,
+              "maximum_distance": 45,
               "examples": [
-                "#c0e0b6",
-                "#777063",
+                "#767063",
                 "#cac1ad",
                 "#766f62"
               ],
@@ -589,6 +1538,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -600,7 +1559,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -630,6 +1600,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -640,17 +1620,447 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
+        },
+        "design": {
+          "passed": true,
+          "errors": 0,
+          "warnings": 6,
+          "info": 1,
+          "by_action": {
+            "fix": [],
+            "review": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            "informational": [
+              4
+            ]
+          },
+          "outcome": {
+            "state": "needs_review",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "required",
+            "review_reasons": [
+              "overlap.text-object: panel, atk-value",
+              "overlap.text-object: panel, def-value",
+              "overlap.text-object: panel, spd-value",
+              "safe_area.outside: panel",
+              "composition.crowding: type-bar, rarity",
+              "composition.crowding: rule-divider, flavor"
+            ],
+            "accepted": [
+              {
+                "rule": "safe_area.outside",
+                "layers": [
+                  "panel-glow"
+                ],
+                "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+              }
+            ],
+            "validated_by": [
+              "profile review",
+              "suite card-qa",
+              "suite no-placeholders"
+            ]
+          },
+          "issues": [
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "atk-value"
+              ],
+              "message": "'panel' and 'atk-value' overlap by 313 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_84ebf450495a2396"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                170,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 313,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 313,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "def-value"
+              ],
+              "message": "'panel' and 'def-value' overlap by 399 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_be439fa0daa7f13e"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                366,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 399,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 399,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "spd-value"
+              ],
+              "message": "'panel' and 'spd-value' overlap by 234 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_a48932f346db4cf1"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                562,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 234,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 234,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "warning",
+              "layers": [
+                "panel"
+              ],
+              "message": "'panel' extends outside the safe area",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "action": "review",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "info",
+              "layers": [
+                "panel-glow"
+              ],
+              "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+              "layer_ids": [
+                "lyr_14d0ddbfd282eea4"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "intentional": true,
+              "action": "informational",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "type-bar",
+                "rarity"
+              ],
+              "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_83ffc0bcfa6774de",
+                "lyr_968ee05133c687a8"
+              ],
+              "box": [
+                40,
+                620,
+                670,
+                64
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                40.0,
+                620.0,
+                670.0,
+                88.7
+              ],
+              "measured": {
+                "actual": 2.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 2.0,
+                "kind": "band"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "rule-divider",
+                "flavor"
+              ],
+              "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_82b7b7e3af310301",
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                115,
+                846,
+                520,
+                2
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                78.0,
+                846.0,
+                594.0,
+                31.0
+              ],
+              "measured": {
+                "actual": 5.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 5.0,
+                "kind": "rule"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            }
+          ],
+          "checked": {
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          },
+          "profile": {
+            "name": "review",
+            "source": "built-in",
+            "fail_on": "fix",
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "failing": [],
+            "suites": {
+              "card-qa": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              },
+              "no-placeholders": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              }
+            }
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "needs_review",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "required",
+        "review_reasons": [
+          "overlap.text-object: panel, atk-value",
+          "overlap.text-object: panel, def-value",
+          "overlap.text-object: panel, spd-value",
+          "safe_area.outside: panel",
+          "composition.crowding: type-bar, rarity",
+          "composition.crowding: rule-divider, flavor"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "panel-glow"
+            ],
+            "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders",
+          "profile review"
+        ]
+      },
       "cache": {
-        "hits": 7,
-        "misses": 27
+        "hits": 155,
+        "misses": 7
       }
     },
     {
       "id": "0004",
+      "row": 4,
       "values": {
         "name": "Galvanir",
         "cost": "5",
@@ -670,13 +2080,14 @@
         "spd": "6",
         "set_no": "004",
         "edition": "First Edition",
-        "art": "assets/b4454a7cd1dddf424b1c08445b2e3cb84d1b38f2e7a506980a108a0b1b23e730.jpg"
+        "art": "assets/a4740c914e0905fe67e312fb2439b81427158dd4f867416cd19ee927baf8e38d.jpg"
       },
       "artboard": null,
       "status": "completed",
-      "output": "0004-ca0a6cd4858b4e6c.webp",
-      "fingerprint": "ca0a6cd4858b4e6c39d46244029c81f4d6d4fdad8e4e98632a805262ccfac598",
-      "sha256": "d5dff34ab9953e662daf4d90607f6b0aa3c0a17f5a238780c6ae8c08e6939175",
+      "output": "0004-588d712cab866e94.webp",
+      "fingerprint": "588d712cab866e94b4e2b112ee1ab33877fcab1466c646d7dc1a1960dd745d93",
+      "request_fingerprint": "1f63ed1e3664f3e3e3640aeea3d2afcd2e0201b0270dd2e57c4f5704912d57aa",
+      "sha256": "4922675fb250cf2b264d78756f821fd0d88692883e2d5c86d408f4f7acc184f3",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -777,7 +2188,7 @@
               "maximum_distance": 45,
               "examples": [
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -803,6 +2214,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -814,7 +2235,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -844,6 +2276,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -854,17 +2296,472 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
+        },
+        "design": {
+          "passed": true,
+          "errors": 0,
+          "warnings": 7,
+          "info": 1,
+          "by_action": {
+            "fix": [],
+            "review": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6,
+              7
+            ],
+            "informational": [
+              4
+            ]
+          },
+          "outcome": {
+            "state": "needs_review",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "required",
+            "review_reasons": [
+              "overlap.text-object: panel, atk-value",
+              "overlap.text-object: panel, def-value",
+              "overlap.text-object: panel, spd-value",
+              "safe_area.outside: panel",
+              "legibility.runt: flavor",
+              "composition.crowding: type-bar, rarity",
+              "composition.crowding: rule-divider, flavor"
+            ],
+            "accepted": [
+              {
+                "rule": "safe_area.outside",
+                "layers": [
+                  "panel-glow"
+                ],
+                "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+              }
+            ],
+            "validated_by": [
+              "profile review",
+              "suite card-qa",
+              "suite no-placeholders"
+            ]
+          },
+          "issues": [
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "atk-value"
+              ],
+              "message": "'panel' and 'atk-value' overlap by 399 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_84ebf450495a2396"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                170,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 399,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 399,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "def-value"
+              ],
+              "message": "'panel' and 'def-value' overlap by 313 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_be439fa0daa7f13e"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                366,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 313,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 313,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "spd-value"
+              ],
+              "message": "'panel' and 'spd-value' overlap by 399 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_a48932f346db4cf1"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                562,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 399,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 399,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "warning",
+              "layers": [
+                "panel"
+              ],
+              "message": "'panel' extends outside the safe area",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "action": "review",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "info",
+              "layers": [
+                "panel-glow"
+              ],
+              "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+              "layer_ids": [
+                "lyr_14d0ddbfd282eea4"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "intentional": true,
+              "action": "informational",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "legibility",
+              "severity": "warning",
+              "layers": [
+                "flavor"
+              ],
+              "message": "'flavor' wraps with 'counting.' alone on its last line (16% of the longest line); set text-layout wrap 'pretty' (or 'balance' for a heading), widen the box, add an explicit line break or run fit-text",
+              "layer_ids": [
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                78,
+                853,
+                594,
+                60
+              ],
+              "code": "runt",
+              "action": "review",
+              "line": "counting.",
+              "share": 0.158,
+              "rule": "legibility.runt"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "type-bar",
+                "rarity"
+              ],
+              "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_83ffc0bcfa6774de",
+                "lyr_968ee05133c687a8"
+              ],
+              "box": [
+                40,
+                620,
+                670,
+                64
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                40.0,
+                620.0,
+                670.0,
+                90.3
+              ],
+              "measured": {
+                "actual": 2.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 2.0,
+                "kind": "band"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "rule-divider",
+                "flavor"
+              ],
+              "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_82b7b7e3af310301",
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                115,
+                846,
+                520,
+                2
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                78.0,
+                846.0,
+                594.0,
+                65.3
+              ],
+              "measured": {
+                "actual": 5.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 5.0,
+                "kind": "rule"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            }
+          ],
+          "checked": {
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          },
+          "profile": {
+            "name": "review",
+            "source": "built-in",
+            "fail_on": "fix",
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "failing": [],
+            "suites": {
+              "card-qa": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              },
+              "no-placeholders": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              }
+            }
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "needs_review",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "required",
+        "review_reasons": [
+          "overlap.text-object: panel, atk-value",
+          "overlap.text-object: panel, def-value",
+          "overlap.text-object: panel, spd-value",
+          "safe_area.outside: panel",
+          "legibility.runt: flavor",
+          "composition.crowding: type-bar, rarity",
+          "composition.crowding: rule-divider, flavor"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "panel-glow"
+            ],
+            "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders",
+          "profile review"
+        ]
+      },
       "cache": {
-        "hits": 5,
-        "misses": 28
+        "hits": 155,
+        "misses": 7
       }
     },
     {
       "id": "0005",
+      "row": 5,
       "values": {
         "name": "Nyxshade",
         "cost": "3",
@@ -884,13 +2781,14 @@
         "spd": "5",
         "set_no": "005",
         "edition": "First Edition",
-        "art": "assets/e8399721306be8fbaa1bbe27854bb065deaedf5a3bb0b449f3ad1adbf327987d.jpg"
+        "art": "assets/144a750caad7b56aea497ff8776c7f374a918367b94f5c7af50f34e81ec194e6.jpg"
       },
       "artboard": null,
       "status": "completed",
-      "output": "0005-3f8539e374b10b09.webp",
-      "fingerprint": "3f8539e374b10b09589e3a7fce68bcdf28e0f2ab57918b74bb50a958a22ebdfe",
-      "sha256": "25cd95af294f05615a9fb253a3589ee3e124abc913128b6be42ab63e95299eda",
+      "output": "0005-cf221142acf04428.webp",
+      "fingerprint": "cf221142acf04428a4c475aa0b28e9cdcb47287e1a033829d5c24c4ae48245de",
+      "request_fingerprint": "fd2ddd842672ef8991bd6d3368232f67d848f4638c5c4150bce1d0a7a6767247",
+      "sha256": "570f53247e556ae9da5abca50661a124d3b06b49ba15c5f4a7579733fe00f116",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -984,15 +2882,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 343,
-              "outside_fraction": 0.0029969942681392424,
+              "outside_pixels": 339,
+              "outside_fraction": 0.002962043897665315,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8adc0",
                 "#cac1ad",
-                "#777063"
+                "#767063"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
             },
@@ -1017,6 +2914,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1028,7 +2935,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -1058,6 +2976,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1068,17 +2996,447 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
+        },
+        "design": {
+          "passed": true,
+          "errors": 0,
+          "warnings": 6,
+          "info": 1,
+          "by_action": {
+            "fix": [],
+            "review": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            "informational": [
+              4
+            ]
+          },
+          "outcome": {
+            "state": "needs_review",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "required",
+            "review_reasons": [
+              "overlap.text-object: panel, atk-value",
+              "overlap.text-object: panel, def-value",
+              "overlap.text-object: panel, spd-value",
+              "safe_area.outside: panel",
+              "composition.crowding: type-bar, rarity",
+              "composition.crowding: rule-divider, flavor"
+            ],
+            "accepted": [
+              {
+                "rule": "safe_area.outside",
+                "layers": [
+                  "panel-glow"
+                ],
+                "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+              }
+            ],
+            "validated_by": [
+              "profile review",
+              "suite card-qa",
+              "suite no-placeholders"
+            ]
+          },
+          "issues": [
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "atk-value"
+              ],
+              "message": "'panel' and 'atk-value' overlap by 319 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_84ebf450495a2396"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                170,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 319,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 319,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "def-value"
+              ],
+              "message": "'panel' and 'def-value' overlap by 369 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_be439fa0daa7f13e"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                366,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 369,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 369,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "spd-value"
+              ],
+              "message": "'panel' and 'spd-value' overlap by 347 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_a48932f346db4cf1"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                562,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 347,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 347,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "warning",
+              "layers": [
+                "panel"
+              ],
+              "message": "'panel' extends outside the safe area",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "action": "review",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "info",
+              "layers": [
+                "panel-glow"
+              ],
+              "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+              "layer_ids": [
+                "lyr_14d0ddbfd282eea4"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "intentional": true,
+              "action": "informational",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "type-bar",
+                "rarity"
+              ],
+              "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_83ffc0bcfa6774de",
+                "lyr_968ee05133c687a8"
+              ],
+              "box": [
+                40,
+                620,
+                670,
+                64
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                40.0,
+                620.0,
+                670.0,
+                88.7
+              ],
+              "measured": {
+                "actual": 2.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 2.0,
+                "kind": "band"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "rule-divider",
+                "flavor"
+              ],
+              "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_82b7b7e3af310301",
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                115,
+                846,
+                520,
+                2
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                78.0,
+                846.0,
+                594.0,
+                31.0
+              ],
+              "measured": {
+                "actual": 5.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 5.0,
+                "kind": "rule"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            }
+          ],
+          "checked": {
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          },
+          "profile": {
+            "name": "review",
+            "source": "built-in",
+            "fail_on": "fix",
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "failing": [],
+            "suites": {
+              "card-qa": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              },
+              "no-placeholders": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              }
+            }
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "needs_review",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "required",
+        "review_reasons": [
+          "overlap.text-object: panel, atk-value",
+          "overlap.text-object: panel, def-value",
+          "overlap.text-object: panel, spd-value",
+          "safe_area.outside: panel",
+          "composition.crowding: type-bar, rarity",
+          "composition.crowding: rule-divider, flavor"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "panel-glow"
+            ],
+            "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders",
+          "profile review"
+        ]
+      },
       "cache": {
-        "hits": 9,
-        "misses": 26
+        "hits": 155,
+        "misses": 7
       }
     },
     {
       "id": "0006",
+      "row": 6,
       "values": {
         "name": "Archsovereign Pyrrhaxion, the Unquenchable Ember of the Ninth Caldera",
         "cost": "9",
@@ -1098,21 +3456,29 @@
         "spd": "4",
         "set_no": "006",
         "edition": "First Edition",
-        "art": "assets/b6f201ab748db24b561b1b04259d1e88fac0db5dcf9fb060b7f5f13d914917f7.jpg"
+        "art": "assets/13848e35771d2c2f21c2de7d05c9a8b623002e6cb000c9b9a7a959ff275acb88.jpg"
       },
       "artboard": null,
       "status": "failed",
       "error": {
         "error": "text_overflow",
         "message": "Text cannot fit at the minimum size",
-        "target": "lyr_bb00b0dc9e3c4a34",
+        "target": "lyr_428122822c0f99ff",
         "minimum": 22,
         "operation_index": 0,
         "operation_type": "action-apply"
+      },
+      "outcome": {
+        "state": "execution_failed",
+        "execution": "failed",
+        "validation": "not_run",
+        "review": "required",
+        "review_reasons": []
       }
     },
     {
       "id": "0007",
+      "row": 7,
       "values": {
         "name": "\u00c6therwyrm \u00d6ls\u00e9n",
         "cost": "4",
@@ -1132,13 +3498,14 @@
         "spd": "4",
         "set_no": "007",
         "edition": "First Edition",
-        "art": "assets/7b5b8c46ca6a8cd326e0b28c9f81eb172366ea9323644e4559fc8787b6037abb.jpg"
+        "art": "assets/ebd1d645d01fc24498a742cd961eaad680fa15ed4a2576d6bf351f190a9a5992.jpg"
       },
       "artboard": null,
       "status": "completed",
-      "output": "0007-12a25df2aa80ff31.webp",
-      "fingerprint": "12a25df2aa80ff314cfde7b3f5be3d6dd52723f45b28eca128c77cb6c7164978",
-      "sha256": "a1053b4a262b6e34f74fc4a92c088e2a409935a1b538a91aafa141efe6b6e378",
+      "output": "0007-5c1167eb57ea2216.webp",
+      "fingerprint": "5c1167eb57ea2216c5ddefde73ad52e7536aad3b45e4ebb52f73a02f6de67d25",
+      "request_fingerprint": "d6911a48340b64cfc347fe46c19b21d46fa674beab7f9d6ee77fea26b2c60982",
+      "sha256": "d31c1129f91798963a44bbbd50d3b7d59cdbd5c7ca5657ae2a3342852bdae755",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -1239,7 +3606,7 @@
               "maximum_distance": 45,
               "examples": [
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -1265,6 +3632,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1276,7 +3653,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -1306,6 +3694,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1316,17 +3714,447 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
+        },
+        "design": {
+          "passed": true,
+          "errors": 0,
+          "warnings": 6,
+          "info": 1,
+          "by_action": {
+            "fix": [],
+            "review": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            "informational": [
+              4
+            ]
+          },
+          "outcome": {
+            "state": "needs_review",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "required",
+            "review_reasons": [
+              "overlap.text-object: panel, atk-value",
+              "overlap.text-object: panel, def-value",
+              "overlap.text-object: panel, spd-value",
+              "safe_area.outside: panel",
+              "composition.crowding: type-bar, rarity",
+              "composition.crowding: rule-divider, flavor"
+            ],
+            "accepted": [
+              {
+                "rule": "safe_area.outside",
+                "layers": [
+                  "panel-glow"
+                ],
+                "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+              }
+            ],
+            "validated_by": [
+              "profile review",
+              "suite card-qa",
+              "suite no-placeholders"
+            ]
+          },
+          "issues": [
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "atk-value"
+              ],
+              "message": "'panel' and 'atk-value' overlap by 347 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_84ebf450495a2396"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                170,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 347,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 347,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "def-value"
+              ],
+              "message": "'panel' and 'def-value' overlap by 313 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_be439fa0daa7f13e"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                366,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 313,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 313,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "spd-value"
+              ],
+              "message": "'panel' and 'spd-value' overlap by 319 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_a48932f346db4cf1"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                562,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 319,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 319,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "warning",
+              "layers": [
+                "panel"
+              ],
+              "message": "'panel' extends outside the safe area",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "action": "review",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "info",
+              "layers": [
+                "panel-glow"
+              ],
+              "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+              "layer_ids": [
+                "lyr_14d0ddbfd282eea4"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "intentional": true,
+              "action": "informational",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "type-bar",
+                "rarity"
+              ],
+              "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_83ffc0bcfa6774de",
+                "lyr_968ee05133c687a8"
+              ],
+              "box": [
+                40,
+                620,
+                670,
+                64
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                40.0,
+                620.0,
+                670.0,
+                88.7
+              ],
+              "measured": {
+                "actual": 2.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 2.0,
+                "kind": "band"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "rule-divider",
+                "flavor"
+              ],
+              "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_82b7b7e3af310301",
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                115,
+                846,
+                520,
+                2
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                78.0,
+                846.0,
+                594.0,
+                31.0
+              ],
+              "measured": {
+                "actual": 5.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 5.0,
+                "kind": "rule"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            }
+          ],
+          "checked": {
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          },
+          "profile": {
+            "name": "review",
+            "source": "built-in",
+            "fail_on": "fix",
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "failing": [],
+            "suites": {
+              "card-qa": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              },
+              "no-placeholders": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              }
+            }
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "needs_review",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "required",
+        "review_reasons": [
+          "overlap.text-object: panel, atk-value",
+          "overlap.text-object: panel, def-value",
+          "overlap.text-object: panel, spd-value",
+          "safe_area.outside: panel",
+          "composition.crowding: type-bar, rarity",
+          "composition.crowding: rule-divider, flavor"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "panel-glow"
+            ],
+            "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders",
+          "profile review"
+        ]
+      },
       "cache": {
-        "hits": 41,
-        "misses": 11
+        "hits": 155,
+        "misses": 7
       }
     },
     {
       "id": "0008",
+      "row": 8,
       "values": {
         "name": "Lantern Moth",
         "cost": "2",
@@ -1346,7 +4174,7 @@
         "spd": "5",
         "set_no": "008",
         "edition": "First Edition",
-        "art": "assets/6d087908030dde716ab5646157194fe7b74ac5bb3b5398b5059884066e185600.jpg"
+        "art": "assets/8edcfcb852026461fa7bdb5fc4ccea7e2b0e87ab9de0964d34c962c887e28617.jpg"
       },
       "artboard": null,
       "status": "needs_review",
@@ -1443,15 +4271,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 223,
-              "outside_fraction": 0.0019484831539214316,
+              "outside_pixels": 219,
+              "outside_fraction": 0.0019135327834475045,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 52,
+              "maximum_distance": 45,
               "examples": [
-                "#c0e0b6",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -1477,6 +4304,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1488,7 +4325,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validation_failed",
+            "execution": "completed",
+            "validation": "failed",
+            "review": "required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -1518,6 +4366,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1528,16 +4386,509 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
+        },
+        "design": {
+          "passed": false,
+          "errors": 0,
+          "warnings": 7,
+          "info": 2,
+          "by_action": {
+            "fix": [],
+            "review": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7,
+              8
+            ],
+            "informational": [
+              4,
+              6
+            ]
+          },
+          "outcome": {
+            "state": "validation_failed",
+            "execution": "completed",
+            "validation": "failed",
+            "review": "required",
+            "review_reasons": [
+              "overlap.text-object: panel, atk-value",
+              "overlap.text-object: panel, def-value",
+              "overlap.text-object: panel, spd-value",
+              "safe_area.outside: panel",
+              "legibility.runt: ability",
+              "composition.crowding: type-bar, rarity",
+              "composition.crowding: rule-divider, flavor"
+            ],
+            "accepted": [
+              {
+                "rule": "safe_area.outside",
+                "layers": [
+                  "panel-glow"
+                ],
+                "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+              }
+            ],
+            "validated_by": [
+              "profile review",
+              "suite card-qa",
+              "suite no-placeholders"
+            ]
+          },
+          "issues": [
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "atk-value"
+              ],
+              "message": "'panel' and 'atk-value' overlap by 234 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_84ebf450495a2396"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                170,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 234,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 234,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "def-value"
+              ],
+              "message": "'panel' and 'def-value' overlap by 369 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_be439fa0daa7f13e"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                366,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 369,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 369,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "spd-value"
+              ],
+              "message": "'panel' and 'spd-value' overlap by 347 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_a48932f346db4cf1"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                562,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 347,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 347,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "warning",
+              "layers": [
+                "panel"
+              ],
+              "message": "'panel' extends outside the safe area",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "action": "review",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "info",
+              "layers": [
+                "panel-glow"
+              ],
+              "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+              "layer_ids": [
+                "lyr_14d0ddbfd282eea4"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "intentional": true,
+              "action": "informational",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "legibility",
+              "severity": "warning",
+              "layers": [
+                "ability"
+              ],
+              "message": "'ability' wraps with 'card.' alone on its last line (9% of the longest line); set text-layout wrap 'pretty' (or 'balance' for a heading), widen the box, add an explicit line break or run fit-text",
+              "layer_ids": [
+                "lyr_ef2ce0c96dc3481a"
+              ],
+              "box": [
+                78,
+                738,
+                594,
+                104
+              ],
+              "code": "runt",
+              "action": "review",
+              "line": "card.",
+              "share": 0.091,
+              "rule": "legibility.runt"
+            },
+            {
+              "check": "legibility",
+              "severity": "info",
+              "layers": [
+                "flavor"
+              ],
+              "message": "'flavor' is 6.0 px tall at 320 px wide; aim for at least 10 px (font size 23+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
+              "layer_ids": [
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                78,
+                853,
+                594,
+                60
+              ],
+              "thumbnail_size": 5.97,
+              "action": "informational",
+              "rule": "legibility",
+              "measured": {
+                "actual": 5.97,
+                "expected": 10,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "type-bar",
+                "rarity"
+              ],
+              "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_83ffc0bcfa6774de",
+                "lyr_968ee05133c687a8"
+              ],
+              "box": [
+                40,
+                620,
+                670,
+                64
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                40.0,
+                620.0,
+                670.0,
+                88.7
+              ],
+              "measured": {
+                "actual": 2.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 2.0,
+                "kind": "band"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "rule-divider",
+                "flavor"
+              ],
+              "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_82b7b7e3af310301",
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                115,
+                846,
+                520,
+                2
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                78.0,
+                846.0,
+                594.0,
+                61.5
+              ],
+              "measured": {
+                "actual": 5.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 5.0,
+                "kind": "rule"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            }
+          ],
+          "checked": {
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          },
+          "profile": {
+            "name": "review",
+            "source": "built-in",
+            "fail_on": "fix",
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "failing": [],
+            "suites": {
+              "card-qa": {
+                "status": "failed",
+                "errors": 1,
+                "needs_review": 0,
+                "not_passed": [
+                  {
+                    "id": "flavor-fits",
+                    "status": "failed",
+                    "severity": "error",
+                    "time": null,
+                    "actual_size": 14,
+                    "fits": true
+                  }
+                ]
+              },
+              "no-placeholders": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              }
+            },
+            "failed_suites": [
+              "card-qa"
+            ]
+          }
         }
       },
       "repairs": [
         "fit-name",
         "fit-rules"
-      ]
+      ],
+      "outcome": {
+        "state": "validation_failed",
+        "execution": "completed",
+        "validation": "failed",
+        "review": "required",
+        "review_reasons": [
+          "overlap.text-object: panel, atk-value",
+          "overlap.text-object: panel, def-value",
+          "overlap.text-object: panel, spd-value",
+          "safe_area.outside: panel",
+          "legibility.runt: ability",
+          "composition.crowding: type-bar, rarity",
+          "composition.crowding: rule-divider, flavor"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "panel-glow"
+            ],
+            "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders",
+          "profile review"
+        ]
+      }
     },
     {
       "id": "0009",
+      "row": 9,
       "values": {
         "name": "\u5149\u306e\u72d0 Hikari-no-Kitsune \u2728",
         "cost": "6",
@@ -1557,333 +4908,136 @@
         "spd": "7",
         "set_no": "009",
         "edition": "First Edition",
-        "art": "assets/d00fc5c662effd3c35489a5aefb3512b8b2599dc0d4ed777abc9f3c1ec7cb814.jpg"
+        "art": "assets/83bf99b299e49ef3843edf20e7228ab1e91e6e81340dbfc7c21d1871d99ffd3b.jpg"
       },
       "artboard": null,
       "status": "needs_review",
       "checks": {
-        "card-qa": {
-          "version": 1,
-          "suite_hash": "9320037720cef443af5bb808a24b4fe36691803ac6cecaf08ec9c68e3b0f4076",
+        "placeholders": {
           "passed": false,
-          "status": "failed",
           "errors": 2,
-          "needs_review": 0,
-          "coverage": {
-            "mode": "still",
-            "times": [
-              null
+          "warnings": 0,
+          "info": 0,
+          "by_action": {
+            "fix": [
+              0,
+              1
+            ],
+            "review": [],
+            "informational": []
+          },
+          "outcome": {
+            "state": "validation_failed",
+            "execution": "completed",
+            "validation": "failed",
+            "review": "required",
+            "review_reasons": [],
+            "validated_by": [
+              "design checks"
             ]
           },
-          "results": [
+          "issues": [
             {
-              "id": "name-fits",
-              "status": "passed",
+              "check": "fonts",
               "severity": "error",
-              "time": null,
-              "actual_size": 41,
-              "fits": true
-            },
-            {
-              "id": "ability-fits",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "actual_size": 27,
-              "fits": true
-            },
-            {
-              "id": "flavor-fits",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "actual_size": 24,
-              "fits": true
-            },
-            {
-              "id": "trim-width",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": 750,
-              "actual": 750
-            },
-            {
-              "id": "trim-height",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": 1050,
-              "actual": 1050
-            },
-            {
-              "id": "name-font",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": "fonts/2c6b1ff0d368efb73636700b69dbef707fa5602a06d085a4e91e5125082651f0.ttf",
-              "actual": "fonts/2c6b1ff0d368efb73636700b69dbef707fa5602a06d085a4e91e5125082651f0.ttf"
-            },
-            {
-              "id": "name-to-art",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": 14,
-              "actual": 14
-            },
-            {
-              "id": "art-to-type",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": 18,
-              "actual": 18
-            },
-            {
-              "id": "rules-box-palette",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "passed": true,
-              "palette": null,
-              "colors": [
-                "#f4ead2",
-                "#14100c",
-                "#5b4a36",
-                "#a99a80"
-              ],
-              "pixels_checked": 114448,
-              "outside_pixels": 359,
-              "outside_fraction": 0.0031367957500349503,
-              "max_fraction": 0.04,
-              "tolerance": 40,
-              "maximum_distance": 78,
-              "examples": [
-                "#a6dbe4",
-                "#cac1ad",
-                "#777063",
-                "#766f62"
-              ],
-              "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
-            },
-            {
-              "id": "art-inside",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": "layer.art.bounds within canvas"
-            },
-            {
-              "id": "name-contrast",
-              "status": "failed",
-              "severity": "error",
-              "time": null,
-              "passed": false,
-              "errors": 1,
-              "warnings": 0,
-              "info": 0,
-              "by_action": {
-                "fix": [
-                  0
-                ],
-                "review": [],
-                "informational": []
-              },
-              "issues": [
-                {
-                  "check": "fonts",
-                  "severity": "error",
-                  "layers": [
-                    "card-name"
-                  ],
-                  "message": "'card-name' has characters no font can draw (\u2728\u306e\u5149\u72d0); they render as empty boxes. Import a font that covers them and add it with font-fallbacks",
-                  "missing": [
-                    "\u2728",
-                    "\u306e",
-                    "\u5149",
-                    "\u72d0"
-                  ],
-                  "fallback": [],
-                  "action": "fix"
-                }
-              ],
-              "checked": {
-                "checks": [
-                  "contrast",
-                  "bounds"
-                ],
-                "layers_checked": 2,
-                "layers_total": 2,
-                "text_layers": 2
-              }
-            },
-            {
-              "id": "missing-glyphs",
-              "status": "failed",
-              "severity": "error",
-              "time": null,
-              "automatic": true,
-              "message": "Text has characters no font can draw; import a covering font and add it with font-fallbacks",
               "layers": [
-                {
-                  "layer": "card-name",
-                  "missing": [
-                    "\u2728",
-                    "\u306e",
-                    "\u5149",
-                    "\u72d0"
-                  ]
-                },
-                {
-                  "layer": "flavor",
-                  "missing": [
-                    "\u3001",
-                    "\u300c",
-                    "\u300d",
-                    "\u3046",
-                    "\u306b",
-                    "\u306f",
-                    "\u3092",
-                    "\u5149",
-                    "\u5f71",
-                    "\u8005",
-                    "\u8ff7",
-                    "\u8ffd"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "no-placeholders": {
-          "version": 1,
-          "suite_hash": "c11e6e04e7ce3e236e94ed5e168d2cbe2e943185bc97f04b99a0d53dc1cd64db",
-          "passed": false,
-          "status": "failed",
-          "errors": 2,
-          "needs_review": 0,
-          "coverage": {
-            "mode": "still",
-            "times": [
-              null
-            ]
-          },
-          "results": [
-            {
-              "id": "copy",
-              "status": "failed",
-              "severity": "error",
-              "time": null,
-              "passed": false,
-              "errors": 2,
-              "warnings": 0,
-              "info": 0,
-              "by_action": {
-                "fix": [
-                  0,
-                  1
-                ],
-                "review": [],
-                "informational": []
-              },
-              "issues": [
-                {
-                  "check": "fonts",
-                  "severity": "error",
-                  "layers": [
-                    "card-name"
-                  ],
-                  "message": "'card-name' has characters no font can draw (\u2728\u306e\u5149\u72d0); they render as empty boxes. Import a font that covers them and add it with font-fallbacks",
-                  "missing": [
-                    "\u2728",
-                    "\u306e",
-                    "\u5149",
-                    "\u72d0"
-                  ],
-                  "fallback": [],
-                  "action": "fix"
-                },
-                {
-                  "check": "fonts",
-                  "severity": "error",
-                  "layers": [
-                    "flavor"
-                  ],
-                  "message": "'flavor' has characters no font can draw (\u3001\u300c\u300d\u3046\u306b\u306f\u3092\u5149\u5f71\u8005\u8ff7\u8ffd); they render as empty boxes. Import a font that covers them and add it with font-fallbacks",
-                  "missing": [
-                    "\u3001",
-                    "\u300c",
-                    "\u300d",
-                    "\u3046",
-                    "\u306b",
-                    "\u306f",
-                    "\u3092",
-                    "\u5149",
-                    "\u5f71",
-                    "\u8005",
-                    "\u8ff7",
-                    "\u8ffd"
-                  ],
-                  "fallback": [],
-                  "action": "fix"
-                }
+                "card-name"
               ],
-              "checked": {
-                "checks": [
-                  "blanks"
-                ],
-                "layers_checked": 26,
-                "layers_total": 27,
-                "text_layers": 13
-              }
+              "message": "variant 0009 (row 9): 'card-name' has characters no font can draw (\u306e\u5149\u72d0); they render as empty boxes. Import a font that covers them and add it with font-fallbacks",
+              "layer_ids": [
+                "lyr_428122822c0f99ff"
+              ],
+              "box": [
+                70,
+                60,
+                520,
+                76
+              ],
+              "missing": [
+                "\u306e",
+                "\u5149",
+                "\u72d0"
+              ],
+              "fallback": [],
+              "action": "fix",
+              "rule": "fonts",
+              "repair": {
+                "kind": null,
+                "available": false,
+                "operations": [],
+                "reason": "no mechanical repair for this rule; see the message for the next step"
+              },
+              "variant": "0009",
+              "row": 9
             },
             {
-              "id": "missing-glyphs",
-              "status": "failed",
+              "check": "fonts",
               "severity": "error",
-              "time": null,
-              "automatic": true,
-              "message": "Text has characters no font can draw; import a covering font and add it with font-fallbacks",
               "layers": [
-                {
-                  "layer": "card-name",
-                  "missing": [
-                    "\u2728",
-                    "\u306e",
-                    "\u5149",
-                    "\u72d0"
-                  ]
-                },
-                {
-                  "layer": "flavor",
-                  "missing": [
-                    "\u3001",
-                    "\u300c",
-                    "\u300d",
-                    "\u3046",
-                    "\u306b",
-                    "\u306f",
-                    "\u3092",
-                    "\u5149",
-                    "\u5f71",
-                    "\u8005",
-                    "\u8ff7",
-                    "\u8ffd"
-                  ]
-                }
-              ]
+                "flavor"
+              ],
+              "message": "variant 0009 (row 9): 'flavor' has characters no font can draw (\u3001\u300c\u300d\u3046\u306b\u306f\u3092\u5149\u5f71\u8005\u8ff7\u8ffd); they render as empty boxes. Import a font that covers them and add it with font-fallbacks",
+              "layer_ids": [
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                78,
+                853,
+                594,
+                60
+              ],
+              "missing": [
+                "\u3001",
+                "\u300c",
+                "\u300d",
+                "\u3046",
+                "\u306b",
+                "\u306f",
+                "\u3092",
+                "\u5149",
+                "\u5f71",
+                "\u8005",
+                "\u8ff7",
+                "\u8ffd"
+              ],
+              "fallback": [],
+              "action": "fix",
+              "rule": "fonts",
+              "repair": {
+                "kind": null,
+                "available": false,
+                "operations": [],
+                "reason": "no mechanical repair for this rule; see the message for the next step"
+              },
+              "variant": "0009",
+              "row": 9
             }
-          ]
+          ],
+          "checked": {
+            "checks": [
+              "placeholders"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          }
         }
       },
-      "repairs": [
-        "fit-name",
-        "fit-rules"
-      ]
+      "repairs": [],
+      "outcome": {
+        "state": "validation_failed",
+        "execution": "completed",
+        "validation": "failed",
+        "review": "required",
+        "review_reasons": [],
+        "validated_by": [
+          "design checks"
+        ]
+      }
     },
     {
       "id": "0010",
+      "row": 10,
       "values": {
         "name": "Grimward Sentinel",
         "cost": "6",
@@ -1903,7 +5057,7 @@
         "spd": "1",
         "set_no": "010",
         "edition": "First Edition",
-        "art": "assets/ba08000314ee99892936852ce7269106d9f4357d6a078ddb5bb8147f77cfe09d.jpg"
+        "art": "assets/17224a563f9b30bad2407cc0f036ef8a67558d11d5aa761ffafc6c0eb97c4d6a.jpg"
       },
       "artboard": null,
       "status": "needs_review",
@@ -2000,15 +5154,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 908,
-              "outside_fraction": 0.007933734097581434,
+              "outside_pixels": 904,
+              "outside_fraction": 0.007898783727107507,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8adc0",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -2034,6 +5187,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2045,7 +5208,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validation_failed",
+            "execution": "completed",
+            "validation": "failed",
+            "review": "required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -2075,6 +5249,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2085,16 +5269,484 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
+        },
+        "design": {
+          "passed": false,
+          "errors": 0,
+          "warnings": 6,
+          "info": 2,
+          "by_action": {
+            "fix": [],
+            "review": [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            "informational": [
+              4,
+              5
+            ]
+          },
+          "outcome": {
+            "state": "validation_failed",
+            "execution": "completed",
+            "validation": "failed",
+            "review": "required",
+            "review_reasons": [
+              "overlap.text-object: panel, atk-value",
+              "overlap.text-object: panel, def-value",
+              "overlap.text-object: panel, spd-value",
+              "safe_area.outside: panel",
+              "composition.crowding: type-bar, rarity",
+              "composition.crowding: rule-divider, flavor"
+            ],
+            "accepted": [
+              {
+                "rule": "safe_area.outside",
+                "layers": [
+                  "panel-glow"
+                ],
+                "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+              }
+            ],
+            "validated_by": [
+              "profile review",
+              "suite card-qa",
+              "suite no-placeholders"
+            ]
+          },
+          "issues": [
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "atk-value"
+              ],
+              "message": "'panel' and 'atk-value' overlap by 313 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_84ebf450495a2396"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                170,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 313,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 313,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "def-value"
+              ],
+              "message": "'panel' and 'def-value' overlap by 399 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_be439fa0daa7f13e"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                366,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 399,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 399,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "spd-value"
+              ],
+              "message": "'panel' and 'spd-value' overlap by 234 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_a48932f346db4cf1"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                562,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 234,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 234,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "warning",
+              "layers": [
+                "panel"
+              ],
+              "message": "'panel' extends outside the safe area",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "action": "review",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "info",
+              "layers": [
+                "panel-glow"
+              ],
+              "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+              "layer_ids": [
+                "lyr_14d0ddbfd282eea4"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "intentional": true,
+              "action": "informational",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "legibility",
+              "severity": "info",
+              "layers": [
+                "ability"
+              ],
+              "message": "'ability' is 7.7 px tall at 320 px wide; aim for at least 10 px (font size 23+); only matters if this is shown as a thumbnail (thumbnail_width: null turns the test off)",
+              "layer_ids": [
+                "lyr_ef2ce0c96dc3481a"
+              ],
+              "box": [
+                78,
+                738,
+                594,
+                104
+              ],
+              "thumbnail_size": 7.68,
+              "action": "informational",
+              "rule": "legibility",
+              "measured": {
+                "actual": 7.68,
+                "expected": 10,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "type-bar",
+                "rarity"
+              ],
+              "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_83ffc0bcfa6774de",
+                "lyr_968ee05133c687a8"
+              ],
+              "box": [
+                40,
+                620,
+                670,
+                64
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                40.0,
+                620.0,
+                670.0,
+                90.3
+              ],
+              "measured": {
+                "actual": 2.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 2.0,
+                "kind": "band"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "rule-divider",
+                "flavor"
+              ],
+              "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_82b7b7e3af310301",
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                115,
+                846,
+                520,
+                2
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                78.0,
+                846.0,
+                594.0,
+                30.9
+              ],
+              "measured": {
+                "actual": 5.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 5.0,
+                "kind": "rule"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            }
+          ],
+          "checked": {
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          },
+          "profile": {
+            "name": "review",
+            "source": "built-in",
+            "fail_on": "fix",
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "failing": [],
+            "suites": {
+              "card-qa": {
+                "status": "failed",
+                "errors": 1,
+                "needs_review": 0,
+                "not_passed": [
+                  {
+                    "id": "ability-fits",
+                    "status": "failed",
+                    "severity": "error",
+                    "time": null,
+                    "actual_size": 18,
+                    "fits": true
+                  }
+                ]
+              },
+              "no-placeholders": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              }
+            },
+            "failed_suites": [
+              "card-qa"
+            ]
+          }
         }
       },
       "repairs": [
         "fit-name",
         "fit-rules"
-      ]
+      ],
+      "outcome": {
+        "state": "validation_failed",
+        "execution": "completed",
+        "validation": "failed",
+        "review": "required",
+        "review_reasons": [
+          "overlap.text-object: panel, atk-value",
+          "overlap.text-object: panel, def-value",
+          "overlap.text-object: panel, spd-value",
+          "safe_area.outside: panel",
+          "composition.crowding: type-bar, rarity",
+          "composition.crowding: rule-divider, flavor"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "panel-glow"
+            ],
+            "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders",
+          "profile review"
+        ]
+      }
     },
     {
       "id": "0011",
+      "row": 11,
       "values": {
         "name": "[CARD NAME]",
         "cost": "0",
@@ -2114,201 +5766,149 @@
         "spd": "0",
         "set_no": "011",
         "edition": "First Edition",
-        "art": "assets/86eef40ecaab6b341ed225b0fc8ba96afaadd26606e86c1a61014cf303d836ac.jpg"
+        "art": "assets/425e1aba3b0a75eabe76f84d4a9e796a73aea1ec93991a917c632e9768d895b9.jpg"
       },
       "artboard": null,
-      "status": "completed",
-      "output": "0011-b60184028e86363b.webp",
-      "fingerprint": "b60184028e86363b7a8dad86430fab034cbcff2916d1b9263526132c907e2f28",
-      "sha256": "78100041cbf97dcd5069a9b66abaada78a6ecf471ff2e0d833cc21f4c49dacda",
+      "status": "needs_review",
       "checks": {
-        "card-qa": {
-          "version": 1,
-          "suite_hash": "9320037720cef443af5bb808a24b4fe36691803ac6cecaf08ec9c68e3b0f4076",
-          "passed": true,
-          "status": "passed",
+        "placeholders": {
+          "passed": false,
           "errors": 0,
-          "needs_review": 0,
-          "coverage": {
-            "mode": "still",
-            "times": [
-              null
+          "warnings": 3,
+          "info": 0,
+          "by_action": {
+            "fix": [
+              0,
+              1,
+              2
+            ],
+            "review": [],
+            "informational": []
+          },
+          "outcome": {
+            "state": "validation_failed",
+            "execution": "completed",
+            "validation": "failed",
+            "review": "required",
+            "review_reasons": [],
+            "validated_by": [
+              "design checks"
             ]
           },
-          "results": [
+          "issues": [
             {
-              "id": "name-fits",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "actual_size": 50,
-              "fits": true
-            },
-            {
-              "id": "ability-fits",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "actual_size": 27,
-              "fits": true
-            },
-            {
-              "id": "flavor-fits",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "actual_size": 24,
-              "fits": true
-            },
-            {
-              "id": "trim-width",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": 750,
-              "actual": 750
-            },
-            {
-              "id": "trim-height",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": 1050,
-              "actual": 1050
-            },
-            {
-              "id": "name-font",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": "fonts/2c6b1ff0d368efb73636700b69dbef707fa5602a06d085a4e91e5125082651f0.ttf",
-              "actual": "fonts/2c6b1ff0d368efb73636700b69dbef707fa5602a06d085a4e91e5125082651f0.ttf"
-            },
-            {
-              "id": "name-to-art",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": 14,
-              "actual": 14
-            },
-            {
-              "id": "art-to-type",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": 18,
-              "actual": 18
-            },
-            {
-              "id": "rules-box-palette",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "passed": true,
-              "palette": null,
-              "colors": [
-                "#f4ead2",
-                "#14100c",
-                "#5b4a36",
-                "#a99a80"
+              "check": "placeholders",
+              "severity": "warning",
+              "layers": [
+                "type-line"
               ],
-              "pixels_checked": 114448,
-              "outside_pixels": 120,
-              "outside_fraction": 0.0010485111142178108,
-              "max_fraction": 0.04,
-              "tolerance": 40,
-              "maximum_distance": 45,
-              "examples": [
-                "#cac1ad",
-                "#777063",
-                "#766f62"
+              "message": "variant 0011 (row 11): 'type-line' still holds placeholder copy 'TBD' (marker); replace it, or mark intended text with layer-intent literal_text",
+              "layer_ids": [
+                "lyr_2275e793cc60cbc3"
               ],
-              "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
+              "box": [
+                70,
+                634,
+                470,
+                40
+              ],
+              "code": "leftover",
+              "match": "TBD",
+              "action": "fix",
+              "rule": "placeholders.leftover",
+              "repair": {
+                "kind": null,
+                "available": false,
+                "operations": [],
+                "reason": "no mechanical repair for this rule; see the message for the next step"
+              },
+              "variant": "0011",
+              "row": 11
             },
             {
-              "id": "art-inside",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "expected": "layer.art.bounds within canvas"
+              "check": "placeholders",
+              "severity": "warning",
+              "layers": [
+                "ability"
+              ],
+              "message": "variant 0011 (row 11): 'ability' still holds placeholder copy 'Lorem ipsum' (lorem ipsum); replace it, or mark intended text with layer-intent literal_text",
+              "layer_ids": [
+                "lyr_ef2ce0c96dc3481a"
+              ],
+              "box": [
+                78,
+                738,
+                594,
+                104
+              ],
+              "code": "leftover",
+              "match": "Lorem ipsum",
+              "action": "fix",
+              "rule": "placeholders.leftover",
+              "repair": {
+                "kind": null,
+                "available": false,
+                "operations": [],
+                "reason": "no mechanical repair for this rule; see the message for the next step"
+              },
+              "variant": "0011",
+              "row": 11
             },
             {
-              "id": "name-contrast",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "passed": true,
-              "errors": 0,
-              "warnings": 0,
-              "info": 0,
-              "by_action": {
-                "fix": [],
-                "review": [],
-                "informational": []
+              "check": "placeholders",
+              "severity": "warning",
+              "layers": [
+                "flavor"
+              ],
+              "message": "variant 0011 (row 11): 'flavor' still holds placeholder copy 'TODO' (marker); replace it, or mark intended text with layer-intent literal_text",
+              "layer_ids": [
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                78,
+                853,
+                594,
+                60
+              ],
+              "code": "leftover",
+              "match": "TODO",
+              "action": "fix",
+              "rule": "placeholders.leftover",
+              "repair": {
+                "kind": null,
+                "available": false,
+                "operations": [],
+                "reason": "no mechanical repair for this rule; see the message for the next step"
               },
-              "issues": [],
-              "checked": {
-                "checks": [
-                  "contrast",
-                  "bounds"
-                ],
-                "layers_checked": 2,
-                "layers_total": 2,
-                "text_layers": 2
-              }
+              "variant": "0011",
+              "row": 11
             }
-          ]
-        },
-        "no-placeholders": {
-          "version": 1,
-          "suite_hash": "c11e6e04e7ce3e236e94ed5e168d2cbe2e943185bc97f04b99a0d53dc1cd64db",
-          "passed": true,
-          "status": "passed",
-          "errors": 0,
-          "needs_review": 0,
-          "coverage": {
-            "mode": "still",
-            "times": [
-              null
-            ]
-          },
-          "results": [
-            {
-              "id": "copy",
-              "status": "passed",
-              "severity": "error",
-              "time": null,
-              "passed": true,
-              "errors": 0,
-              "warnings": 0,
-              "info": 0,
-              "by_action": {
-                "fix": [],
-                "review": [],
-                "informational": []
-              },
-              "issues": [],
-              "checked": {
-                "checks": [
-                  "blanks"
-                ],
-                "layers_checked": 26,
-                "layers_total": 27,
-                "text_layers": 13
-              }
-            }
-          ]
+          ],
+          "checked": {
+            "checks": [
+              "placeholders"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          }
         }
       },
       "repairs": [],
-      "cache": {
-        "hits": 35,
-        "misses": 14
+      "outcome": {
+        "state": "validation_failed",
+        "execution": "completed",
+        "validation": "failed",
+        "review": "required",
+        "review_reasons": [],
+        "validated_by": [
+          "design checks"
+        ]
       }
     },
     {
       "id": "0012",
+      "row": 12,
       "values": {
         "name": "Seraphel, Dawn\u2019s Last Light",
         "cost": "8",
@@ -2328,13 +5928,14 @@
         "spd": "6",
         "set_no": "012",
         "edition": "First Edition",
-        "art": "assets/c4a98c8361c3775d16c171cad0192d8925c7b582a12fac490a45e0e2139b3b42.jpg"
+        "art": "assets/41848f1ab78c6d45ef54c0b1a8c98cce9e10ca0be42e27bc9254b9cfc0e2eb67.jpg"
       },
       "artboard": null,
       "status": "completed",
-      "output": "0012-ddb6acee97e0ae55.webp",
-      "fingerprint": "ddb6acee97e0ae55a827f6d2ca13e1ba14d8034948c4f9e6f0baad3ed0f6f95c",
-      "sha256": "2f3ce66e23f25010688f4b71d1c6171d76df2f34bb5468290c98d2121d4a4ee6",
+      "output": "0012-f28182d47c34f332.webp",
+      "fingerprint": "f28182d47c34f3321e051cc4c98e6212859294f8aa628ea203a92fd3c2a57aab",
+      "request_fingerprint": "82160665049daec102d409c91a042a82f28ca135798daaa7718074ab35b1c11a",
+      "sha256": "457e13ea69758836848950274be9b191493d28ea047b530806c4993b963a26b6",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -2428,15 +6029,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 435,
-              "outside_fraction": 0.0038008527890395637,
+              "outside_pixels": 431,
+              "outside_fraction": 0.003765902418565637,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8b895",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -2462,6 +6062,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2473,7 +6083,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -2503,6 +6124,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2513,19 +6144,449 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
+        },
+        "design": {
+          "passed": true,
+          "errors": 0,
+          "warnings": 6,
+          "info": 1,
+          "by_action": {
+            "fix": [],
+            "review": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            "informational": [
+              4
+            ]
+          },
+          "outcome": {
+            "state": "needs_review",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "required",
+            "review_reasons": [
+              "overlap.text-object: panel, atk-value",
+              "overlap.text-object: panel, def-value",
+              "overlap.text-object: panel, spd-value",
+              "safe_area.outside: panel",
+              "composition.crowding: type-bar, rarity",
+              "composition.crowding: rule-divider, flavor"
+            ],
+            "accepted": [
+              {
+                "rule": "safe_area.outside",
+                "layers": [
+                  "panel-glow"
+                ],
+                "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+              }
+            ],
+            "validated_by": [
+              "profile review",
+              "suite card-qa",
+              "suite no-placeholders"
+            ]
+          },
+          "issues": [
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "atk-value"
+              ],
+              "message": "'panel' and 'atk-value' overlap by 240 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_84ebf450495a2396"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                170,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 240,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 240,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "def-value"
+              ],
+              "message": "'panel' and 'def-value' overlap by 240 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_be439fa0daa7f13e"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                366,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 240,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 240,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "spd-value"
+              ],
+              "message": "'panel' and 'spd-value' overlap by 399 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_a48932f346db4cf1"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                562,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 399,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 399,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "warning",
+              "layers": [
+                "panel"
+              ],
+              "message": "'panel' extends outside the safe area",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "action": "review",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "info",
+              "layers": [
+                "panel-glow"
+              ],
+              "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+              "layer_ids": [
+                "lyr_14d0ddbfd282eea4"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "intentional": true,
+              "action": "informational",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "type-bar",
+                "rarity"
+              ],
+              "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_83ffc0bcfa6774de",
+                "lyr_968ee05133c687a8"
+              ],
+              "box": [
+                40,
+                620,
+                670,
+                64
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                40.0,
+                620.0,
+                670.0,
+                90.9
+              ],
+              "measured": {
+                "actual": 2.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 2.0,
+                "kind": "band"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "rule-divider",
+                "flavor"
+              ],
+              "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_82b7b7e3af310301",
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                115,
+                846,
+                520,
+                2
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                78.0,
+                846.0,
+                594.0,
+                31.0
+              ],
+              "measured": {
+                "actual": 5.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 5.0,
+                "kind": "rule"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            }
+          ],
+          "checked": {
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          },
+          "profile": {
+            "name": "review",
+            "source": "built-in",
+            "fail_on": "fix",
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "failing": [],
+            "suites": {
+              "card-qa": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              },
+              "no-placeholders": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              }
+            }
+          }
         }
       },
       "repairs": [
         "fit-name"
       ],
+      "outcome": {
+        "state": "needs_review",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "required",
+        "review_reasons": [
+          "overlap.text-object: panel, atk-value",
+          "overlap.text-object: panel, def-value",
+          "overlap.text-object: panel, spd-value",
+          "safe_area.outside: panel",
+          "composition.crowding: type-bar, rarity",
+          "composition.crowding: rule-divider, flavor"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "panel-glow"
+            ],
+            "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders",
+          "profile review"
+        ]
+      },
       "cache": {
-        "hits": 77,
-        "misses": 15
+        "hits": 292,
+        "misses": 10
       }
     },
     {
       "id": "0013",
+      "row": 13,
       "values": {
         "name": "Riftling",
         "cost": "1",
@@ -2545,13 +6606,14 @@
         "spd": "6",
         "set_no": "013",
         "edition": "First Edition",
-        "art": "assets/218cc5ea7a0f156abd6f7bb501de19787fb90eb4e1d03644e7ceca344de56e0b.jpg"
+        "art": "assets/e74568e6cbdb5ce71e0a1c2fca183e3321f4f28a2cadd56932b00b8dc158ac1b.jpg"
       },
       "artboard": null,
       "status": "completed",
-      "output": "0013-a65f39ad0c0c406e.webp",
-      "fingerprint": "a65f39ad0c0c406e8c54b7d3fa3e3dadb117939d0bda4c50ab114f53fb57143d",
-      "sha256": "07b5b1412a1194034209c3a1c0baacfdf83965040b3e0d849d1a25570fde9335",
+      "output": "0013-6d10cb177d7d9737.webp",
+      "fingerprint": "6d10cb177d7d9737a7e773c2dbaf664ace235efdaee1edbf15da12ddd49cabb3",
+      "request_fingerprint": "a7da2015c9c8fffded3d2d7fbfc0981d1ab2d6d792b65e1f171c8fa45538c540",
+      "sha256": "de11b8caca00523542a465590c09c93da98224882d6afb57ebdc31f25e0f4075",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -2645,15 +6707,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 329,
-              "outside_fraction": 0.0028746679714804976,
+              "outside_pixels": 325,
+              "outside_fraction": 0.0028397176010065707,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8adc0",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -2679,6 +6740,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2690,7 +6761,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -2720,6 +6802,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2730,15 +6822,454 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
+        },
+        "design": {
+          "passed": true,
+          "errors": 0,
+          "warnings": 6,
+          "info": 1,
+          "by_action": {
+            "fix": [],
+            "review": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            "informational": [
+              4
+            ]
+          },
+          "outcome": {
+            "state": "needs_review",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "required",
+            "review_reasons": [
+              "overlap.text-object: panel, atk-value",
+              "overlap.text-object: panel, def-value",
+              "overlap.text-object: panel, spd-value",
+              "safe_area.outside: panel",
+              "composition.crowding: type-bar, rarity",
+              "composition.crowding: rule-divider, flavor"
+            ],
+            "accepted": [
+              {
+                "rule": "safe_area.outside",
+                "layers": [
+                  "panel-glow"
+                ],
+                "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+              }
+            ],
+            "validated_by": [
+              "profile review",
+              "suite card-qa",
+              "suite no-placeholders"
+            ]
+          },
+          "issues": [
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "atk-value"
+              ],
+              "message": "'panel' and 'atk-value' overlap by 234 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_84ebf450495a2396"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                170,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 234,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 234,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "def-value"
+              ],
+              "message": "'panel' and 'def-value' overlap by 234 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_be439fa0daa7f13e"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                366,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 234,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 234,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "overlap",
+              "severity": "warning",
+              "layers": [
+                "panel",
+                "spd-value"
+              ],
+              "message": "'panel' and 'spd-value' overlap by 399 px (100.0% of the smaller layer)",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307",
+                "lyr_a48932f346db4cf1"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "region": [
+                562,
+                931,
+                76,
+                53
+              ],
+              "code": "text-object",
+              "pixels": 399,
+              "action": "review",
+              "rule": "overlap.text-object",
+              "measured": {
+                "actual": 399,
+                "expected": null,
+                "unit": "px"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "warning",
+              "layers": [
+                "panel"
+              ],
+              "message": "'panel' extends outside the safe area",
+              "layer_ids": [
+                "lyr_34d3fcf335b4a307"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "action": "review",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "safe_area",
+              "severity": "info",
+              "layers": [
+                "panel-glow"
+              ],
+              "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+              "layer_ids": [
+                "lyr_14d0ddbfd282eea4"
+              ],
+              "box": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "bounds": [
+                22,
+                22,
+                706,
+                962
+              ],
+              "safe_area": [
+                38,
+                38,
+                674,
+                974
+              ],
+              "code": "outside",
+              "intentional": true,
+              "action": "informational",
+              "rule": "safe_area.outside",
+              "measured": {
+                "actual": [
+                  22,
+                  22,
+                  706,
+                  962
+                ],
+                "expected": [
+                  38,
+                  38,
+                  674,
+                  974
+                ],
+                "unit": "box"
+              }
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "type-bar",
+                "rarity"
+              ],
+              "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_83ffc0bcfa6774de",
+                "lyr_968ee05133c687a8"
+              ],
+              "box": [
+                40,
+                620,
+                670,
+                64
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                40.0,
+                620.0,
+                670.0,
+                88.7
+              ],
+              "measured": {
+                "actual": 2.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 2.0,
+                "kind": "band"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            },
+            {
+              "check": "composition",
+              "severity": "warning",
+              "layers": [
+                "rule-divider",
+                "flavor"
+              ],
+              "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+              "layer_ids": [
+                "lyr_82b7b7e3af310301",
+                "lyr_b4bb4c1f8d78adb8"
+              ],
+              "box": [
+                115,
+                846,
+                520,
+                2
+              ],
+              "code": "crowding",
+              "action": "review",
+              "region": [
+                78.0,
+                846.0,
+                594.0,
+                30.9
+              ],
+              "measured": {
+                "actual": 5.0,
+                "expected": 8.0,
+                "unit": "px"
+              },
+              "values": {
+                "gap": 5.0,
+                "kind": "rule"
+              },
+              "threshold": {
+                "min_gap_px": 8.0
+              },
+              "spacing_unit": 16.0,
+              "rule": "composition.crowding"
+            }
+          ],
+          "checked": {
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "layers_checked": 26,
+            "layers_total": 27,
+            "text_layers": 13
+          },
+          "profile": {
+            "name": "review",
+            "source": "built-in",
+            "fail_on": "fix",
+            "checks": [
+              "bounds",
+              "overlap",
+              "contrast",
+              "safe_area",
+              "legibility",
+              "blanks",
+              "placeholders",
+              "fonts",
+              "brand",
+              "content",
+              "form",
+              "links",
+              "diagram",
+              "flow",
+              "codes",
+              "composition"
+            ],
+            "failing": [],
+            "suites": {
+              "card-qa": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              },
+              "no-placeholders": {
+                "status": "passed",
+                "errors": 0,
+                "needs_review": 0,
+                "not_passed": []
+              }
+            }
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "needs_review",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "required",
+        "review_reasons": [
+          "overlap.text-object: panel, atk-value",
+          "overlap.text-object: panel, def-value",
+          "overlap.text-object: panel, spd-value",
+          "safe_area.outside: panel",
+          "composition.crowding: type-bar, rarity",
+          "composition.crowding: rule-divider, flavor"
+        ],
+        "accepted": [
+          {
+            "rule": "safe_area.outside",
+            "layers": [
+              "panel-glow"
+            ],
+            "reason": "'panel-glow' extends outside the safe area (intentional crop or bleed)"
+          }
+        ],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders",
+          "profile review"
+        ]
+      },
       "cache": {
-        "hits": 43,
-        "misses": 10
+        "hits": 155,
+        "misses": 7
       }
     }
   ],
+  "outcome": {
+    "state": "execution_failed",
+    "total": 13,
+    "counts": {
+      "needs_review": 8,
+      "execution_failed": 1,
+      "validation_failed": 4
+    },
+    "validated": false
+  },
   "contact_sheet": "contact-sheet.png"
 }

@@ -1,6 +1,6 @@
 # Heyoka: Mirrors & Paradox
 
-A psychedelic editorial collection exploring contemporary heyoka spirituality through emotional mirroring, paradox, disruptive humor, shadow work, pattern interruption, and grounded relationships. Created with Vixl 0.23.0 and preserved here as a visual and document reference.
+A psychedelic editorial collection exploring contemporary heyoka spirituality through emotional mirroring, paradox, disruptive humor, shadow work, pattern interruption, and grounded relationships. Created with Vixl 0.23.0 and preserved here as a visual and document reference. The exports were re-rendered from the masters with Vixl 0.27.0 by [`art/rerender.py`](../rerender.py); the collection overview and the HTML galleries keep their 0.23.0 previews.
 
 ![Collection overview](collection-overview.jpg)
 
@@ -42,3 +42,7 @@ The artwork uses modern editorial metaphors, without traditional ceremonial obje
 - The PowerPoint contained six slides; both animations played for three seconds; the fillable journal exported AcroForm fields.
 
 Browser checks used Chromium and do not establish behavior in every embedded application preview.
+
+## Re-render with Vixl 0.27.0
+
+`python art/rerender.py` loads and saves each master, exports its PNG, PDF, page PNGs, contact sheet, PowerPoint, animation and thumbnail, and runs the same design checks and the readability suite again. Every single-page item, the deck and the carousel pass. Booklet pages 1–7 report `needs_review`: the booklet's readability suite names layers that exist only on page 8, and 0.27 reports a missing layer as needing review when the suite runs page by page.

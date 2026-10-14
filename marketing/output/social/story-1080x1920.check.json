@@ -1,23 +1,27 @@
 {
   "passed": true,
   "errors": 0,
-  "warnings": 0,
+  "warnings": 1,
   "info": 3,
   "by_action": {
     "fix": [],
-    "review": [],
+    "review": [
+      2
+    ],
     "informational": [
       0,
       1,
-      2
+      3
     ]
   },
   "outcome": {
-    "state": "validated",
+    "state": "needs_review",
     "execution": "completed",
     "validation": "passed",
-    "review": "not_required",
-    "review_reasons": [],
+    "review": "required",
+    "review_reasons": [
+      "composition.dead_band: logo-v, headline"
+    ],
     "accepted": [
       {
         "rule": "bounds.bleed",
@@ -47,7 +51,7 @@
       ],
       "message": "'glow' bleeds off the canvas edge (marked as an intentional crop)",
       "layer_ids": [
-        "lyr_7ae491c071dae1ca"
+        "lyr_816362602af15dfe"
       ],
       "box": [
         -180,
@@ -74,7 +78,7 @@
       ],
       "message": "'glow' extends outside the safe area (intentional crop or bleed)",
       "layer_ids": [
-        "lyr_7ae491c071dae1ca"
+        "lyr_816362602af15dfe"
       ],
       "box": [
         -180,
@@ -115,10 +119,54 @@
       }
     },
     {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "logo-v",
+        "headline"
+      ],
+      "message": "An empty band 117 px tall (6% of the canvas height) sits between content blocks; the document's typical gap is 6 px. Close it up (move the blocks below up, or grow the content into it) or give it a purpose",
+      "layer_ids": [
+        "lyr_27d1e9443d3bc8b7",
+        "lyr_6a6a3f45afd5c1fd"
+      ],
+      "box": [
+        116,
+        304,
+        55,
+        52
+      ],
+      "code": "dead_band",
+      "action": "review",
+      "region": [
+        0.0,
+        355.6,
+        1080.0,
+        116.7
+      ],
+      "measured": {
+        "actual": 116.7,
+        "expected": 115.2,
+        "unit": "px"
+      },
+      "values": {
+        "height": 116.7,
+        "width": 1080.0,
+        "typical_gap": 5.9,
+        "frame_share": 0.061
+      },
+      "threshold": {
+        "min_height": 115.2,
+        "min_width_share": 0.33
+      },
+      "spacing_unit": 14.0,
+      "rule": "composition.dead_band"
+    },
+    {
       "check": "fonts",
       "severity": "info",
       "layers": [],
-      "message": "1 embedded file(s), 112,204 bytes, are not used by the current design (fonts registered but unused: jetbrains-mono-500); the rest are kept so undo can restore them. Compacting (vixl_history action='compact', CLI vixl compact) drops them together with the undo history.",
+      "message": "1 embedded file(s), 112,204 bytes, are not used by the current design (fonts registered but unused: jetbrains-mono-500); the rest are kept so undo can restore them. Compacting (vixl_document(action='history') action='compact', CLI vixl compact) drops them together with the undo history.",
       "unused_assets": [
         {
           "asset": "fonts/3386a05f6ece969e4537de6be894170d20558e82f7d56c8c5d332972ef172160.ttf",
@@ -151,7 +199,8 @@
       "links",
       "diagram",
       "flow",
-      "codes"
+      "codes",
+      "composition"
     ],
     "layers_checked": 41,
     "layers_total": 41,

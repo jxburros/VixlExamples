@@ -11,12 +11,22 @@
         0
       ]
     },
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "design checks"
+      ]
+    },
     "issues": [
       {
         "check": "fonts",
         "severity": "info",
         "layers": [],
-        "message": "2 embedded file(s), 1,153,224 bytes, are not used by the current design (fonts registered but unused: bold, italic); the rest are kept so undo can restore them. Compacting (vixl_history action='compact', CLI vixl compact) drops them together with the undo history.",
+        "message": "2 embedded file(s), 1,153,224 bytes, are not used by the current design (fonts registered but unused: bold, italic); the rest are kept so undo can restore them. Compacting (vixl_document(action='history') action='compact', CLI vixl compact) drops them together with the undo history.",
         "unused_assets": [
           {
             "asset": "fonts/bc25600aa27cd409e1e5b3d86340df3a329bb860fcfbe57a03a95070b229e1b0.ttf",
@@ -38,7 +48,8 @@
           }
         ],
         "bytes": 1153224,
-        "action": "informational"
+        "action": "informational",
+        "rule": "fonts"
       }
     ],
     "checked": {
@@ -52,62 +63,117 @@
       "layers_checked": 8,
       "layers_total": 8,
       "text_layers": 5
+    },
+    "variants": [
+      {
+        "page": "page-03",
+        "passed": true,
+        "errors": 0,
+        "warnings": 0,
+        "issues": 0
+      }
+    ],
+    "coverage": {
+      "variants": 1,
+      "pages": [
+        "page-03"
+      ]
     }
   },
   "readability": {
     "version": 1,
-    "suite_hash": "961d98bd679ed6deb26d2c8c5ba44fb2cae38093393adfab68368d1e6134dbec",
-    "passed": true,
-    "status": "passed",
+    "suite_hash": "a792e8d8552e8294ad6e193a6a62f5010c480ac443bb51f4f266d804fd14c982",
+    "passed": false,
+    "status": "needs_review",
     "errors": 0,
-    "needs_review": 0,
+    "needs_review": 3,
     "coverage": {
       "mode": "still",
       "times": [
         null
+      ],
+      "variants": 1,
+      "pages": [
+        "page-03"
       ]
     },
     "results": [
       {
         "id": "fit-0",
-        "status": "passed",
+        "status": "needs_review",
         "severity": "error",
         "time": null,
-        "actual_size": 18,
-        "fits": true
+        "variant": {
+          "page": "page-03"
+        },
+        "message": "Layer 'series' does not exist. Layers: 'id', 'title', 'art-1-surreal', 'art-1-border', 'question', 'essay-02', 'line', 'footer'"
       },
       {
         "id": "fit-1",
         "status": "passed",
         "severity": "error",
         "time": null,
+        "variant": {
+          "page": "page-03"
+        },
         "actual_size": 49,
         "fits": true
       },
       {
         "id": "fit-2",
-        "status": "passed",
+        "status": "needs_review",
         "severity": "error",
         "time": null,
-        "actual_size": 33,
-        "fits": true
+        "variant": {
+          "page": "page-03"
+        },
+        "message": "Layer 'body' does not exist. Layers: 'id', 'title', 'art-1-surreal', 'art-1-border', 'question', 'essay-02', 'line', 'footer'"
       },
       {
         "id": "fit-3",
-        "status": "passed",
+        "status": "needs_review",
         "severity": "error",
         "time": null,
-        "actual_size": 22,
-        "fits": true
+        "variant": {
+          "page": "page-03"
+        },
+        "message": "Layer 'sources' does not exist. Layers: 'id', 'title', 'art-1-surreal', 'art-1-border', 'question', 'essay-02', 'line', 'footer'"
       },
       {
         "id": "fit-4",
         "status": "passed",
         "severity": "error",
         "time": null,
+        "variant": {
+          "page": "page-03"
+        },
         "actual_size": 17,
         "fits": true
       }
-    ]
+    ],
+    "source": "document",
+    "groups": [
+      {
+        "page": "page-03",
+        "label": "page 3 (page-03)",
+        "status": "needs_review",
+        "errors": 0,
+        "needs_review": 3
+      }
+    ],
+    "outcome": {
+      "state": "needs_review",
+      "execution": "completed",
+      "validation": "incomplete",
+      "review": "required",
+      "review_reasons": [
+        "fit-0 (could not be measured)",
+        "fit-2 (could not be measured)",
+        "fit-3 (could not be measured)"
+      ],
+      "validated_by": [
+        "suite"
+      ]
+    }
   }
 }

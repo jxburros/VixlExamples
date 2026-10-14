@@ -1,22 +1,30 @@
 {
   "passed": true,
   "errors": 0,
-  "warnings": 0,
+  "warnings": 3,
   "info": 2,
   "by_action": {
     "fix": [],
-    "review": [],
+    "review": [
+      2,
+      3,
+      4
+    ],
     "informational": [
       0,
       1
     ]
   },
   "outcome": {
-    "state": "validated",
+    "state": "needs_review",
     "execution": "completed",
     "validation": "passed",
-    "review": "not_required",
-    "review_reasons": [],
+    "review": "required",
+    "review_reasons": [
+      "composition.dead_band: sub, interfaces-0-label",
+      "composition.dead_band: logo-v, headline",
+      "composition.dead_band: headline, sub"
+    ],
     "accepted": [
       {
         "rule": "bounds.bleed",
@@ -46,7 +54,7 @@
       ],
       "message": "'glow' bleeds off the canvas edge (marked as an intentional crop)",
       "layer_ids": [
-        "lyr_a1f1c991cd146296"
+        "lyr_ad57c8c6e05c3659"
       ],
       "box": [
         550,
@@ -73,7 +81,7 @@
       ],
       "message": "'glow' extends outside the safe area (intentional crop or bleed)",
       "layer_ids": [
-        "lyr_a1f1c991cd146296"
+        "lyr_ad57c8c6e05c3659"
       ],
       "box": [
         550,
@@ -112,6 +120,138 @@
         ],
         "unit": "box"
       }
+    },
+    {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "sub",
+        "interfaces-0-label"
+      ],
+      "message": "An empty band 58 px tall (9% of the canvas height) sits between content blocks; the document's typical gap is 2 px. Close it up (move the blocks below up, or grow the content into it) or give it a purpose",
+      "layer_ids": [
+        "lyr_eb7eadd0e9566c85",
+        "lyr_ea8493eec2050006"
+      ],
+      "box": [
+        64,
+        414,
+        399,
+        59
+      ],
+      "code": "dead_band",
+      "action": "review",
+      "region": [
+        0.0,
+        472.0,
+        1200.0,
+        58.0
+      ],
+      "measured": {
+        "actual": 58.0,
+        "expected": 37.8,
+        "unit": "px"
+      },
+      "values": {
+        "height": 58.0,
+        "width": 1200.0,
+        "typical_gap": 1.6,
+        "frame_share": 0.092
+      },
+      "threshold": {
+        "min_height": 37.8,
+        "min_width_share": 0.33
+      },
+      "spacing_unit": 8.0,
+      "rule": "composition.dead_band"
+    },
+    {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "logo-v",
+        "headline"
+      ],
+      "message": "An empty band 89 px tall (14% of the canvas height) sits between content blocks; the document's typical gap is 2 px. Close it up (move the blocks below up, or grow the content into it) or give it a purpose",
+      "layer_ids": [
+        "lyr_c35d084995b2c8c5",
+        "lyr_b16234c4547ffc02"
+      ],
+      "box": [
+        98,
+        72,
+        53,
+        51
+      ],
+      "code": "dead_band",
+      "action": "review",
+      "region": [
+        0.0,
+        122.1,
+        680.0,
+        89.2
+      ],
+      "measured": {
+        "actual": 89.2,
+        "expected": 37.8,
+        "unit": "px"
+      },
+      "values": {
+        "height": 89.2,
+        "width": 680.0,
+        "typical_gap": 1.6,
+        "frame_share": 0.142
+      },
+      "threshold": {
+        "min_height": 37.8,
+        "min_width_share": 0.33
+      },
+      "spacing_unit": 8.0,
+      "rule": "composition.dead_band"
+    },
+    {
+      "check": "composition",
+      "severity": "warning",
+      "layers": [
+        "headline",
+        "sub"
+      ],
+      "message": "An empty band 57 px tall (9% of the canvas height) sits between content blocks; the document's typical gap is 2 px. Close it up (move the blocks below up, or grow the content into it) or give it a purpose",
+      "layer_ids": [
+        "lyr_b16234c4547ffc02",
+        "lyr_eb7eadd0e9566c85"
+      ],
+      "box": [
+        64,
+        190,
+        577,
+        188
+      ],
+      "code": "dead_band",
+      "action": "review",
+      "region": [
+        0.0,
+        357.2,
+        680.0,
+        56.8
+      ],
+      "measured": {
+        "actual": 56.8,
+        "expected": 37.8,
+        "unit": "px"
+      },
+      "values": {
+        "height": 56.8,
+        "width": 680.0,
+        "typical_gap": 1.6,
+        "frame_share": 0.09
+      },
+      "threshold": {
+        "min_height": 37.8,
+        "min_width_share": 0.33
+      },
+      "spacing_unit": 8.0,
+      "rule": "composition.dead_band"
     }
   ],
   "checked": {
@@ -130,7 +270,8 @@
       "links",
       "diagram",
       "flow",
-      "codes"
+      "codes",
+      "composition"
     ],
     "layers_checked": 42,
     "layers_total": 42,

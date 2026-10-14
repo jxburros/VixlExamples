@@ -24,6 +24,29 @@
     ],
     "informational": []
   },
+  "outcome": {
+    "state": "validation_failed",
+    "execution": "completed",
+    "validation": "failed",
+    "review": "required",
+    "review_reasons": [
+      "safe_area.outside: print-1",
+      "safe_area.outside: cut-1",
+      "safe_area.outside: print-2",
+      "safe_area.outside: cut-2",
+      "safe_area.outside: print-3",
+      "safe_area.outside: cut-3",
+      "safe_area.outside: print-7",
+      "safe_area.outside: cut-7",
+      "safe_area.outside: print-8",
+      "safe_area.outside: cut-8",
+      "safe_area.outside: print-9",
+      "safe_area.outside: cut-9"
+    ],
+    "validated_by": [
+      "design checks"
+    ]
+  },
   "issues": [
     {
       "check": "safe_area",
@@ -32,19 +55,45 @@
         "print-1"
       ],
       "message": "'print-1' extends outside the safe area",
+      "layer_ids": [
+        "lyr_04ac80aba24d5238"
+      ],
+      "box": [
+        163,
+        88,
+        750,
+        1050
+      ],
       "bounds": [
-        164,
-        89,
+        163,
+        88,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          163,
+          88,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -53,19 +102,45 @@
         "cut-1"
       ],
       "message": "'cut-1' extends outside the safe area",
+      "layer_ids": [
+        "lyr_2ef5e92fe0ba726e"
+      ],
+      "box": [
+        163,
+        88,
+        750,
+        1050
+      ],
       "bounds": [
-        164,
-        89,
+        163,
+        88,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          163,
+          88,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -74,19 +149,45 @@
         "print-2"
       ],
       "message": "'print-2' extends outside the safe area",
+      "layer_ids": [
+        "lyr_3d70345c720a7f11"
+      ],
+      "box": [
+        937,
+        88,
+        750,
+        1050
+      ],
       "bounds": [
-        938,
-        89,
+        937,
+        88,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          937,
+          88,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -95,19 +196,45 @@
         "cut-2"
       ],
       "message": "'cut-2' extends outside the safe area",
+      "layer_ids": [
+        "lyr_859c6e4b433ecbb6"
+      ],
+      "box": [
+        937,
+        88,
+        750,
+        1050
+      ],
       "bounds": [
-        938,
-        89,
+        937,
+        88,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          937,
+          88,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -116,19 +243,45 @@
         "print-3"
       ],
       "message": "'print-3' extends outside the safe area",
+      "layer_ids": [
+        "lyr_601ee1c42a8ab699"
+      ],
+      "box": [
+        1711,
+        88,
+        750,
+        1050
+      ],
       "bounds": [
-        1712,
-        89,
+        1711,
+        88,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          1711,
+          88,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -137,19 +290,45 @@
         "cut-3"
       ],
       "message": "'cut-3' extends outside the safe area",
+      "layer_ids": [
+        "lyr_d2ec0d89cab2c61f"
+      ],
+      "box": [
+        1711,
+        88,
+        750,
+        1050
+      ],
       "bounds": [
-        1712,
-        89,
+        1711,
+        88,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          1711,
+          88,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -158,19 +337,45 @@
         "print-7"
       ],
       "message": "'print-7' extends outside the safe area",
+      "layer_ids": [
+        "lyr_6a355040ec7e343e"
+      ],
+      "box": [
+        163,
+        2236,
+        750,
+        1050
+      ],
       "bounds": [
-        164,
-        2237,
+        163,
+        2236,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          163,
+          2236,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -179,19 +384,45 @@
         "cut-7"
       ],
       "message": "'cut-7' extends outside the safe area",
+      "layer_ids": [
+        "lyr_baee7dcdf2117dda"
+      ],
+      "box": [
+        163,
+        2236,
+        750,
+        1050
+      ],
       "bounds": [
-        164,
-        2237,
+        163,
+        2236,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          163,
+          2236,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -200,19 +431,45 @@
         "print-8"
       ],
       "message": "'print-8' extends outside the safe area",
+      "layer_ids": [
+        "lyr_26d9ae1a2d1b60fb"
+      ],
+      "box": [
+        937,
+        2236,
+        750,
+        1050
+      ],
       "bounds": [
-        938,
-        2237,
+        937,
+        2236,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          937,
+          2236,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -221,19 +478,45 @@
         "cut-8"
       ],
       "message": "'cut-8' extends outside the safe area",
+      "layer_ids": [
+        "lyr_15c546e321bec1e6"
+      ],
+      "box": [
+        937,
+        2236,
+        750,
+        1050
+      ],
       "bounds": [
-        938,
-        2237,
+        937,
+        2236,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          937,
+          2236,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -242,19 +525,45 @@
         "print-9"
       ],
       "message": "'print-9' extends outside the safe area",
+      "layer_ids": [
+        "lyr_f84e087263d7fde1"
+      ],
+      "box": [
+        1711,
+        2236,
+        750,
+        1050
+      ],
       "bounds": [
-        1712,
-        2237,
+        1711,
+        2236,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          1711,
+          2236,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -263,19 +572,45 @@
         "cut-9"
       ],
       "message": "'cut-9' extends outside the safe area",
+      "layer_ids": [
+        "lyr_f8ac6bc8681160f8"
+      ],
+      "box": [
+        1711,
+        2236,
+        750,
+        1050
+      ],
       "bounds": [
-        1712,
-        2237,
+        1711,
+        2236,
         750,
         1050
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          1711,
+          2236,
+          750,
+          1050
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "safe_area",
@@ -284,19 +619,59 @@
         "slug"
       ],
       "message": "'slug' extends outside the safe area",
-      "bounds": [
-        107,
+      "layer_ids": [
+        "lyr_b5c28842a6f0327e"
+      ],
+      "box": [
+        106,
         1200,
         26,
-        976
+        975
+      ],
+      "bounds": [
+        106,
+        1200,
+        26,
+        975
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "fix"
+      "code": "outside",
+      "action": "fix",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          106,
+          1200,
+          26,
+          975
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      },
+      "repair": {
+        "kind": "safe-area-nudge",
+        "available": true,
+        "operations": [
+          {
+            "type": "move",
+            "target": "lyr_b5c28842a6f0327e",
+            "x": 7,
+            "y": 0,
+            "relative": true
+          }
+        ],
+        "reason": "move the layer by (7, 0) px back inside the safe area, keeping its anchor"
+      }
     },
     {
       "check": "print",
@@ -304,14 +679,30 @@
       "layers": [
         "slug"
       ],
-      "message": "'slug' is outside the live area (113px from the edge) and may be trimmed",
-      "live_area": [
-        113,
-        113,
-        2400,
-        3150
+      "message": "'slug' is outside the live area (112.5px from the edge) and may be trimmed",
+      "layer_ids": [
+        "lyr_b5c28842a6f0327e"
       ],
-      "action": "fix"
+      "box": [
+        106,
+        1200,
+        26,
+        975
+      ],
+      "live_area": [
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
+      ],
+      "action": "fix",
+      "rule": "print",
+      "repair": {
+        "kind": null,
+        "available": false,
+        "operations": [],
+        "reason": "no mechanical repair for this rule; see the message for the next step"
+      }
     }
   ],
   "checked": {
