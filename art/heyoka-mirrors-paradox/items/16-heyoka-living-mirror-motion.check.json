@@ -11,12 +11,22 @@
         0
       ]
     },
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "design checks"
+      ]
+    },
     "issues": [
       {
         "check": "fonts",
         "severity": "info",
         "layers": [],
-        "message": "2 embedded file(s), 1,153,224 bytes, are not used by the current design (fonts registered but unused: bold, italic); the rest are kept so undo can restore them. Compacting (vixl_history action='compact', CLI vixl compact) drops them together with the undo history.",
+        "message": "2 embedded file(s), 1,153,224 bytes, are not used by the current design (fonts registered but unused: bold, italic); the rest are kept so undo can restore them. Compacting (vixl_document(action='history') action='compact', CLI vixl compact) drops them together with the undo history.",
         "unused_assets": [
           {
             "asset": "fonts/bc25600aa27cd409e1e5b3d86340df3a329bb860fcfbe57a03a95070b229e1b0.ttf",
@@ -38,7 +48,8 @@
           }
         ],
         "bytes": 1153224,
-        "action": "informational"
+        "action": "informational",
+        "rule": "fonts"
       }
     ],
     "checked": {
@@ -92,6 +103,17 @@
         "actual_size": 35,
         "fits": true
       }
-    ]
+    ],
+    "source": "document",
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "suite"
+      ]
+    }
   }
 }

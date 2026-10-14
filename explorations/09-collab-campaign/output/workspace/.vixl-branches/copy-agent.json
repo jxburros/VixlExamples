@@ -3,9 +3,9 @@
   "branch": "copy-agent",
   "source": "ig-portrait.vixl",
   "base": ".vixl-branches/copy-agent.base.vixl",
-  "base_hash": "2b1927c65ade4b40ab4d739baed44af7f6ccab43e53cd531c1954184600b26df",
+  "base_hash": "b0c9138cff58ef8e31d6ab4051914ff43606dd15474635e01391390b9d3445c8",
   "output": "copy-agent.vixl",
   "author": "copy-agent",
   "status": "merged",
-  "head": "rev_51dd6c1cd00f4891"
+  "head": "rev_caaf0b48210a49d2"
 }

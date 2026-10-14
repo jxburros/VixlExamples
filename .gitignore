@@ -5,7 +5,8 @@ __pycache__/
 .vixl-jobs/
 .vixl-cache/
 .vixl-cache.usage.json
-.vixl/rolls.json
+**/.vixl/rolls.json
+.vixl-cache.seen
 *.vixl.lock
 .env
 

@@ -12,7 +12,7 @@ timelapse brings in the layers (and the pines one tree at a time) in painting or
 The final document holds **3,723 strokes on 26 paint layers**. 3,072 of them are authored strokes; the
 other 651 are copies made when the mountain layers are duplicated for the reflections. All of it stays
 editable in `output/painting.vixl`. The project was first built with Vixl 0.16.0; the committed outputs
-are rebuilt with 0.20.0.
+are rebuilt with 0.27.0.
 
 Run from the repo root: `python explorations/05-generative-painting/build.py` (2 min 41 s with 0.21.0 on a shared 4-core container; about 13 minutes with 0.16.0).
 

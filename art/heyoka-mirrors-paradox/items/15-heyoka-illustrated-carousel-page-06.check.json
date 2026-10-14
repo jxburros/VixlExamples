@@ -11,12 +11,22 @@
         0
       ]
     },
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "design checks"
+      ]
+    },
     "issues": [
       {
         "check": "fonts",
         "severity": "info",
         "layers": [],
-        "message": "2 embedded file(s), 1,153,224 bytes, are not used by the current design (fonts registered but unused: bold, italic); the rest are kept so undo can restore them. Compacting (vixl_history action='compact', CLI vixl compact) drops them together with the undo history.",
+        "message": "2 embedded file(s), 1,153,224 bytes, are not used by the current design (fonts registered but unused: bold, italic); the rest are kept so undo can restore them. Compacting (vixl_document(action='history') action='compact', CLI vixl compact) drops them together with the undo history.",
         "unused_assets": [
           {
             "asset": "fonts/bc25600aa27cd409e1e5b3d86340df3a329bb860fcfbe57a03a95070b229e1b0.ttf",
@@ -38,7 +48,8 @@
           }
         ],
         "bytes": 1153224,
-        "action": "informational"
+        "action": "informational",
+        "rule": "fonts"
       }
     ],
     "checked": {
@@ -52,6 +63,21 @@
       "layers_checked": 8,
       "layers_total": 8,
       "text_layers": 5
+    },
+    "variants": [
+      {
+        "page": "page-06",
+        "passed": true,
+        "errors": 0,
+        "warnings": 0,
+        "issues": 0
+      }
+    ],
+    "coverage": {
+      "variants": 1,
+      "pages": [
+        "page-06"
+      ]
     }
   },
   "readability": {
@@ -65,6 +91,10 @@
       "mode": "still",
       "times": [
         null
+      ],
+      "variants": 1,
+      "pages": [
+        "page-06"
       ]
     },
     "results": [
@@ -73,6 +103,9 @@
         "status": "passed",
         "severity": "error",
         "time": null,
+        "variant": {
+          "page": "page-06"
+        },
         "actual_size": 18,
         "fits": true
       },
@@ -81,6 +114,9 @@
         "status": "passed",
         "severity": "error",
         "time": null,
+        "variant": {
+          "page": "page-06"
+        },
         "actual_size": 53,
         "fits": true
       },
@@ -89,6 +125,9 @@
         "status": "passed",
         "severity": "error",
         "time": null,
+        "variant": {
+          "page": "page-06"
+        },
         "actual_size": 26,
         "fits": true
       },
@@ -97,6 +136,9 @@
         "status": "passed",
         "severity": "error",
         "time": null,
+        "variant": {
+          "page": "page-06"
+        },
         "actual_size": 27,
         "fits": true
       },
@@ -105,9 +147,32 @@
         "status": "passed",
         "severity": "error",
         "time": null,
+        "variant": {
+          "page": "page-06"
+        },
         "actual_size": 17,
         "fits": true
       }
-    ]
+    ],
+    "source": "document",
+    "groups": [
+      {
+        "page": "page-06",
+        "label": "page 6 (page-06)",
+        "status": "passed",
+        "errors": 0,
+        "needs_review": 0
+      }
+    ],
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "suite"
+      ]
+    }
   }
 }

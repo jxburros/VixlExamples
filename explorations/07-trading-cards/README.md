@@ -1,11 +1,11 @@
 # Aetherling Spirits: a data-driven trading-card set
 
-This project is one editable 750×1050 px card template (2.5×3.5 in at 300 dpi) for a set of fantasy "elemental spirit" cards. The data is a 13-row `cards.csv` that includes deliberately awkward rows: a 70-character name, a 380-character flavor text, Latin accents, CJK and emoji, a long rules paragraph, and a row of unfilled placeholder copy. The creature art is also painted with Vixl operations (`art.py`), so there are no external images. The build renders the set from CSV through the CLI in a standard and a holo-foil comp. It then attaches a custom check suite, captures a typed recipe, plans and runs a variation matrix (element × rarity × edition), and runs the whole CSV through a durable checked-production job with repair actions. It finishes with a QA-annotated contact sheet and a CMYK PDF print sheet: 3×3 cards on US Letter with bleed. It was first built with Vixl 0.16.0; the committed outputs are rebuilt with 0.21.0.
+This project is one editable 750×1050 px card template (2.5×3.5 in at 300 dpi) for a set of fantasy "elemental spirit" cards. The data is a 13-row `cards.csv` that includes deliberately awkward rows: a 70-character name, a 380-character flavor text, Latin accents, CJK and emoji, a long rules paragraph, and a row of unfilled placeholder copy. The creature art is also painted with Vixl operations (`art.py`), so there are no external images. The build renders the set from CSV through the CLI in a standard and a holo-foil comp. It then attaches a custom check suite, captures a typed recipe, plans and runs a variation matrix (element × rarity × edition), and runs the whole CSV through a durable checked-production job with repair actions. It finishes with a QA-annotated contact sheet and a CMYK PDF print sheet: 3×3 cards on US Letter with bleed. It was first built with Vixl 0.16.0; the committed outputs are rebuilt with 0.27.0.
 
 Run it from the repository root:
 
 ```bash
-python explorations/07-trading-cards/build.py     # 0.21.0: 1 min 43 s on a shared 4-core container; 0.16.0: ~15 min idle, ~35 min under load
+python explorations/07-trading-cards/build.py     # 0.27.0: 1 min 20 s on a shared 4-core container; 0.16.0: ~15 min idle, ~35 min under load
 ```
 
 | Template (standard comp) | Holo comp, long name (row 6) | Holo comp, CJK + emoji name (row 9) |
@@ -65,7 +65,7 @@ From `output/qa-report.json`. Checked production uses the recipe with static tex
 | 8 | Lantern Moth | **needs_review** | After both repairs the 380-character flavor fits only at 14 px, below the 21 px (5 pt) `flavor-fits` minimum. |
 | 10 | Grimward Sentinel | **needs_review** | The ability text fits only at 18 px, below the 23 px (5.5 pt) `ability-fits` minimum. |
 | 9 | 光の狐 Hikari-no-Kitsune ✨ | **needs_review** (was a false pass) | The CJK and emoji render as tofu boxes in Cinzel and EB Garamond. In 0.16.0 no check noticed and the row completed after `fit-name`. In 0.20.0 the `missing-glyphs` rule of both suites fails, and the card is left off the print sheet (Riftling, row 13, takes its place). |
-| 11 | [CARD NAME] / TBD / Lorem ipsum | completed | **False pass.** `no-placeholders` only knows layout and template blanks. Only my own regex lint in `build.py` flags it. |
+| 11 | [CARD NAME] / TBD / Lorem ipsum | **needs_review** (was a false pass) | Until 0.27 `no-placeholders` only knew layout and template blanks, so only the regex lint in `build.py` flagged this row. 0.27's placeholder check finds the `TBD`, `Lorem ipsum` and `TODO` copy. |
 | 12 | Seraphel, Dawn's Last Light | completed (after `fit-name`) | Fits at a smaller size, above the minimum. |
 | others | | completed | |
 

@@ -8,9 +8,11 @@
       "italic": false,
       "role": "heading",
       "source": {
-        "origin": "cache",
-        "cache_file": "/home/user/Vixl/explorations/01-print-concert-poster/.work/fonts/syne-800.ttf",
-        "cache_dir": "/home/user/Vixl/explorations/01-print-concert-poster/.work/fonts",
+        "origin": "download",
+        "url": "https://fonts.gstatic.com/s/syne/v24/8vIS7w4qzmVxsWxjBZRjr0FKM_24vj6k.ttf",
+        "stylesheet": "https://fonts.googleapis.com/css2?family=Syne:wght@800",
+        "cache_file": "/home/user/VixlExamples/explorations/01-print-concert-poster/.work/fonts/syne-800.ttf",
+        "cache_dir": "/home/user/VixlExamples/explorations/01-print-concert-poster/.work/fonts",
         "cache_dir_from": "VIXL_FONT_CACHE",
         "bundled_fallback": false
       },
@@ -27,9 +29,11 @@
       "italic": false,
       "role": "body",
       "source": {
-        "origin": "cache",
-        "cache_file": "/home/user/Vixl/explorations/01-print-concert-poster/.work/fonts/dm-sans-400.ttf",
-        "cache_dir": "/home/user/Vixl/explorations/01-print-concert-poster/.work/fonts",
+        "origin": "download",
+        "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxhTg.ttf",
+        "stylesheet": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400",
+        "cache_file": "/home/user/VixlExamples/explorations/01-print-concert-poster/.work/fonts/dm-sans-400.ttf",
+        "cache_dir": "/home/user/VixlExamples/explorations/01-print-concert-poster/.work/fonts",
         "cache_dir_from": "VIXL_FONT_CACHE",
         "bundled_fallback": false
       },
@@ -45,7 +49,7 @@
       "heading": "syne-800",
       "body": "dm-sans-400"
     },
-    "origin": "cache",
+    "origin": "download",
     "note": "Layouts now use these fonts by default; pass font/display_font to override."
   },
   "font_install": {
@@ -54,9 +58,11 @@
     "weight": 700,
     "italic": false,
     "source": {
-      "origin": "cache",
-      "cache_file": "/home/user/Vixl/explorations/01-print-concert-poster/.work/fonts/dm-sans-700.ttf",
-      "cache_dir": "/home/user/Vixl/explorations/01-print-concert-poster/.work/fonts",
+      "origin": "download",
+      "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwARZthTg.ttf",
+      "stylesheet": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@700",
+      "cache_file": "/home/user/VixlExamples/explorations/01-print-concert-poster/.work/fonts/dm-sans-700.ttf",
+      "cache_dir": "/home/user/VixlExamples/explorations/01-print-concert-poster/.work/fonts",
       "cache_dir_from": "VIXL_FONT_CACHE",
       "bundled_fallback": false
     },
@@ -104,6 +110,83 @@
         20
       ]
     },
+    "outcome": {
+      "state": "validation_failed",
+      "execution": "completed",
+      "validation": "failed",
+      "review": "required",
+      "review_reasons": [
+        "bounds.cut-off: peak-far-l",
+        "bounds.cut-off: peak-far-r",
+        "bounds.cut-off: peak-near-r",
+        "bounds.cut-off: mountains",
+        "overlap.text-object: sun, badge-text",
+        "overlap.text-object: sun, headliners",
+        "overlap.text-object: sun, support",
+        "overlap.text-object: slice, badge-text",
+        "overlap.text-object: sparkle-2, subtitle",
+        "safe_area.outside: sky",
+        "safe_area.outside: mountains",
+        "safe_area.outside: ground",
+        "safe_area.outside: horizon-line",
+        "safe_area.outside: rung",
+        "safe_area.outside: grid"
+      ],
+      "accepted": [
+        {
+          "rule": "bounds.bleed",
+          "layers": [
+            "haze"
+          ],
+          "reason": "'haze' bleeds off the canvas edge (marked as an intentional crop)"
+        },
+        {
+          "rule": "bounds.bleed",
+          "layers": [
+            "rays"
+          ],
+          "reason": "'rays' bleeds off the canvas edge (artwork running past two edges)"
+        },
+        {
+          "rule": "safe_area.outside",
+          "layers": [
+            "haze"
+          ],
+          "reason": "'haze' extends outside the safe area (intentional crop or bleed)"
+        },
+        {
+          "rule": "safe_area.outside",
+          "layers": [
+            "peak-far-l"
+          ],
+          "reason": "'peak-far-l' extends outside the safe area (intentional crop or bleed)"
+        },
+        {
+          "rule": "safe_area.outside",
+          "layers": [
+            "peak-far-r"
+          ],
+          "reason": "'peak-far-r' extends outside the safe area (intentional crop or bleed)"
+        },
+        {
+          "rule": "safe_area.outside",
+          "layers": [
+            "peak-near-r"
+          ],
+          "reason": "'peak-near-r' extends outside the safe area (intentional crop or bleed)"
+        },
+        {
+          "rule": "safe_area.outside",
+          "layers": [
+            "rays"
+          ],
+          "reason": "'rays' extends outside the safe area (intentional crop or bleed)"
+        }
+      ],
+      "validated_by": [
+        "design checks"
+      ]
+    },
     "issues": [
       {
         "check": "bounds",
@@ -112,6 +195,15 @@
           "haze"
         ],
         "message": "'haze' bleeds off the canvas edge (marked as an intentional crop)",
+        "layer_ids": [
+          "lyr_902e1c13a670e99b"
+        ],
+        "box": [
+          -6,
+          355,
+          1700,
+          1700
+        ],
         "bounds": [
           -6.0,
           355.0,
@@ -119,7 +211,9 @@
           1700.0
         ],
         "intentional": true,
-        "action": "informational"
+        "code": "bleed",
+        "action": "informational",
+        "rule": "bounds.bleed"
       },
       {
         "check": "bounds",
@@ -128,13 +222,39 @@
           "peak-far-l"
         ],
         "message": "'peak-far-l' is cut off by the canvas edge; if the crop is deliberate, mark it with layer-intent allow_crop",
+        "layer_ids": [
+          "lyr_2ca9ddb0196d131b"
+        ],
+        "box": [
+          -180,
+          1130,
+          900,
+          380
+        ],
         "bounds": [
           -180.0,
           1130.0,
           900.0,
           380.0
         ],
-        "action": "review"
+        "code": "cut-off",
+        "action": "review",
+        "rule": "bounds.cut-off",
+        "measured": {
+          "actual": [
+            -180.0,
+            1130.0,
+            900.0,
+            380.0
+          ],
+          "expected": [
+            0,
+            0,
+            1688,
+            2588
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "bounds",
@@ -143,13 +263,39 @@
           "peak-far-r"
         ],
         "message": "'peak-far-r' is cut off by the canvas edge; if the crop is deliberate, mark it with layer-intent allow_crop",
+        "layer_ids": [
+          "lyr_d023a72bebfd1b93"
+        ],
+        "box": [
+          980,
+          1070,
+          1000,
+          440
+        ],
         "bounds": [
           980.0,
           1070.0,
           1000.0,
           440.0
         ],
-        "action": "review"
+        "code": "cut-off",
+        "action": "review",
+        "rule": "bounds.cut-off",
+        "measured": {
+          "actual": [
+            980.0,
+            1070.0,
+            1000.0,
+            440.0
+          ],
+          "expected": [
+            0,
+            0,
+            1688,
+            2588
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "bounds",
@@ -158,13 +304,39 @@
           "peak-near-r"
         ],
         "message": "'peak-near-r' is cut off by the canvas edge; if the crop is deliberate, mark it with layer-intent allow_crop",
+        "layer_ids": [
+          "lyr_8327e1e347f3990e"
+        ],
+        "box": [
+          1180,
+          1290,
+          620,
+          220
+        ],
         "bounds": [
           1180.0,
           1290.0,
           620.0,
           220.0
         ],
-        "action": "review"
+        "code": "cut-off",
+        "action": "review",
+        "rule": "bounds.cut-off",
+        "measured": {
+          "actual": [
+            1180.0,
+            1290.0,
+            620.0,
+            220.0
+          ],
+          "expected": [
+            0,
+            0,
+            1688,
+            2588
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "bounds",
@@ -173,13 +345,39 @@
           "mountains"
         ],
         "message": "'mountains' is cut off by the canvas edge; if the crop is deliberate, mark it with layer-intent allow_crop",
+        "layer_ids": [
+          "lyr_efe60c8dda4897f9"
+        ],
+        "box": [
+          -180,
+          1070,
+          2160,
+          440
+        ],
         "bounds": [
           -180.0,
           1070.0,
           2160.0,
           440.0
         ],
-        "action": "review"
+        "code": "cut-off",
+        "action": "review",
+        "rule": "bounds.cut-off",
+        "measured": {
+          "actual": [
+            -180.0,
+            1070.0,
+            2160.0,
+            440.0
+          ],
+          "expected": [
+            0,
+            0,
+            1688,
+            2588
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "bounds",
@@ -188,6 +386,15 @@
           "rays"
         ],
         "message": "'rays' bleeds off the canvas edge (artwork running past two edges)",
+        "layer_ids": [
+          "lyr_d2ed6c4d9f7dc486"
+        ],
+        "box": [
+          0,
+          1505,
+          1688,
+          1083
+        ],
         "bounds": [
           -1858.3,
           1503.5,
@@ -195,7 +402,9 @@
           1086.0
         ],
         "intentional": true,
-        "action": "informational"
+        "code": "bleed",
+        "action": "informational",
+        "rule": "bounds.bleed"
       },
       {
         "check": "overlap",
@@ -204,14 +413,32 @@
           "sun",
           "badge-text"
         ],
-        "message": "'sun' and 'badge-text' overlap by 4304 px (54.5% of the smaller layer)",
+        "message": "'sun' and 'badge-text' overlap by 4121 px (54.5% of the smaller layer)",
+        "layer_ids": [
+          "lyr_289e2810bce52790",
+          "lyr_d9aec44ff2e0acaf"
+        ],
+        "box": [
+          344,
+          855,
+          1000,
+          1000
+        ],
         "region": [
           1250,
           1325,
           253,
           149
         ],
-        "action": "review"
+        "code": "text-object",
+        "pixels": 4121,
+        "action": "review",
+        "rule": "overlap.text-object",
+        "measured": {
+          "actual": 4121,
+          "expected": null,
+          "unit": "px"
+        }
       },
       {
         "check": "overlap",
@@ -220,14 +447,32 @@
           "sun",
           "headliners"
         ],
-        "message": "'sun' and 'headliners' overlap by 35004 px (69.6% of the smaller layer)",
+        "message": "'sun' and 'headliners' overlap by 34616 px (69.6% of the smaller layer)",
+        "layer_ids": [
+          "lyr_289e2810bce52790",
+          "lyr_13edb6c6656e006e"
+        ],
+        "box": [
+          344,
+          855,
+          1000,
+          1000
+        ],
         "region": [
           232,
           1711,
           1224,
           131
         ],
-        "action": "review"
+        "code": "text-object",
+        "pixels": 34616,
+        "action": "review",
+        "rule": "overlap.text-object",
+        "measured": {
+          "actual": 34616,
+          "expected": null,
+          "unit": "px"
+        }
       },
       {
         "check": "overlap",
@@ -236,14 +481,32 @@
           "sun",
           "support"
         ],
-        "message": "'sun' and 'support' overlap by 3026 px (9.5% of the smaller layer)",
+        "message": "'sun' and 'support' overlap by 3025 px (9.5% of the smaller layer)",
+        "layer_ids": [
+          "lyr_289e2810bce52790",
+          "lyr_c8c4424c47f2fa21"
+        ],
+        "box": [
+          344,
+          855,
+          1000,
+          1000
+        ],
         "region": [
           234,
           1882,
           1220,
           112
         ],
-        "action": "review"
+        "code": "text-object",
+        "pixels": 3025,
+        "action": "review",
+        "rule": "overlap.text-object",
+        "measured": {
+          "actual": 3025,
+          "expected": null,
+          "unit": "px"
+        }
       },
       {
         "check": "overlap",
@@ -252,14 +515,32 @@
           "slice",
           "badge-text"
         ],
-        "message": "'slice' and 'badge-text' overlap by 1318 px (16.7% of the smaller layer)",
+        "message": "'slice' and 'badge-text' overlap by 1257 px (16.6% of the smaller layer)",
+        "layer_ids": [
+          "lyr_856e806975608462",
+          "lyr_d9aec44ff2e0acaf"
+        ],
+        "box": [
+          324,
+          1235,
+          1040,
+          350
+        ],
         "region": [
           1250,
           1325,
           114,
           149
         ],
-        "action": "review"
+        "code": "text-object",
+        "pixels": 1257,
+        "action": "review",
+        "rule": "overlap.text-object",
+        "measured": {
+          "actual": 1257,
+          "expected": null,
+          "unit": "px"
+        }
       },
       {
         "check": "overlap",
@@ -269,13 +550,31 @@
           "subtitle"
         ],
         "message": "'sparkle-2' and 'subtitle' overlap by 549 px (100.0% of the smaller layer)",
+        "layer_ids": [
+          "lyr_9f9d57a16b9b68d0",
+          "lyr_da8b72615c9c57ec"
+        ],
+        "box": [
+          1240,
+          470,
+          60,
+          60
+        ],
         "region": [
           1168,
           398,
           204,
           204
         ],
-        "action": "review"
+        "code": "text-object",
+        "pixels": 549,
+        "action": "review",
+        "rule": "overlap.text-object",
+        "measured": {
+          "actual": 549,
+          "expected": null,
+          "unit": "px"
+        }
       },
       {
         "check": "safe_area",
@@ -284,6 +583,15 @@
           "sky"
         ],
         "message": "'sky' extends outside the safe area",
+        "layer_ids": [
+          "lyr_cfab72fc3475be99"
+        ],
+        "box": [
+          0,
+          0,
+          1688,
+          1545
+        ],
         "bounds": [
           0,
           0,
@@ -296,7 +604,24 @@
           1574,
           2474
         ],
-        "action": "review"
+        "code": "outside",
+        "action": "review",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            0,
+            0,
+            1688,
+            1545
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -305,6 +630,15 @@
           "haze"
         ],
         "message": "'haze' extends outside the safe area (intentional crop or bleed)",
+        "layer_ids": [
+          "lyr_902e1c13a670e99b"
+        ],
+        "box": [
+          -6,
+          355,
+          1700,
+          1700
+        ],
         "bounds": [
           -6,
           355,
@@ -317,8 +651,25 @@
           1574,
           2474
         ],
+        "code": "outside",
         "intentional": true,
-        "action": "informational"
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            -6,
+            355,
+            1700,
+            1700
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -327,6 +678,15 @@
           "peak-far-l"
         ],
         "message": "'peak-far-l' extends outside the safe area (intentional crop or bleed)",
+        "layer_ids": [
+          "lyr_2ca9ddb0196d131b"
+        ],
+        "box": [
+          -180,
+          1130,
+          900,
+          380
+        ],
         "bounds": [
           -180,
           1130,
@@ -339,8 +699,25 @@
           1574,
           2474
         ],
+        "code": "outside",
         "intentional": true,
-        "action": "informational"
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            -180,
+            1130,
+            900,
+            380
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -349,6 +726,15 @@
           "peak-far-r"
         ],
         "message": "'peak-far-r' extends outside the safe area (intentional crop or bleed)",
+        "layer_ids": [
+          "lyr_d023a72bebfd1b93"
+        ],
+        "box": [
+          980,
+          1070,
+          1000,
+          440
+        ],
         "bounds": [
           980,
           1070,
@@ -361,8 +747,25 @@
           1574,
           2474
         ],
+        "code": "outside",
         "intentional": true,
-        "action": "informational"
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            980,
+            1070,
+            1000,
+            440
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -371,6 +774,15 @@
           "peak-near-r"
         ],
         "message": "'peak-near-r' extends outside the safe area (intentional crop or bleed)",
+        "layer_ids": [
+          "lyr_8327e1e347f3990e"
+        ],
+        "box": [
+          1180,
+          1290,
+          620,
+          220
+        ],
         "bounds": [
           1180,
           1290,
@@ -383,8 +795,25 @@
           1574,
           2474
         ],
+        "code": "outside",
         "intentional": true,
-        "action": "informational"
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            1180,
+            1290,
+            620,
+            220
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -393,6 +822,15 @@
           "mountains"
         ],
         "message": "'mountains' extends outside the safe area",
+        "layer_ids": [
+          "lyr_efe60c8dda4897f9"
+        ],
+        "box": [
+          -180,
+          1070,
+          2160,
+          440
+        ],
         "bounds": [
           -180,
           1070,
@@ -405,7 +843,24 @@
           1574,
           2474
         ],
-        "action": "review"
+        "code": "outside",
+        "action": "review",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            -180,
+            1070,
+            2160,
+            440
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -414,6 +869,15 @@
           "ground"
         ],
         "message": "'ground' extends outside the safe area",
+        "layer_ids": [
+          "lyr_6ae4d626a77c7275"
+        ],
+        "box": [
+          0,
+          1505,
+          1688,
+          1083
+        ],
         "bounds": [
           0,
           1505,
@@ -426,7 +890,24 @@
           1574,
           2474
         ],
-        "action": "review"
+        "code": "outside",
+        "action": "review",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            0,
+            1505,
+            1688,
+            1083
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -435,6 +916,15 @@
           "horizon-line"
         ],
         "message": "'horizon-line' extends outside the safe area",
+        "layer_ids": [
+          "lyr_ca176ff06bc8dda0"
+        ],
+        "box": [
+          0,
+          1505,
+          1688,
+          4
+        ],
         "bounds": [
           0,
           1505,
@@ -447,7 +937,24 @@
           1574,
           2474
         ],
-        "action": "review"
+        "code": "outside",
+        "action": "review",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            0,
+            1505,
+            1688,
+            4
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -456,6 +963,15 @@
           "rung"
         ],
         "message": "'rung' extends outside the safe area",
+        "layer_ids": [
+          "lyr_29bf1b9983be6ad4"
+        ],
+        "box": [
+          0,
+          1523,
+          1688,
+          1021
+        ],
         "bounds": [
           0,
           1523,
@@ -468,7 +984,24 @@
           1574,
           2474
         ],
-        "action": "review"
+        "code": "outside",
+        "action": "review",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            0,
+            1523,
+            1688,
+            1021
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -477,6 +1010,15 @@
           "rays"
         ],
         "message": "'rays' extends outside the safe area (intentional crop or bleed)",
+        "layer_ids": [
+          "lyr_d2ed6c4d9f7dc486"
+        ],
+        "box": [
+          0,
+          1505,
+          1688,
+          1083
+        ],
         "bounds": [
           -1859,
           1503,
@@ -489,8 +1031,25 @@
           1574,
           2474
         ],
+        "code": "outside",
         "intentional": true,
-        "action": "informational"
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            -1859,
+            1503,
+            5406,
+            1087
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -499,6 +1058,15 @@
           "grid"
         ],
         "message": "'grid' extends outside the safe area",
+        "layer_ids": [
+          "lyr_f0a92fbe4ba1229d"
+        ],
+        "box": [
+          0,
+          1505,
+          1688,
+          1083
+        ],
         "bounds": [
           0,
           1505,
@@ -511,7 +1079,24 @@
           1574,
           2474
         ],
-        "action": "review"
+        "code": "outside",
+        "action": "review",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            0,
+            1505,
+            1688,
+            1083
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -520,6 +1105,15 @@
           "title"
         ],
         "message": "'title' extends outside the safe area",
+        "layer_ids": [
+          "lyr_379ed0832e3d15b5"
+        ],
+        "box": [
+          54,
+          127,
+          1580,
+          330
+        ],
         "bounds": [
           54,
           127,
@@ -532,7 +1126,30 @@
           1574,
           2474
         ],
-        "action": "fix"
+        "code": "outside",
+        "action": "fix",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            54,
+            127,
+            1580,
+            330
+          ],
+          "expected": [
+            57,
+            57,
+            1574,
+            2474
+          ],
+          "unit": "box"
+        },
+        "repair": {
+          "kind": "safe-area-nudge",
+          "available": false,
+          "operations": [],
+          "reason": "the layer (1580\u00d7330) is larger than the area (1574\u00d72474); shrink it first"
+        }
       },
       {
         "check": "print",
@@ -541,13 +1158,29 @@
           "title"
         ],
         "message": "'title' is outside the live area (57px from the edge) and may be trimmed",
+        "layer_ids": [
+          "lyr_379ed0832e3d15b5"
+        ],
+        "box": [
+          54,
+          127,
+          1580,
+          330
+        ],
         "live_area": [
           57,
           57,
           1574,
           2474
         ],
-        "action": "fix"
+        "action": "fix",
+        "rule": "print",
+        "repair": {
+          "kind": null,
+          "available": false,
+          "operations": [],
+          "reason": "no mechanical repair for this rule; see the message for the next step"
+        }
       }
     ],
     "checked": {
@@ -574,6 +1207,16 @@
       "review": [],
       "informational": []
     },
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "design checks"
+      ]
+    },
     "issues": [],
     "checked": {
       "checks": [
@@ -586,15 +1229,18 @@
   },
   "icc_profile": "default_cmyk.icc",
   "export_png": {
-    "output": "/home/user/Vixl/explorations/01-print-concert-poster/output/poster-rgb.png",
-    "bytes": 2278137,
+    "output": "/home/user/VixlExamples/explorations/01-print-concert-poster/output/poster-rgb.png",
+    "bytes": 2277436,
     "warnings": [
       "PNG is 2.2 MB; messaging apps often recompress or reject images this large. Texture looks (grain) add noise that PNG cannot compress: lower their amount, or export JPEG or WebP."
     ]
   },
   "export_pdf": {
-    "output": "/home/user/Vixl/explorations/01-print-concert-poster/output/poster-cmyk.pdf",
-    "bytes": 2352950,
+    "output": "/home/user/VixlExamples/explorations/01-print-concert-poster/output/poster-cmyk.pdf",
+    "bytes": 2372206,
+    "warnings": [
+      "CMYK conversion has no ICC profile; colors may shift or lose saturation. Supply icc_profile (CLI --icc) for the intended printer/paper."
+    ],
     "pages": 1,
     "content": "vector",
     "color_space": "cmyk",
@@ -615,38 +1261,23 @@
     "content_reason": "default: vector, with images only for what PDF cannot draw (see raster_fallbacks)"
   },
   "export_jpg": {
-    "output": "/home/user/Vixl/explorations/01-print-concert-poster/output/poster-cmyk-swop.jpg",
-    "bytes": 2564667
+    "output": "/home/user/VixlExamples/explorations/01-print-concert-poster/output/poster-cmyk-swop.jpg",
+    "bytes": 2566082
   },
   "export_svg": {
-    "output": "/home/user/Vixl/explorations/01-print-concert-poster/output/poster.svg",
-    "bytes": 249029,
+    "output": "/home/user/VixlExamples/explorations/01-print-concert-poster/output/poster.svg",
+    "bytes": 292167,
     "svg": {
       "vector_only": true,
       "raster_fallbacks": []
     }
   },
   "export_svg_full_comp": {
-    "output": "/home/user/Vixl/explorations/01-print-concert-poster/.work/poster-fullcomp.svg",
-    "bytes": 10852273,
+    "output": "/home/user/VixlExamples/explorations/01-print-concert-poster/.work/poster-fullcomp.svg",
+    "bytes": 11080596,
     "svg": {
       "vector_only": false,
       "raster_fallbacks": [
-        {
-          "layer": "haze",
-          "reason": "backdrop-dependent blend or adjustment requires document rasterization",
-          "effects": []
-        },
-        {
-          "layer": "sun-slices",
-          "reason": "backdrop-dependent blend or adjustment requires document rasterization",
-          "effects": []
-        },
-        {
-          "layer": "grid",
-          "reason": "backdrop-dependent blend or adjustment requires document rasterization",
-          "effects": []
-        },
         {
           "layer": "vignette",
           "reason": "backdrop-dependent blend or adjustment requires document rasterization",
@@ -674,8 +1305,8 @@
       150,
       150
     ],
-    "max_total_ink_pct": 339.6,
-    "p99_total_ink_pct": 302.4
+    "max_total_ink_pct": 334.9,
+    "p99_total_ink_pct": 302.7
   },
   "pdf": {
     "header": "%PDF-1.7",
@@ -684,7 +1315,7 @@
     "MediaBox": "/MediaBox [0 0 810 1242] /Resources <</X"
   },
   "svg": {
-    "bytes": 249029,
+    "bytes": 292138,
     "image_elements": 0,
     "path_elements": 486
   },
@@ -695,8 +1326,8 @@
       "pct_pixels_changed_gt8": 0.0
     },
     "swop_icc_perceptual": {
-      "mean_abs_rgb": 13.32,
-      "max_abs_rgb": 68,
+      "mean_abs_rgb": 13.29,
+      "max_abs_rgb": 69,
       "pct_pixels_changed_gt8": 91.4
     }
   }

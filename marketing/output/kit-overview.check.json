@@ -25,7 +25,7 @@
       "check": "fonts",
       "severity": "info",
       "layers": [],
-      "message": "1 embedded file(s), 112,204 bytes, are not used by the current design (fonts registered but unused: jetbrains-mono-500); the rest are kept so undo can restore them. Compacting (vixl_history action='compact', CLI vixl compact) drops them together with the undo history.",
+      "message": "1 embedded file(s), 112,204 bytes, are not used by the current design (fonts registered but unused: jetbrains-mono-500); the rest are kept so undo can restore them. Compacting (vixl_document(action='history') action='compact', CLI vixl compact) drops them together with the undo history.",
       "unused_assets": [
         {
           "asset": "fonts/3386a05f6ece969e4537de6be894170d20558e82f7d56c8c5d332972ef172160.ttf",

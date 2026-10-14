@@ -11,6 +11,19 @@
     ],
     "informational": []
   },
+  "outcome": {
+    "state": "needs_review",
+    "execution": "completed",
+    "validation": "passed",
+    "review": "required",
+    "review_reasons": [
+      "safe_area.outside: logo",
+      "print: hero"
+    ],
+    "validated_by": [
+      "design checks"
+    ]
+  },
   "issues": [
     {
       "check": "safe_area",
@@ -19,6 +32,15 @@
         "logo"
       ],
       "message": "'logo' extends outside the safe area",
+      "layer_ids": [
+        "lyr_da68cea215b070a3"
+      ],
+      "box": [
+        2195,
+        110,
+        300,
+        300
+      ],
       "bounds": [
         2195,
         110,
@@ -26,12 +48,29 @@
         300
       ],
       "safe_area": [
-        113,
-        113,
-        2400,
-        3150
+        112.5,
+        112.5,
+        2400.0,
+        3150.0
       ],
-      "action": "review"
+      "code": "outside",
+      "action": "review",
+      "rule": "safe_area.outside",
+      "measured": {
+        "actual": [
+          2195,
+          110,
+          300,
+          300
+        ],
+        "expected": [
+          112.5,
+          112.5,
+          2400.0,
+          3150.0
+        ],
+        "unit": "box"
+      }
     },
     {
       "check": "print",
@@ -40,8 +79,18 @@
         "hero"
       ],
       "message": "'hero' prints at about 152 ppi (aim for 200+); use a larger image or place it smaller",
+      "layer_ids": [
+        "lyr_e4ad353d43a00c06"
+      ],
+      "box": [
+        131,
+        480,
+        2364,
+        1440
+      ],
       "effective_ppi": 152,
-      "action": "review"
+      "action": "review",
+      "rule": "print"
     }
   ],
   "checked": {

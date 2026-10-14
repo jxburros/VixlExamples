@@ -2,7 +2,7 @@
 
 An 8-second, 1080×1080, 30 fps product-launch animation for a fictional smart ring, "HALO". The
 film is built entirely from editable Vixl layers and timeline tracks. It was first built with Vixl
-0.16.0; the committed outputs are rebuilt with 0.21.0. Act one stacks three words
+0.16.0; the committed outputs are rebuilt with 0.27.0. Act one stacks three words
 ("SLEEP. MOVE. RECOVER.") that rise in on a staggered motion recipe, recolour, and leave upwards.
 In act two the canvas shifts from night to violet, and a glowing lime ring springs open with
 `elastic-out` while its blur clears. The letters of HALO drop in one by one on a `spring`

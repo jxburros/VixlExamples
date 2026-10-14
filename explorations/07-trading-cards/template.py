@@ -68,8 +68,8 @@ def template_ops(art_asset):
                       "stops": [{"offset": 0, "color": "${element_light}"}, {"offset": 0.45, "color": "${element_color}"},
                                 {"offset": 1, "color": "${element_color}"}]}},
         {"type": "shape", "name": "panel", "shape": "rounded-rectangle", "radius": 26, "width": CW - 44,
-         "height": 982, "x": 22, "y": 22, "fill": "${element_dark}"},
-        {"type": "gradient", "name": "panel-glow", "direction": "radial", "width": CW - 44, "height": 982,
+         "height": 962, "x": 22, "y": 22, "fill": "${element_dark}"},
+        {"type": "gradient", "name": "panel-glow", "direction": "radial", "width": CW - 44, "height": 962,
          "x": 22, "y": 22, "stops": [{"offset": 0, "color": "alpha(${element_color}, 0.35)"},
                                      {"offset": 1, "color": "alpha(${element_dark}, 0)"}]},
         {"type": "clip", "target": "panel-glow", "base": "panel"},
@@ -151,9 +151,10 @@ def template_ops(art_asset):
             {"type": "style-apply", "target": f"{key}-value", "name": "centered", "kind": "paragraph"},
             {"type": "text-layout", "target": f"{key}-value", "width": 76, "height": 56},
         ]
+    # The footer sits on the frame below the panel, inside the 38 px safe margin.
     ops += [
         {"type": "text", "name": "footer", "text": "AETHERLING SPIRITS · ${set_no}/013 · ${edition}",
-         "font": "body", "x": 0, "y": 1010, "size": 25, "color": "#1a1208"},
+         "font": "body", "x": 0, "y": 990, "size": 24, "color": "#1a1208"},
         {"type": "constrain", "target": "footer", "constraints": {"center-x": "canvas.center-x"}},
     ]
     # Holo-foil layers (hidden in the "standard" comp).

@@ -11,6 +11,18 @@
    ],
    "informational": []
   },
+  "outcome": {
+   "state": "needs_review",
+   "execution": "completed",
+   "validation": "passed",
+   "review": "required",
+   "review_reasons": [
+    "overlap.text-object: spark-3, word-2"
+   ],
+   "validated_by": [
+    "design checks"
+   ]
+  },
   "issues": [
    {
     "check": "overlap",
@@ -19,14 +31,32 @@
      "spark-3",
      "word-2"
     ],
-    "message": "'spark-3' and 'word-2' overlap by 70 px (100.0% of the smaller layer)",
+    "message": "'spark-3' and 'word-2' overlap by 69 px (100.0% of the smaller layer)",
+    "layer_ids": [
+     "lyr_b88a99316d7aaac4",
+     "lyr_eeaaeea69733a754"
+    ],
+    "box": [
+     880,
+     745,
+     9,
+     10
+    ],
     "region": [
      880,
      745,
      9,
      10
     ],
-    "action": "review"
+    "code": "text-object",
+    "pixels": 69,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 69,
+     "expected": null,
+     "unit": "px"
+    }
    }
   ],
   "checked": {
@@ -42,18 +72,56 @@
  },
  "3.6s": {
   "passed": false,
-  "errors": 1,
-  "warnings": 1,
+  "errors": 6,
+  "warnings": 7,
   "info": 1,
   "by_action": {
    "fix": [
-    2
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
    ],
    "review": [
-    1
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
    ],
    "informational": [
     0
+   ]
+  },
+  "outcome": {
+   "state": "validation_failed",
+   "execution": "completed",
+   "validation": "failed",
+   "review": "required",
+   "review_reasons": [
+    "bounds.cut-off: ticks",
+    "overlap.text-object: ticks, word-0",
+    "overlap.text-object: ticks, word-1",
+    "overlap.text-object: ticks, word-2",
+    "overlap.text-object: ring, word-0",
+    "overlap.text-object: ring, word-1",
+    "overlap.text-object: ring, word-2"
+   ],
+   "accepted": [
+    {
+     "rule": "bounds.bleed",
+     "layers": [
+      "glow"
+     ],
+     "reason": "'glow' bleeds off the canvas edge (marked as an intentional crop)"
+    }
+   ],
+   "validated_by": [
+    "design checks"
    ]
   },
   "issues": [
@@ -64,6 +132,15 @@
      "glow"
     ],
     "message": "'glow' bleeds off the canvas edge (marked as an intentional crop)",
+    "layer_ids": [
+     "lyr_104a1130d0a2335f"
+    ],
+    "box": [
+     60,
+     -100,
+     960,
+     960
+    ],
     "bounds": [
      60.0,
      -100.0,
@@ -71,7 +148,9 @@
      960.0
     ],
     "intentional": true,
-    "action": "informational"
+    "code": "bleed",
+    "action": "informational",
+    "rule": "bounds.bleed"
    },
    {
     "check": "bounds",
@@ -80,30 +159,498 @@
      "ticks"
     ],
     "message": "'ticks' is cut off by the canvas edge; if the crop is deliberate, mark it with layer-intent allow_crop",
+    "layer_ids": [
+     "lyr_61520713fc6bf0c2"
+    ],
+    "box": [
+     133,
+     -27,
+     814,
+     814
+    ],
     "bounds": [
      134.68649316744936,
      -25.313506832550672,
      810.6270136651013,
      810.6270136651015
     ],
-    "action": "review"
+    "code": "cut-off",
+    "action": "review",
+    "rule": "bounds.cut-off",
+    "measured": {
+     "actual": [
+      134.68649316744936,
+      -25.313506832550672,
+      810.6270136651013,
+      810.6270136651015
+     ],
+     "expected": [
+      0,
+      0,
+      1080,
+      1080
+     ],
+     "unit": "box"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "ticks",
+     "word-0"
+    ],
+    "message": "'ticks' and 'word-0' overlap by 301 px (2.3% of the smaller layer)",
+    "layer_ids": [
+     "lyr_61520713fc6bf0c2",
+     "lyr_758242bd468d251b"
+    ],
+    "box": [
+     133,
+     -27,
+     814,
+     814
+    ],
+    "region": [
+     134,
+     178,
+     577,
+     136
+    ],
+    "code": "text-object",
+    "pixels": 301,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 301,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "ticks",
+     "word-1"
+    ],
+    "message": "'ticks' and 'word-1' overlap by 804 px (6.2% of the smaller layer)",
+    "layer_ids": [
+     "lyr_61520713fc6bf0c2",
+     "lyr_7d0d40fb84bbc6c2"
+    ],
+    "box": [
+     133,
+     -27,
+     814,
+     814
+    ],
+    "region": [
+     134,
+     352,
+     567,
+     136
+    ],
+    "code": "text-object",
+    "pixels": 804,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 804,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "ticks",
+     "word-2"
+    ],
+    "message": "'ticks' and 'word-2' overlap by 1305 px (10.1% of the smaller layer)",
+    "layer_ids": [
+     "lyr_61520713fc6bf0c2",
+     "lyr_eeaaeea69733a754"
+    ],
+    "box": [
+     133,
+     -27,
+     814,
+     814
+    ],
+    "region": [
+     134,
+     526,
+     812,
+     136
+    ],
+    "code": "text-object",
+    "pixels": 1305,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 1305,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "ring",
+     "word-0"
+    ],
+    "message": "'ring' and 'word-0' overlap by 5436 px (12.6% of the smaller layer)",
+    "layer_ids": [
+     "lyr_22b622e5e39a3b67",
+     "lyr_758242bd468d251b"
+    ],
+    "box": [
+     260,
+     100,
+     560,
+     560
+    ],
+    "region": [
+     176,
+     178,
+     535,
+     136
+    ],
+    "code": "text-object",
+    "pixels": 5436,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 5436,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "ring",
+     "word-1"
+    ],
+    "message": "'ring' and 'word-1' overlap by 4150 px (9.9% of the smaller layer)",
+    "layer_ids": [
+     "lyr_22b622e5e39a3b67",
+     "lyr_7d0d40fb84bbc6c2"
+    ],
+    "box": [
+     260,
+     100,
+     560,
+     560
+    ],
+    "region": [
+     176,
+     352,
+     525,
+     136
+    ],
+    "code": "text-object",
+    "pixels": 4150,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 4150,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "ring",
+     "word-2"
+    ],
+    "message": "'ring' and 'word-2' overlap by 13233 px (20.2% of the smaller layer)",
+    "layer_ids": [
+     "lyr_22b622e5e39a3b67",
+     "lyr_eeaaeea69733a754"
+    ],
+    "box": [
+     260,
+     100,
+     560,
+     560
+    ],
+    "region": [
+     176,
+     526,
+     728,
+     136
+    ],
+    "code": "text-object",
+    "pixels": 13233,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 13233,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "error",
+    "layers": [
+     "word-1",
+     "letter-H"
+    ],
+    "message": "'word-1' and 'letter-H' overlap by 3445 px (55.0% of the smaller layer)",
+    "layer_ids": [
+     "lyr_7d0d40fb84bbc6c2",
+     "lyr_57b138b8d617b24a"
+    ],
+    "box": [
+     66,
+     352,
+     635,
+     136
+    ],
+    "region": [
+     332,
+     352,
+     114,
+     77
+    ],
+    "code": "text-text",
+    "pixels": 3445,
+    "action": "fix",
+    "rule": "overlap.text-text",
+    "measured": {
+     "actual": 3445,
+     "expected": null,
+     "unit": "px"
+    },
+    "repair": {
+     "kind": null,
+     "available": false,
+     "operations": [],
+     "reason": "no mechanical repair for this rule; see the message for the next step"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "error",
+    "layers": [
+     "word-1",
+     "letter-A"
+    ],
+    "message": "'word-1' and 'letter-A' overlap by 1772 px (30.2% of the smaller layer)",
+    "layer_ids": [
+     "lyr_7d0d40fb84bbc6c2",
+     "lyr_3d250492e969508e"
+    ],
+    "box": [
+     66,
+     352,
+     635,
+     136
+    ],
+    "region": [
+     446,
+     352,
+     112,
+     77
+    ],
+    "code": "text-text",
+    "pixels": 1772,
+    "action": "fix",
+    "rule": "overlap.text-text",
+    "measured": {
+     "actual": 1772,
+     "expected": null,
+     "unit": "px"
+    },
+    "repair": {
+     "kind": null,
+     "available": false,
+     "operations": [],
+     "reason": "no mechanical repair for this rule; see the message for the next step"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "error",
+    "layers": [
+     "word-1",
+     "letter-L"
+    ],
+    "message": "'word-1' and 'letter-L' overlap by 2101 px (59.0% of the smaller layer)",
+    "layer_ids": [
+     "lyr_7d0d40fb84bbc6c2",
+     "lyr_2bea2a9e7d717476"
+    ],
+    "box": [
+     66,
+     352,
+     635,
+     136
+    ],
+    "region": [
+     557,
+     352,
+     80,
+     77
+    ],
+    "code": "text-text",
+    "pixels": 2101,
+    "action": "fix",
+    "rule": "overlap.text-text",
+    "measured": {
+     "actual": 2101,
+     "expected": null,
+     "unit": "px"
+    },
+    "repair": {
+     "kind": null,
+     "available": false,
+     "operations": [],
+     "reason": "no mechanical repair for this rule; see the message for the next step"
+    }
    },
    {
     "check": "contrast",
     "severity": "error",
     "layers": [
-     "badge-label"
+     "word-0"
     ],
-    "message": "'badge-label' contrast is 1.44:1 or lower for a tenth of its glyph pixels (minimum 1.42:1, weakest at x 786\u2013824, y 160\u2013177); needs 3:1",
+    "message": "'word-0' contrast is 2.20:1 or lower for a tenth of its glyph pixels (minimum 1.00:1, weakest at x 219\u2013586, y 182\u2013310); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+    "layer_ids": [
+     "lyr_758242bd468d251b"
+    ],
+    "box": [
+     66,
+     178,
+     645,
+     136
+    ],
     "region": [
-     786,
-     160,
-     39,
-     18
+     219,
+     182,
+     368,
+     129
     ],
-    "contrast": 1.436,
+    "contrast": 2.202,
     "required": 3.0,
-    "action": "fix"
+    "code": "text-contrast",
+    "action": "fix",
+    "rule": "contrast.text-contrast",
+    "measured": {
+     "actual": 2.202,
+     "expected": 3.0,
+     "unit": ":1"
+    },
+    "repair": {
+     "kind": "contrast-ink",
+     "available": true,
+     "operations": [
+      {
+       "type": "text-set",
+       "target": "lyr_758242bd468d251b",
+       "color": "#f7f4ef"
+      }
+     ],
+     "reason": "move the text colour 25% toward the role ink (white): about 12.7:1 against the backdrop, needs 3:1"
+    }
+   },
+   {
+    "check": "contrast",
+    "severity": "error",
+    "layers": [
+     "word-1"
+    ],
+    "message": "'word-1' contrast is 1.60:1 or lower for a tenth of its glyph pixels (minimum 1.00:1, weakest at x 211\u2013561, y 356\u2013485); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+    "layer_ids": [
+     "lyr_7d0d40fb84bbc6c2"
+    ],
+    "box": [
+     66,
+     352,
+     635,
+     136
+    ],
+    "region": [
+     211,
+     356,
+     351,
+     130
+    ],
+    "contrast": 1.598,
+    "required": 3.0,
+    "code": "text-contrast",
+    "action": "fix",
+    "rule": "contrast.text-contrast",
+    "measured": {
+     "actual": 1.598,
+     "expected": 3.0,
+     "unit": ":1"
+    },
+    "repair": {
+     "kind": "contrast-ink",
+     "available": true,
+     "operations": [
+      {
+       "type": "text-set",
+       "target": "lyr_7d0d40fb84bbc6c2",
+       "color": "#c9bcff"
+      }
+     ],
+     "reason": "move the text colour 25% toward the role ink (white): about 7.0:1 against the backdrop, needs 3:1"
+    }
+   },
+   {
+    "check": "contrast",
+    "severity": "error",
+    "layers": [
+     "word-2"
+    ],
+    "message": "'word-2' contrast is 1.30:1 or lower for a tenth of its glyph pixels (minimum 1.00:1, weakest at x 257\u2013826, y 530\u2013660); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+    "layer_ids": [
+     "lyr_eeaaeea69733a754"
+    ],
+    "box": [
+     66,
+     526,
+     972,
+     136
+    ],
+    "region": [
+     257,
+     530,
+     570,
+     131
+    ],
+    "contrast": 1.296,
+    "required": 3.0,
+    "code": "text-contrast",
+    "action": "fix",
+    "rule": "contrast.text-contrast",
+    "measured": {
+     "actual": 1.296,
+     "expected": 3.0,
+     "unit": ":1"
+    },
+    "repair": {
+     "kind": "contrast-ink",
+     "available": true,
+     "operations": [
+      {
+       "type": "text-set",
+       "target": "lyr_eeaaeea69733a754",
+       "color": "#ff8f7a"
+      }
+     ],
+     "reason": "move the text colour 25% toward the role ink (white): about 6.1:1 against the backdrop, needs 3:1"
+    }
    }
   ],
   "checked": {
@@ -112,23 +659,75 @@
     "overlap",
     "bounds"
    ],
-   "layers_checked": 24,
-   "layers_total": 24,
-   "text_layers": 7
+   "layers_checked": 27,
+   "layers_total": 27,
+   "text_layers": 10
   }
  },
  "7.5s": {
-  "passed": true,
-  "errors": 0,
-  "warnings": 1,
+  "passed": false,
+  "errors": 12,
+  "warnings": 10,
   "info": 1,
   "by_action": {
-   "fix": [],
+   "fix": [
+    2,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    19,
+    20,
+    21,
+    22
+   ],
    "review": [
-    1
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    15,
+    17,
+    18
    ],
    "informational": [
     0
+   ]
+  },
+  "outcome": {
+   "state": "validation_failed",
+   "execution": "completed",
+   "validation": "failed",
+   "review": "required",
+   "review_reasons": [
+    "bounds.cut-off: cta-pill",
+    "overlap.text-object: ticks, word-0",
+    "overlap.text-object: ticks, word-1",
+    "overlap.text-object: ring, word-0",
+    "overlap.text-object: ring, word-1",
+    "overlap.text-object: spark-2, word-2",
+    "overlap.text-object: spark-4, word-0",
+    "overlap.text-object: word-2, chip-bg-0",
+    "overlap.text-object: word-2, chip-bg-1",
+    "overlap.text-object: word-2, chip-bg-2"
+   ],
+   "accepted": [
+    {
+     "rule": "bounds.bleed",
+     "layers": [
+      "glow"
+     ],
+     "reason": "'glow' bleeds off the canvas edge (marked as an intentional crop)"
+    }
+   ],
+   "validated_by": [
+    "design checks"
    ]
   },
   "issues": [
@@ -139,6 +738,15 @@
      "glow"
     ],
     "message": "'glow' bleeds off the canvas edge (marked as an intentional crop)",
+    "layer_ids": [
+     "lyr_104a1130d0a2335f"
+    ],
+    "box": [
+     60,
+     -100,
+     960,
+     960
+    ],
     "bounds": [
      60.0,
      -100.0,
@@ -146,23 +754,842 @@
      960.0
     ],
     "intentional": true,
-    "action": "informational"
+    "code": "bleed",
+    "action": "informational",
+    "rule": "bounds.bleed"
+   },
+   {
+    "check": "bounds",
+    "severity": "warning",
+    "layers": [
+     "cta-pill"
+    ],
+    "message": "'cta-pill' is cut off by the canvas edge; if the crop is deliberate, mark it with layer-intent allow_crop",
+    "layer_ids": [
+     "lyr_77c7a78bf7aa5681"
+    ],
+    "box": [
+     310,
+     1029,
+     460,
+     85
+    ],
+    "bounds": [
+     310.0,
+     1029.9264731832052,
+     460.0,
+     84.0
+    ],
+    "code": "cut-off",
+    "action": "review",
+    "rule": "bounds.cut-off",
+    "measured": {
+     "actual": [
+      310.0,
+      1029.9264731832052,
+      460.0,
+      84.0
+     ],
+     "expected": [
+      0,
+      0,
+      1080,
+      1080
+     ],
+     "unit": "box"
+    }
+   },
+   {
+    "check": "bounds",
+    "severity": "error",
+    "layers": [
+     "cta-label"
+    ],
+    "message": "'cta-label' is cut off by the canvas edge",
+    "layer_ids": [
+     "lyr_31c974b190ee7c9b"
+    ],
+    "box": [
+     379,
+     1059,
+     322,
+     25
+    ],
+    "bounds": [
+     379.0,
+     1059.9264731832052,
+     322.0,
+     24.0
+    ],
+    "code": "cut-off",
+    "action": "fix",
+    "rule": "bounds.cut-off",
+    "measured": {
+     "actual": [
+      379.0,
+      1059.9264731832052,
+      322.0,
+      24.0
+     ],
+     "expected": [
+      0,
+      0,
+      1080,
+      1080
+     ],
+     "unit": "box"
+    },
+    "repair": {
+     "kind": "safe-area-nudge",
+     "available": true,
+     "operations": [
+      {
+       "type": "move",
+       "target": "lyr_31c974b190ee7c9b",
+       "x": 0,
+       "y": -4,
+       "relative": true
+      }
+     ],
+     "reason": "move the layer by (0, -4) px back inside the canvas, keeping its anchor"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "ticks",
+     "word-0"
+    ],
+    "message": "'ticks' and 'word-0' overlap by 635 px (5.1% of the smaller layer)",
+    "layer_ids": [
+     "lyr_61520713fc6bf0c2",
+     "lyr_758242bd468d251b"
+    ],
+    "box": [
+     163,
+     3,
+     754,
+     754
+    ],
+    "region": [
+     164,
+     420,
+     547,
+     136
+    ],
+    "code": "text-object",
+    "pixels": 635,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 635,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "ticks",
+     "word-1"
+    ],
+    "message": "'ticks' and 'word-1' overlap by 1168 px (9.4% of the smaller layer)",
+    "layer_ids": [
+     "lyr_61520713fc6bf0c2",
+     "lyr_7d0d40fb84bbc6c2"
+    ],
+    "box": [
+     163,
+     3,
+     754,
+     754
+    ],
+    "region": [
+     164,
+     596,
+     537,
+     136
+    ],
+    "code": "text-object",
+    "pixels": 1168,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 1168,
+     "expected": null,
+     "unit": "px"
+    }
    },
    {
     "check": "overlap",
     "severity": "warning",
     "layers": [
      "ring",
-     "badge-label"
+     "word-0"
     ],
-    "message": "'ring' and 'badge-label' overlap by 70 px (10.4% of the smaller layer)",
+    "message": "'ring' and 'word-0' overlap by 3030 px (7.2% of the smaller layer)",
+    "layer_ids": [
+     "lyr_22b622e5e39a3b67",
+     "lyr_758242bd468d251b"
+    ],
+    "box": [
+     260,
+     100,
+     560,
+     560
+    ],
     "region": [
-     746,
-     179,
-     82,
-     32
+     176,
+     420,
+     535,
+     136
     ],
-    "action": "review"
+    "code": "text-object",
+    "pixels": 3030,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 3030,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "ring",
+     "word-1"
+    ],
+    "message": "'ring' and 'word-1' overlap by 7225 px (17.7% of the smaller layer)",
+    "layer_ids": [
+     "lyr_22b622e5e39a3b67",
+     "lyr_7d0d40fb84bbc6c2"
+    ],
+    "box": [
+     260,
+     100,
+     560,
+     560
+    ],
+    "region": [
+     176,
+     596,
+     525,
+     136
+    ],
+    "code": "text-object",
+    "pixels": 7225,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 7225,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "spark-2",
+     "word-2"
+    ],
+    "message": "'spark-2' and 'word-2' overlap by 80 px (66.7% of the smaller layer)",
+    "layer_ids": [
+     "lyr_156153d9a301c303",
+     "lyr_eeaaeea69733a754"
+    ],
+    "box": [
+     180,
+     820,
+     12,
+     12
+    ],
+    "region": [
+     180,
+     820,
+     12,
+     12
+    ],
+    "code": "text-object",
+    "pixels": 80,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 80,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "spark-4",
+     "word-0"
+    ],
+    "message": "'spark-4' and 'word-0' overlap by 11 px (24.4% of the smaller layer)",
+    "layer_ids": [
+     "lyr_cdcb22400d18ffad",
+     "lyr_758242bd468d251b"
+    ],
+    "box": [
+     70,
+     520,
+     7,
+     7
+    ],
+    "region": [
+     70,
+     520,
+     7,
+     7
+    ],
+    "code": "text-object",
+    "pixels": 11,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 11,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "error",
+    "layers": [
+     "word-0",
+     "letter-H"
+    ],
+    "message": "'word-0' and 'letter-H' overlap by 180 px (2.9% of the smaller layer)",
+    "layer_ids": [
+     "lyr_758242bd468d251b",
+     "lyr_57b138b8d617b24a"
+    ],
+    "box": [
+     66,
+     420,
+     645,
+     136
+    ],
+    "region": [
+     332,
+     420,
+     114,
+     9
+    ],
+    "code": "text-text",
+    "pixels": 180,
+    "action": "fix",
+    "rule": "overlap.text-text",
+    "measured": {
+     "actual": 180,
+     "expected": null,
+     "unit": "px"
+    },
+    "repair": {
+     "kind": null,
+     "available": false,
+     "operations": [],
+     "reason": "no mechanical repair for this rule; see the message for the next step"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "error",
+    "layers": [
+     "word-0",
+     "letter-A"
+    ],
+    "message": "'word-0' and 'letter-A' overlap by 215 px (3.7% of the smaller layer)",
+    "layer_ids": [
+     "lyr_758242bd468d251b",
+     "lyr_3d250492e969508e"
+    ],
+    "box": [
+     66,
+     420,
+     645,
+     136
+    ],
+    "region": [
+     446,
+     420,
+     112,
+     9
+    ],
+    "code": "text-text",
+    "pixels": 215,
+    "action": "fix",
+    "rule": "overlap.text-text",
+    "measured": {
+     "actual": 215,
+     "expected": null,
+     "unit": "px"
+    },
+    "repair": {
+     "kind": null,
+     "available": false,
+     "operations": [],
+     "reason": "no mechanical repair for this rule; see the message for the next step"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "error",
+    "layers": [
+     "word-0",
+     "letter-L"
+    ],
+    "message": "'word-0' and 'letter-L' overlap by 380 px (10.7% of the smaller layer)",
+    "layer_ids": [
+     "lyr_758242bd468d251b",
+     "lyr_2bea2a9e7d717476"
+    ],
+    "box": [
+     66,
+     420,
+     645,
+     136
+    ],
+    "region": [
+     557,
+     420,
+     80,
+     9
+    ],
+    "code": "text-text",
+    "pixels": 380,
+    "action": "fix",
+    "rule": "overlap.text-text",
+    "measured": {
+     "actual": 380,
+     "expected": null,
+     "unit": "px"
+    },
+    "repair": {
+     "kind": null,
+     "available": false,
+     "operations": [],
+     "reason": "no mechanical repair for this rule; see the message for the next step"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "error",
+    "layers": [
+     "word-1",
+     "tagline"
+    ],
+    "message": "'word-1' and 'tagline' overlap by 1556 px (28.3% of the smaller layer)",
+    "layer_ids": [
+     "lyr_7d0d40fb84bbc6c2",
+     "lyr_c625bc8968f07834"
+    ],
+    "box": [
+     66,
+     596,
+     635,
+     136
+    ],
+    "region": [
+     269,
+     706,
+     432,
+     26
+    ],
+    "code": "text-text",
+    "pixels": 1556,
+    "action": "fix",
+    "rule": "overlap.text-text",
+    "measured": {
+     "actual": 1556,
+     "expected": null,
+     "unit": "px"
+    },
+    "repair": {
+     "kind": null,
+     "available": false,
+     "operations": [],
+     "reason": "no mechanical repair for this rule; see the message for the next step"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "error",
+    "layers": [
+     "word-2",
+     "chip-label-0"
+    ],
+    "message": "'word-2' and 'chip-label-0' overlap by 603 px (48.4% of the smaller layer)",
+    "layer_ids": [
+     "lyr_eeaaeea69733a754",
+     "lyr_0d34eb393b1cf11d"
+    ],
+    "box": [
+     66,
+     772,
+     972,
+     136
+    ],
+    "region": [
+     278,
+     794,
+     188,
+     18
+    ],
+    "code": "text-text",
+    "pixels": 603,
+    "action": "fix",
+    "rule": "overlap.text-text",
+    "measured": {
+     "actual": 603,
+     "expected": null,
+     "unit": "px"
+    },
+    "repair": {
+     "kind": null,
+     "available": false,
+     "operations": [],
+     "reason": "no mechanical repair for this rule; see the message for the next step"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "error",
+    "layers": [
+     "word-2",
+     "chip-label-1"
+    ],
+    "message": "'word-2' and 'chip-label-1' overlap by 490 px (52.9% of the smaller layer)",
+    "layer_ids": [
+     "lyr_eeaaeea69733a754",
+     "lyr_b01fb1d1530e0998"
+    ],
+    "box": [
+     66,
+     772,
+     972,
+     136
+    ],
+    "region": [
+     540,
+     794,
+     116,
+     18
+    ],
+    "code": "text-text",
+    "pixels": 490,
+    "action": "fix",
+    "rule": "overlap.text-text",
+    "measured": {
+     "actual": 490,
+     "expected": null,
+     "unit": "px"
+    },
+    "repair": {
+     "kind": null,
+     "available": false,
+     "operations": [],
+     "reason": "no mechanical repair for this rule; see the message for the next step"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "word-2",
+     "chip-bg-0"
+    ],
+    "message": "'word-2' and 'chip-bg-0' overlap by 526 px (44.1% of the smaller layer)",
+    "layer_ids": [
+     "lyr_eeaaeea69733a754",
+     "lyr_2b475011ca497bed"
+    ],
+    "box": [
+     66,
+     772,
+     972,
+     136
+    ],
+    "region": [
+     250,
+     778,
+     244,
+     50
+    ],
+    "code": "text-object",
+    "pixels": 526,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 526,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "error",
+    "layers": [
+     "word-2",
+     "chip-label-2"
+    ],
+    "message": "'word-2' and 'chip-label-2' overlap by 196 px (52.3% of the smaller layer)",
+    "layer_ids": [
+     "lyr_eeaaeea69733a754",
+     "lyr_e3e484370099e5df"
+    ],
+    "box": [
+     66,
+     772,
+     972,
+     136
+    ],
+    "region": [
+     730,
+     794,
+     72,
+     18
+    ],
+    "code": "text-text",
+    "pixels": 196,
+    "action": "fix",
+    "rule": "overlap.text-text",
+    "measured": {
+     "actual": 196,
+     "expected": null,
+     "unit": "px"
+    },
+    "repair": {
+     "kind": null,
+     "available": false,
+     "operations": [],
+     "reason": "no mechanical repair for this rule; see the message for the next step"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "word-2",
+     "chip-bg-1"
+    ],
+    "message": "'word-2' and 'chip-bg-1' overlap by 374 px (41.4% of the smaller layer)",
+    "layer_ids": [
+     "lyr_eeaaeea69733a754",
+     "lyr_cf6348d1115e91ae"
+    ],
+    "box": [
+     66,
+     772,
+     972,
+     136
+    ],
+    "region": [
+     512,
+     778,
+     172,
+     50
+    ],
+    "code": "text-object",
+    "pixels": 374,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 374,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "overlap",
+    "severity": "warning",
+    "layers": [
+     "word-2",
+     "chip-bg-2"
+    ],
+    "message": "'word-2' and 'chip-bg-2' overlap by 435 px (59.8% of the smaller layer)",
+    "layer_ids": [
+     "lyr_eeaaeea69733a754",
+     "lyr_33a5acdf0b23a0e6"
+    ],
+    "box": [
+     66,
+     772,
+     972,
+     136
+    ],
+    "region": [
+     702,
+     778,
+     128,
+     50
+    ],
+    "code": "text-object",
+    "pixels": 435,
+    "action": "review",
+    "rule": "overlap.text-object",
+    "measured": {
+     "actual": 435,
+     "expected": null,
+     "unit": "px"
+    }
+   },
+   {
+    "check": "contrast",
+    "severity": "error",
+    "layers": [
+     "word-0"
+    ],
+    "message": "'word-0' contrast is 1.74:1 or lower for a tenth of its glyph pixels (minimum 1.05:1, weakest at x 75\u2013600, y 423\u2013554); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+    "layer_ids": [
+     "lyr_758242bd468d251b"
+    ],
+    "box": [
+     66,
+     420,
+     645,
+     136
+    ],
+    "region": [
+     75,
+     423,
+     526,
+     132
+    ],
+    "contrast": 1.742,
+    "required": 3.0,
+    "code": "text-contrast",
+    "action": "fix",
+    "rule": "contrast.text-contrast",
+    "measured": {
+     "actual": 1.742,
+     "expected": 3.0,
+     "unit": ":1"
+    },
+    "repair": {
+     "kind": "contrast-ink",
+     "available": true,
+     "operations": [
+      {
+       "type": "text-set",
+       "target": "lyr_758242bd468d251b",
+       "color": "#f7f4ef"
+      }
+     ],
+     "reason": "move the text colour 25% toward the role ink (white): about 14.2:1 against the backdrop, needs 3:1"
+    }
+   },
+   {
+    "check": "contrast",
+    "severity": "error",
+    "layers": [
+     "word-1"
+    ],
+    "message": "'word-1' contrast is 1.42:1 or lower for a tenth of its glyph pixels (minimum 1.00:1, weakest at x 305\u2013639, y 597\u2013707); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+    "layer_ids": [
+     "lyr_7d0d40fb84bbc6c2"
+    ],
+    "box": [
+     66,
+     596,
+     635,
+     136
+    ],
+    "region": [
+     305,
+     597,
+     335,
+     111
+    ],
+    "contrast": 1.421,
+    "required": 3.0,
+    "code": "text-contrast",
+    "action": "fix",
+    "rule": "contrast.text-contrast",
+    "measured": {
+     "actual": 1.421,
+     "expected": 3.0,
+     "unit": ":1"
+    },
+    "repair": {
+     "kind": "contrast-ink",
+     "available": true,
+     "operations": [
+      {
+       "type": "text-set",
+       "target": "lyr_7d0d40fb84bbc6c2",
+       "color": "#c9bcff"
+      }
+     ],
+     "reason": "move the text colour 25% toward the role ink (white): about 7.9:1 against the backdrop, needs 3:1"
+    }
+   },
+   {
+    "check": "contrast",
+    "severity": "error",
+    "layers": [
+     "word-2"
+    ],
+    "message": "'word-2' contrast is 1.32:1 or lower for a tenth of its glyph pixels (minimum 1.11:1, weakest at x 180\u2013799, y 775\u2013853); needs 3:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+    "layer_ids": [
+     "lyr_eeaaeea69733a754"
+    ],
+    "box": [
+     66,
+     772,
+     972,
+     136
+    ],
+    "region": [
+     180,
+     775,
+     620,
+     79
+    ],
+    "contrast": 1.319,
+    "required": 3.0,
+    "code": "text-contrast",
+    "action": "fix",
+    "rule": "contrast.text-contrast",
+    "measured": {
+     "actual": 1.319,
+     "expected": 3.0,
+     "unit": ":1"
+    },
+    "repair": {
+     "available": null,
+     "reason": "only the first 10 fix findings get a suggestion; check fewer targets or fix these first"
+    }
+   },
+   {
+    "check": "contrast",
+    "severity": "error",
+    "layers": [
+     "cta-label"
+    ],
+    "message": "Could not measure the contrast of 'cta-label': Region must be within canvas",
+    "layer_ids": [
+     "lyr_31c974b190ee7c9b"
+    ],
+    "box": [
+     379,
+     1059,
+     322,
+     25
+    ],
+    "code": "unmeasurable",
+    "action": "fix",
+    "rule": "contrast.unmeasurable",
+    "repair": {
+     "available": null,
+     "reason": "only the first 10 fix findings get a suggestion; check fewer targets or fix these first"
+    }
    }
   ],
   "checked": {
@@ -173,7 +1600,7 @@
    ],
    "layers_checked": 36,
    "layers_total": 36,
-   "text_layers": 12
+   "text_layers": 14
   }
  }
 }

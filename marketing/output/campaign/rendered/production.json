@@ -14,9 +14,9 @@
       },
       "artboard": null,
       "status": "completed",
-      "output": "0001-518fe9d4ae227e53.png",
-      "fingerprint": "518fe9d4ae227e53fb29f6b04d8dad39aa26c48c78376730de61fa14f482d8e2",
-      "request_fingerprint": "4aed6fed4c7a00bf5f4b884dd59d26c8d42a43c04c17b217106af444c868482b",
+      "output": "0001-443a5f4ced0f7eba.png",
+      "fingerprint": "443a5f4ced0f7ebada4cd439026288a30a1269cb4c3fb84d8ea8dd400668adc5",
+      "request_fingerprint": "0f83c5bb7886e2c28de3623f4a87b2c60978ccd4673a0e8b92c0706a90b1a641",
       "sha256": "d8d4695baeb77989c9b252e49801e175b249b237164ea6158376770299a58ec2",
       "checks": {
         "delivery": {
@@ -153,9 +153,9 @@
       },
       "artboard": null,
       "status": "completed",
-      "output": "0002-44c6c65446d42ad9.png",
-      "fingerprint": "44c6c65446d42ad93f791d86a6b68b12a129ea3ac5957e2cabceebe3d7ada27a",
-      "request_fingerprint": "5dec00cbbb1fd5fced33d3f2bb36d499059af514df635a9d31d1e5ac23df6236",
+      "output": "0002-36afd3c16857e03f.png",
+      "fingerprint": "36afd3c16857e03fcd46e38e0018ee0e173cab06718914106e3e0a69e865c7cc",
+      "request_fingerprint": "8e22d8663c2d7d70c0eb5e187ef4aaea3acf47a60b78b6b15c53ad2c596d4143",
       "sha256": "09062e94b39b2d3f6facfaf33aa2b14635407f0655e5e43cb9390c51861a52c5",
       "checks": {
         "delivery": {
@@ -278,7 +278,7 @@
         ]
       },
       "cache": {
-        "hits": 25,
+        "hits": 27,
         "misses": 8
       }
     },
@@ -292,9 +292,9 @@
       },
       "artboard": null,
       "status": "completed",
-      "output": "0003-5e51e93df1c4682d.png",
-      "fingerprint": "5e51e93df1c4682d9b90590eb4e5b0353f53f09f3ad8f58a43b77d29707be70e",
-      "request_fingerprint": "a183e5c0eb25a40eda68d0c004ff2de1c909a724f9f7952e3ba66e34bdb48da5",
+      "output": "0003-244673a7ff462685.png",
+      "fingerprint": "244673a7ff462685870413679011b842d571cf6e19dbbbf774e5db8e6853b582",
+      "request_fingerprint": "7a02cb3a44da8f18f95c8e8130da1be553d33231de4d386ae31e13ea8817a4f1",
       "sha256": "9ec9f14cba3fbe971debf4ad18fd22f885382283d9ceb2bce64edf4c58623408",
       "checks": {
         "delivery": {
@@ -417,7 +417,7 @@
         ]
       },
       "cache": {
-        "hits": 25,
+        "hits": 27,
         "misses": 8
       }
     }

@@ -3,20 +3,88 @@
     "passed": false,
     "issues": [
       {
+        "check": "bounds",
+        "severity": "error",
+        "layers": [
+          "headline"
+        ],
+        "message": "'headline' does not fit its 896×100 text box at 95 px and is cut off (it needs 463×205); enlarge the box with text-layout or shrink the text with fit-text",
+        "layer_ids": [
+          "lyr_d17542a4ede094d8"
+        ],
+        "box": [
+          92,
+          966,
+          896,
+          100
+        ],
+        "needs": [
+          463,
+          205
+        ],
+        "code": "text-overflow",
+        "action": "fix",
+        "rule": "bounds.text-overflow",
+        "measured": {
+          "actual": [
+            463,
+            205
+          ],
+          "expected": [
+            896,
+            100
+          ],
+          "unit": "px"
+        },
+        "repair": {
+          "kind": "fit-text",
+          "available": true,
+          "operations": [
+            {
+              "type": "fit-text",
+              "target": "lyr_d17542a4ede094d8",
+              "width": 896,
+              "height": 100,
+              "minimum": 24,
+              "maximum": 95
+            }
+          ],
+          "reason": "shrink the text to fit its 896×100 box, not below 24 px"
+        }
+      },
+      {
         "check": "overlap",
         "severity": "warning",
         "layers": [
           "cta-button",
           "cta"
         ],
-        "message": "'cta-button' and 'cta' overlap by 1314 px (92.9% of the smaller layer)",
-        "region": [
-          107,
-          1169,
-          205,
-          29
+        "message": "'cta-button' and 'cta' overlap by 1782 px (89.8% of the smaller layer)",
+        "layer_ids": [
+          "lyr_f013b3b5dbecbe73",
+          "lyr_870934a84f812441"
         ],
-        "action": "review"
+        "box": [
+          92,
+          1185,
+          260,
+          75
+        ],
+        "region": [
+          129,
+          1205,
+          249,
+          35
+        ],
+        "code": "text-object",
+        "pixels": 1782,
+        "action": "review",
+        "rule": "overlap.text-object",
+        "measured": {
+          "actual": 1782,
+          "expected": null,
+          "unit": "px"
+        }
       },
       {
         "check": "contrast",
@@ -24,29 +92,66 @@
         "layers": [
           "cta"
         ],
-        "message": "'cta' contrast is 1.47:1 or lower for a tenth of its glyph pixels (minimum 1.17:1, weakest at x 298–309, y 1176–1196); needs 4.5:1",
-        "region": [
-          298,
-          1176,
-          12,
-          21
+        "message": "'cta' contrast is 1.48:1 or lower for a tenth of its glyph pixels (minimum 1.05:1, weakest at x 360–375, y 1214–1238); needs 4.5:1. If the faint text is deliberate (a watermark, a ghost numeral), waive it with layer-intent waive",
+        "layer_ids": [
+          "lyr_870934a84f812441"
         ],
-        "contrast": 1.474,
+        "box": [
+          129,
+          1205,
+          249,
+          35
+        ],
+        "region": [
+          360,
+          1214,
+          16,
+          25
+        ],
+        "contrast": 1.483,
         "required": 4.5,
-        "action": "fix"
+        "code": "text-contrast",
+        "action": "fix",
+        "rule": "contrast.text-contrast",
+        "measured": {
+          "actual": 1.483,
+          "expected": 4.5,
+          "unit": ":1"
+        },
+        "repair": {
+          "kind": "contrast-ink",
+          "available": true,
+          "operations": [
+            {
+              "type": "text-set",
+              "target": "lyr_870934a84f812441",
+              "color": "#406476"
+            }
+          ],
+          "reason": "move the text colour 75% toward the role ink (@ink): about 5.2:1 against the backdrop, needs 4.5:1"
+        }
       },
       {
         "check": "safe_area",
-        "severity": "warning",
+        "severity": "info",
         "layers": [
           "image"
         ],
-        "message": "'image' extends outside the safe area",
+        "message": "'image' extends outside the safe area (intentional crop or bleed)",
+        "layer_ids": [
+          "lyr_35562380e66db931"
+        ],
+        "box": [
+          0,
+          0,
+          1080,
+          807
+        ],
         "bounds": [
           0,
           0,
           1080,
-          834
+          807
         ],
         "safe_area": [
           60,
@@ -54,18 +159,45 @@
           960,
           1230
         ],
-        "action": "review"
+        "code": "outside",
+        "intentional": true,
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            0,
+            0,
+            1080,
+            807
+          ],
+          "expected": [
+            60,
+            60,
+            960,
+            1230
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
-        "severity": "warning",
+        "severity": "info",
         "layers": [
           "golden-division"
         ],
-        "message": "'golden-division' extends outside the safe area",
+        "message": "'golden-division' extends outside the safe area (intentional crop or bleed)",
+        "layer_ids": [
+          "lyr_089c6555ffbf8818"
+        ],
+        "box": [
+          0,
+          807,
+          1080,
+          7
+        ],
         "bounds": [
           0,
-          834,
+          807,
           1080,
           7
         ],
@@ -75,7 +207,25 @@
           960,
           1230
         ],
-        "action": "review"
+        "code": "outside",
+        "intentional": true,
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            0,
+            807,
+            1080,
+            7
+          ],
+          "expected": [
+            60,
+            60,
+            960,
+            1230
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -84,11 +234,20 @@
           "direction-motif"
         ],
         "message": "'direction-motif' extends outside the safe area (intentional crop or bleed)",
-        "bounds": [
-          990,
-          38,
+        "layer_ids": [
+          "lyr_78d95e0fbecaeaeb"
+        ],
+        "box": [
+          974,
+          46,
           14,
-          3
+          14
+        ],
+        "bounds": [
+          974,
+          46,
+          14,
+          14
         ],
         "safe_area": [
           60,
@@ -96,8 +255,25 @@
           960,
           1230
         ],
+        "code": "outside",
         "intentional": true,
-        "action": "informational"
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            974,
+            46,
+            14,
+            14
+          ],
+          "expected": [
+            60,
+            60,
+            960,
+            1230
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -106,6 +282,15 @@
           "stat"
         ],
         "message": "'stat' extends outside the safe area",
+        "layer_ids": [
+          "lyr_9771f9df6d4c4904"
+        ],
+        "box": [
+          700,
+          1010,
+          333,
+          127
+        ],
         "bounds": [
           700,
           1010,
@@ -118,27 +303,38 @@
           960,
           1230
         ],
-        "action": "fix"
-      },
-      {
-        "check": "legibility",
-        "severity": "warning",
-        "layers": [
-          "label"
-        ],
-        "message": "'label' is 6.2 px tall at 320 px wide; aim for at least 10 px (font size 34+)",
-        "thumbnail_size": 6.22,
-        "action": "fix"
-      },
-      {
-        "check": "legibility",
-        "severity": "warning",
-        "layers": [
-          "body"
-        ],
-        "message": "'body' is 8.3 px tall at 320 px wide; aim for at least 10 px (font size 34+)",
-        "thumbnail_size": 8.3,
-        "action": "fix"
+        "code": "outside",
+        "action": "fix",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            700,
+            1010,
+            333,
+            127
+          ],
+          "expected": [
+            60,
+            60,
+            960,
+            1230
+          ],
+          "unit": "box"
+        },
+        "repair": {
+          "kind": "safe-area-nudge",
+          "available": true,
+          "operations": [
+            {
+              "type": "move",
+              "target": "lyr_9771f9df6d4c4904",
+              "x": -13,
+              "y": 0,
+              "relative": true
+            }
+          ],
+          "reason": "move the layer by (-13, 0) px back inside the safe area, keeping its anchor"
+        }
       },
       {
         "check": "legibility",
@@ -146,9 +342,36 @@
         "layers": [
           "cta"
         ],
-        "message": "'cta' is 8.3 px tall at 320 px wide; aim for at least 10 px (font size 34+)",
-        "thumbnail_size": 8.3,
-        "action": "fix"
+        "message": "'cta' is 10.1 px at 320 px wide (a feed thumbnail); at weight 400 and 1.5:1 contrast it needs 14.7 px there: font size 50+",
+        "layer_ids": [
+          "lyr_870934a84f812441"
+        ],
+        "box": [
+          129,
+          1205,
+          249,
+          35
+        ],
+        "code": "use-size",
+        "action": "review",
+        "use": {
+          "seen": "thumbnail",
+          "width": "auto",
+          "as": "a feed thumbnail",
+          "source": "purpose social"
+        },
+        "font_size": 34.0,
+        "needed_size": 49.53,
+        "at_use": 10.0741,
+        "needed_at_use": 14.6755,
+        "weight": 400,
+        "contrast": 1.48,
+        "rule": "legibility.use-size",
+        "measured": {
+          "actual": 34.0,
+          "expected": 49.53,
+          "unit": "px"
+        }
       },
       {
         "check": "legibility",
@@ -156,31 +379,105 @@
         "layers": [
           "stat-caption"
         ],
-        "message": "'stat-caption' is 7.7 px tall at 320 px wide; aim for at least 10 px (font size 34+)",
-        "thumbnail_size": 7.7,
-        "action": "fix"
+        "message": "'stat-caption' is 7.7 px at 320 px wide (a feed thumbnail); at weight 400 it needs 10.0 px there: font size 34+",
+        "layer_ids": [
+          "lyr_15ee6597dad6ae49"
+        ],
+        "box": [
+          708,
+          1190,
+          300,
+          27
+        ],
+        "code": "use-size",
+        "action": "review",
+        "use": {
+          "seen": "thumbnail",
+          "width": "auto",
+          "as": "a feed thumbnail",
+          "source": "purpose social"
+        },
+        "font_size": 26.0,
+        "needed_size": 33.75,
+        "at_use": 7.7037,
+        "needed_at_use": 10.0,
+        "weight": 400,
+        "contrast": 5.72,
+        "rule": "legibility.use-size",
+        "measured": {
+          "actual": 26.0,
+          "expected": 33.75,
+          "unit": "px"
+        }
+      },
+      {
+        "check": "composition",
+        "severity": "warning",
+        "layers": [
+          "stat-caption",
+          "stat"
+        ],
+        "message": "'stat-caption' sits at left 708 px while 'stat' sits at 700 px: 8 px apart, two left edges where one was meant. Snap them to one edge (align), or move them a clear step apart",
+        "layer_ids": [
+          "lyr_15ee6597dad6ae49",
+          "lyr_9771f9df6d4c4904"
+        ],
+        "box": [
+          708,
+          1190,
+          300,
+          27
+        ],
+        "code": "margin_drift",
+        "action": "review",
+        "region": [
+          700.0,
+          1010.0,
+          333.0,
+          206.7
+        ],
+        "measured": {
+          "actual": 8.0,
+          "expected": 0,
+          "unit": "px"
+        },
+        "values": {
+          "axis": "left",
+          "edge": 708.0,
+          "margin": 700.0,
+          "offset": 8.0,
+          "stray_ids": [
+            "lyr_15ee6597dad6ae49"
+          ]
+        },
+        "threshold": {
+          "tolerance_px": 2.0,
+          "window_px": 28.0
+        },
+        "spacing_unit": 14.0,
+        "rule": "composition.margin_drift"
       }
     ]
   },
   "notes_opened": {
     "notes": [
       {
-        "id": "27bb9a17caac4ea5b8a589f863c04f4e",
+        "id": "ba340abad1104f8b8e351127c17affde",
         "text": "Merged headline 'Your city, on a Loop' now runs into the 400 stat — move the stat down/right.",
         "resolved": false,
-        "created": "2026-10-06T18:39:44.409268+00:00"
+        "created": "2026-10-14T17:13:20.192598+00:00"
       },
       {
-        "id": "3af9f39d40d24ca298d0422e3f80495a",
+        "id": "a00ca052a53b4b08b63b907a73cf0bb5",
         "text": "CTA 'Download Loop' is wider than its button (check: cta contrast error where it spills). Resize the button.",
         "resolved": false,
-        "created": "2026-10-06T18:39:44.702709+00:00"
+        "created": "2026-10-14T17:13:20.492827+00:00"
       },
       {
-        "id": "1d957947a31248c9a860480e0471beea",
+        "id": "16ae75ce3ec649458adb08db22b96ed3",
         "text": "Stat caption reads well; keep '1 city'.",
         "resolved": false,
-        "created": "2026-10-06T18:39:45.056462+00:00"
+        "created": "2026-10-14T17:13:20.794540+00:00"
       }
     ]
   },
@@ -188,17 +485,76 @@
     "passed": false,
     "issues": [
       {
+        "check": "bounds",
+        "severity": "error",
+        "layers": [
+          "headline"
+        ],
+        "message": "'headline' does not fit its 896×100 text box at 95 px and is cut off (it needs 463×205); enlarge the box with text-layout or shrink the text with fit-text",
+        "layer_ids": [
+          "lyr_d17542a4ede094d8"
+        ],
+        "box": [
+          92,
+          966,
+          896,
+          100
+        ],
+        "needs": [
+          463,
+          205
+        ],
+        "code": "text-overflow",
+        "action": "fix",
+        "rule": "bounds.text-overflow",
+        "measured": {
+          "actual": [
+            463,
+            205
+          ],
+          "expected": [
+            896,
+            100
+          ],
+          "unit": "px"
+        },
+        "repair": {
+          "kind": "fit-text",
+          "available": true,
+          "operations": [
+            {
+              "type": "fit-text",
+              "target": "lyr_d17542a4ede094d8",
+              "width": 896,
+              "height": 100,
+              "minimum": 24,
+              "maximum": 95
+            }
+          ],
+          "reason": "shrink the text to fit its 896×100 box, not below 24 px"
+        }
+      },
+      {
         "check": "safe_area",
-        "severity": "warning",
+        "severity": "info",
         "layers": [
           "image"
         ],
-        "message": "'image' extends outside the safe area",
+        "message": "'image' extends outside the safe area (intentional crop or bleed)",
+        "layer_ids": [
+          "lyr_35562380e66db931"
+        ],
+        "box": [
+          0,
+          0,
+          1080,
+          807
+        ],
         "bounds": [
           0,
           0,
           1080,
-          834
+          807
         ],
         "safe_area": [
           60,
@@ -206,18 +562,45 @@
           960,
           1230
         ],
-        "action": "review"
+        "code": "outside",
+        "intentional": true,
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            0,
+            0,
+            1080,
+            807
+          ],
+          "expected": [
+            60,
+            60,
+            960,
+            1230
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
-        "severity": "warning",
+        "severity": "info",
         "layers": [
           "golden-division"
         ],
-        "message": "'golden-division' extends outside the safe area",
+        "message": "'golden-division' extends outside the safe area (intentional crop or bleed)",
+        "layer_ids": [
+          "lyr_089c6555ffbf8818"
+        ],
+        "box": [
+          0,
+          807,
+          1080,
+          7
+        ],
         "bounds": [
           0,
-          834,
+          807,
           1080,
           7
         ],
@@ -227,7 +610,25 @@
           960,
           1230
         ],
-        "action": "review"
+        "code": "outside",
+        "intentional": true,
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            0,
+            807,
+            1080,
+            7
+          ],
+          "expected": [
+            60,
+            60,
+            960,
+            1230
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -236,11 +637,20 @@
           "direction-motif"
         ],
         "message": "'direction-motif' extends outside the safe area (intentional crop or bleed)",
-        "bounds": [
-          990,
-          38,
+        "layer_ids": [
+          "lyr_78d95e0fbecaeaeb"
+        ],
+        "box": [
+          974,
+          46,
           14,
-          3
+          14
+        ],
+        "bounds": [
+          974,
+          46,
+          14,
+          14
         ],
         "safe_area": [
           60,
@@ -248,8 +658,25 @@
           960,
           1230
         ],
+        "code": "outside",
         "intentional": true,
-        "action": "informational"
+        "action": "informational",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            974,
+            46,
+            14,
+            14
+          ],
+          "expected": [
+            60,
+            60,
+            960,
+            1230
+          ],
+          "unit": "box"
+        }
       },
       {
         "check": "safe_area",
@@ -258,6 +685,15 @@
           "stat-caption"
         ],
         "message": "'stat-caption' extends outside the safe area",
+        "layer_ids": [
+          "lyr_15ee6597dad6ae49"
+        ],
+        "box": [
+          726,
+          1238,
+          300,
+          27
+        ],
         "bounds": [
           726,
           1238,
@@ -270,37 +706,38 @@
           960,
           1230
         ],
-        "action": "fix"
-      },
-      {
-        "check": "legibility",
-        "severity": "warning",
-        "layers": [
-          "label"
-        ],
-        "message": "'label' is 6.2 px tall at 320 px wide; aim for at least 10 px (font size 34+)",
-        "thumbnail_size": 6.22,
-        "action": "fix"
-      },
-      {
-        "check": "legibility",
-        "severity": "warning",
-        "layers": [
-          "body"
-        ],
-        "message": "'body' is 8.3 px tall at 320 px wide; aim for at least 10 px (font size 34+)",
-        "thumbnail_size": 8.3,
-        "action": "fix"
-      },
-      {
-        "check": "legibility",
-        "severity": "warning",
-        "layers": [
-          "cta"
-        ],
-        "message": "'cta' is 8.3 px tall at 320 px wide; aim for at least 10 px (font size 34+)",
-        "thumbnail_size": 8.3,
-        "action": "fix"
+        "code": "outside",
+        "action": "fix",
+        "rule": "safe_area.outside",
+        "measured": {
+          "actual": [
+            726,
+            1238,
+            300,
+            27
+          ],
+          "expected": [
+            60,
+            60,
+            960,
+            1230
+          ],
+          "unit": "box"
+        },
+        "repair": {
+          "kind": "safe-area-nudge",
+          "available": true,
+          "operations": [
+            {
+              "type": "move",
+              "target": "lyr_15ee6597dad6ae49",
+              "x": -6,
+              "y": 0,
+              "relative": true
+            }
+          ],
+          "reason": "move the layer by (-6, 0) px back inside the safe area, keeping its anchor"
+        }
       },
       {
         "check": "legibility",
@@ -308,31 +745,105 @@
         "layers": [
           "stat-caption"
         ],
-        "message": "'stat-caption' is 7.7 px tall at 320 px wide; aim for at least 10 px (font size 34+)",
-        "thumbnail_size": 7.7,
-        "action": "fix"
+        "message": "'stat-caption' is 7.7 px at 320 px wide (a feed thumbnail); at weight 400 it needs 10.0 px there: font size 34+",
+        "layer_ids": [
+          "lyr_15ee6597dad6ae49"
+        ],
+        "box": [
+          726,
+          1238,
+          300,
+          27
+        ],
+        "code": "use-size",
+        "action": "review",
+        "use": {
+          "seen": "thumbnail",
+          "width": "auto",
+          "as": "a feed thumbnail",
+          "source": "purpose social"
+        },
+        "font_size": 26.0,
+        "needed_size": 33.75,
+        "at_use": 7.7037,
+        "needed_at_use": 10.0,
+        "weight": 400,
+        "contrast": 5.66,
+        "rule": "legibility.use-size",
+        "measured": {
+          "actual": 26.0,
+          "expected": 33.75,
+          "unit": "px"
+        }
+      },
+      {
+        "check": "composition",
+        "severity": "warning",
+        "layers": [
+          "stat-caption",
+          "stat"
+        ],
+        "message": "'stat-caption' sits at left 726 px while 'stat' sits at 722 px: 4 px apart, two left edges where one was meant. Snap them to one edge (align), or move them a clear step apart",
+        "layer_ids": [
+          "lyr_15ee6597dad6ae49",
+          "lyr_9771f9df6d4c4904"
+        ],
+        "box": [
+          726,
+          1238,
+          300,
+          27
+        ],
+        "code": "margin_drift",
+        "action": "review",
+        "region": [
+          722.0,
+          1092.0,
+          304.0,
+          172.7
+        ],
+        "measured": {
+          "actual": 4.0,
+          "expected": 0,
+          "unit": "px"
+        },
+        "values": {
+          "axis": "left",
+          "edge": 726.0,
+          "margin": 722.0,
+          "offset": 4.0,
+          "stray_ids": [
+            "lyr_15ee6597dad6ae49"
+          ]
+        },
+        "threshold": {
+          "tolerance_px": 2.0,
+          "window_px": 28.0
+        },
+        "spacing_unit": 14.0,
+        "rule": "composition.margin_drift"
       }
     ]
   },
   "notes_final": {
     "notes": [
       {
-        "id": "27bb9a17caac4ea5b8a589f863c04f4e",
+        "id": "ba340abad1104f8b8e351127c17affde",
         "text": "Merged headline 'Your city, on a Loop' now runs into the 400 stat — move the stat down/right.",
         "resolved": true,
-        "created": "2026-10-06T18:39:44.409268+00:00"
+        "created": "2026-10-14T17:13:20.192598+00:00"
       },
       {
-        "id": "3af9f39d40d24ca298d0422e3f80495a",
+        "id": "a00ca052a53b4b08b63b907a73cf0bb5",
         "text": "CTA 'Download Loop' is wider than its button (check: cta contrast error where it spills). Resize the button.",
         "resolved": true,
-        "created": "2026-10-06T18:39:44.702709+00:00"
+        "created": "2026-10-14T17:13:20.492827+00:00"
       },
       {
-        "id": "1d957947a31248c9a860480e0471beea",
+        "id": "16ae75ce3ec649458adb08db22b96ed3",
         "text": "Stat caption reads well; keep '1 city'.",
         "resolved": false,
-        "created": "2026-10-06T18:39:45.056462+00:00"
+        "created": "2026-10-14T17:13:20.794540+00:00"
       }
     ]
   }

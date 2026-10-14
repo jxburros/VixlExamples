@@ -1,8 +1,8 @@
 {
   "submitted": {
     "version": 1,
-    "id": "7ae6a687f3034588802576ba820f2ddb",
-    "created": 1791311768.2311401,
+    "id": "84684136b3a54758b6c01601f100fb67",
+    "created": 1791998361.9145977,
     "status": "queued",
     "progress": {
       "done": 0
@@ -11,16 +11,25 @@
     "limits": {
       "max_pixels": 40000000,
       "max_dimension": 16384,
-      "max_layers": 512,
+      "max_layers": 4096,
       "max_asset_bytes": 67108864,
       "max_project_bytes": 268435456,
       "max_operations": 10000,
-      "max_history": 2000
+      "max_history": 2000,
+      "max_load_pixels": 160000000,
+      "max_load_fonts": 64
     },
-    "updated": 1791311768.2311661,
+    "updated": 1791998361.915089,
+    "outcome": {
+      "state": "pending",
+      "execution": "pending",
+      "validation": "not_run",
+      "review": "required",
+      "review_reasons": []
+    },
     "worker": {
-      "worker_pid": 27897,
-      "workspace": "/home/user/Vixl/explorations/07-trading-cards/output"
+      "worker_pid": 5158,
+      "workspace": "/home/user/VixlExamples/explorations/07-trading-cards/output"
     }
   },
   "trace": [
@@ -42,15 +51,7 @@
     {
       "status": "running",
       "progress": {
-        "done": 5,
-        "total": 13
-      },
-      "attempts": 1
-    },
-    {
-      "status": "running",
-      "progress": {
-        "done": 7,
+        "done": 6,
         "total": 13
       },
       "attempts": 1
@@ -74,8 +75,8 @@
   ],
   "final": {
     "version": 1,
-    "id": "7ae6a687f3034588802576ba820f2ddb",
-    "created": 1791311768.2311401,
+    "id": "84684136b3a54758b6c01601f100fb67",
+    "created": 1791998361.9145977,
     "status": "needs_review",
     "progress": {
       "done": 13,
@@ -85,12 +86,33 @@
     "limits": {
       "max_pixels": 40000000,
       "max_dimension": 16384,
-      "max_layers": 512,
+      "max_layers": 4096,
       "max_asset_bytes": 67108864,
       "max_project_bytes": 268435456,
       "max_operations": 10000,
-      "max_history": 2000
+      "max_history": 2000,
+      "max_load_pixels": 160000000,
+      "max_load_fonts": 64
     },
-    "updated": 1791311782.5678933
+    "updated": 1791998373.3408215,
+    "outcome": {
+      "state": "unvalidated",
+      "execution": "completed",
+      "validation": "not_run",
+      "review": "required",
+      "review_reasons": [
+        "outputs by state: {'needs_review': 8, 'execution_failed': 1, 'validation_failed': 4}"
+      ],
+      "outputs": {
+        "state": "execution_failed",
+        "total": 13,
+        "counts": {
+          "needs_review": 8,
+          "execution_failed": 1,
+          "validation_failed": 4
+        },
+        "validated": false
+      }
+    }
   }
 }

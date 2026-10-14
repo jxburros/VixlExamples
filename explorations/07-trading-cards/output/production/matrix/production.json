@@ -6,13 +6,14 @@
   "results": [
     {
       "id": "0001",
+      "row": 1,
       "values": {
         "name": "Ember Warden",
         "element": "Ember",
         "element_color": "#ff6b35",
         "element_dark": "#2a0905",
         "element_light": "#ffd166",
-        "art": "assets/1e7958055ca456d0acd9b59e25c68935ef33e1e4cda95da0b22888697cf03545.jpg",
+        "art": "assets/9b4a489e77062b71b88f7da8782555eef73f3b5ca537a95a32e18c646e849445.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Ember spirits you control get +1 DEF.",
@@ -21,9 +22,10 @@
       },
       "artboard": "common",
       "status": "completed",
-      "output": "0001-d97c364befa0b788.webp",
-      "fingerprint": "d97c364befa0b78800f4809fa215b6272d5da1e6b83f00df440a4ba0aad696df",
-      "sha256": "0e535d64c3c222031aa46f14c3ce4f6b1a255e1f90a33f249b8dc0dba60b3ea8",
+      "output": "0001-ccd9d5c8fc30a41e.webp",
+      "fingerprint": "ccd9d5c8fc30a41e5e574cc36e65156bc8741307e7d4390ce11c24a46b7b193a",
+      "request_fingerprint": "1f63382d08bedf5531503e58dd9298e2d629972fdd1a94f7896ac5652ce937a2",
+      "sha256": "8cd43cfe18e8833901d39e5e3ff8caa0a08902a4ec645ebcf370cfa3803e17cf",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -117,13 +119,12 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 201,
-              "outside_fraction": 0.0017562561163148329,
+              "outside_pixels": 197,
+              "outside_fraction": 0.001721305745840906,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8b895",
                 "#766f62",
                 "#cac1ad"
               ],
@@ -150,6 +151,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -161,7 +172,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -191,6 +213,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -201,24 +233,47 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
-        "hits": 38,
-        "misses": 31
+        "hits": 67,
+        "misses": 15
       }
     },
     {
       "id": "0002",
+      "row": 1,
       "values": {
         "name": "Ember Warden",
         "element": "Ember",
         "element_color": "#ff6b35",
         "element_dark": "#2a0905",
         "element_light": "#ffd166",
-        "art": "assets/1e7958055ca456d0acd9b59e25c68935ef33e1e4cda95da0b22888697cf03545.jpg",
+        "art": "assets/9b4a489e77062b71b88f7da8782555eef73f3b5ca537a95a32e18c646e849445.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Ember spirits you control get +1 DEF.",
@@ -227,9 +282,10 @@
       },
       "artboard": "rare",
       "status": "completed",
-      "output": "0002-7e8dc3177fa69c3f.webp",
-      "fingerprint": "7e8dc3177fa69c3f4cd1e2ce7d613399eff199089abe7c9b03e0c30c8f376a55",
-      "sha256": "6f69b64c2b63119faaf71a6ffb92ef373da3ca7d0882cc303c3e008db205d0eb",
+      "output": "0002-8097c3fbdc5090bc.webp",
+      "fingerprint": "8097c3fbdc5090bc3a007c5add41b236ca26a6974f079715c7b6c764e394d92d",
+      "request_fingerprint": "fa8ea7d2a7942738a37240d937f6b74c09cf311da999fe9de2f65d9f1bb34cf2",
+      "sha256": "cb3e97a120f3070e948300139b873ef48c710cb6e9c288adb82dcb006883f7b9",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -323,13 +379,12 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 201,
-              "outside_fraction": 0.0017562561163148329,
+              "outside_pixels": 197,
+              "outside_fraction": 0.001721305745840906,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8b895",
                 "#766f62",
                 "#cac1ad"
               ],
@@ -356,6 +411,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -367,7 +432,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -397,6 +473,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -407,24 +493,47 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
-        "hits": 21,
-        "misses": 45
+        "hits": 54,
+        "misses": 31
       }
     },
     {
       "id": "0003",
+      "row": 1,
       "values": {
         "name": "Ember Warden",
         "element": "Ember",
         "element_color": "#ff6b35",
         "element_dark": "#2a0905",
         "element_light": "#ffd166",
-        "art": "assets/1e7958055ca456d0acd9b59e25c68935ef33e1e4cda95da0b22888697cf03545.jpg",
+        "art": "assets/9b4a489e77062b71b88f7da8782555eef73f3b5ca537a95a32e18c646e849445.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Ember spirits you control get +1 DEF.",
@@ -433,9 +542,10 @@
       },
       "artboard": "epic",
       "status": "completed",
-      "output": "0003-06397a631fe41b14.webp",
-      "fingerprint": "06397a631fe41b1413b9887eb9dec2ca13f2b53ede7799489cd4351f47bd57ed",
-      "sha256": "232838f947f5916c3308d735c45b9836da6166e63895fc93d2db5e4076ef483e",
+      "output": "0003-af9150758df1d7d4.webp",
+      "fingerprint": "af9150758df1d7d43ec401f58ff4294e5a11e3e3403ce2e5163321a08b61ff85",
+      "request_fingerprint": "691fc30057d5debfd0432470a2e43777b9f9b48fca89bd297ff4f2aa188f2858",
+      "sha256": "96e7dee7ca81e1a3ce7c0020200037204ce16b5f1560cd75d90caf35b0209780",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -529,13 +639,12 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 201,
-              "outside_fraction": 0.0017562561163148329,
+              "outside_pixels": 197,
+              "outside_fraction": 0.001721305745840906,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8b895",
                 "#766f62",
                 "#cac1ad"
               ],
@@ -562,6 +671,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -573,7 +692,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -603,6 +733,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -613,24 +753,47 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
-        "hits": 80,
-        "misses": 6
+        "hits": 82,
+        "misses": 5
       }
     },
     {
       "id": "0004",
+      "row": 1,
       "values": {
         "name": "Ember Warden",
         "element": "Ember",
         "element_color": "#ff6b35",
         "element_dark": "#2a0905",
         "element_light": "#ffd166",
-        "art": "assets/1e7958055ca456d0acd9b59e25c68935ef33e1e4cda95da0b22888697cf03545.jpg",
+        "art": "assets/9b4a489e77062b71b88f7da8782555eef73f3b5ca537a95a32e18c646e849445.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Ember spirits you control get +1 DEF.",
@@ -639,9 +802,10 @@
       },
       "artboard": "legendary",
       "status": "completed",
-      "output": "0004-06cad562a3f735e2.webp",
-      "fingerprint": "06cad562a3f735e2c68cf3b031ecbeb06424bf09eead480a858d9386357bb998",
-      "sha256": "4fa6ada5fa5f68481db52c06c52077be11e7e4793e4c2cb97dfb71d011350480",
+      "output": "0004-daa08f498b9f5532.webp",
+      "fingerprint": "daa08f498b9f5532186ab672d522c1c25887c4e40b99094493a7af2346376442",
+      "request_fingerprint": "d3550287ad6700cf7947bd1bc1b776ada3eefc19e9f674775c6e63053893e8f1",
+      "sha256": "1686a00d3ed03f39458d084117cc77799678e466f373c3ba9de3f9ceafff7b83",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -735,13 +899,12 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 201,
-              "outside_fraction": 0.0017562561163148329,
+              "outside_pixels": 197,
+              "outside_fraction": 0.001721305745840906,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8b895",
                 "#766f62",
                 "#cac1ad"
               ],
@@ -768,6 +931,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -779,7 +952,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -809,6 +993,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -819,24 +1013,47 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
-        "hits": 80,
-        "misses": 6
+        "hits": 84,
+        "misses": 4
       }
     },
     {
       "id": "0005",
+      "row": 1,
       "values": {
         "name": "Ember Warden",
         "element": "Ember",
         "element_color": "#ff6b35",
         "element_dark": "#2a0905",
         "element_light": "#ffd166",
-        "art": "assets/1e7958055ca456d0acd9b59e25c68935ef33e1e4cda95da0b22888697cf03545.jpg",
+        "art": "assets/9b4a489e77062b71b88f7da8782555eef73f3b5ca537a95a32e18c646e849445.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Ember spirits you control get +1 DEF.",
@@ -845,9 +1062,10 @@
       },
       "artboard": "common",
       "status": "completed",
-      "output": "0005-8542e318506a27ae.webp",
-      "fingerprint": "8542e318506a27ae310fe9f2f519ab6f14551ac5237772d444742742df75b4f7",
-      "sha256": "6b18b5f993b842a30278ff55354294ce7efc0d7cc7b6156286ee47e01798cdb8",
+      "output": "0005-a74edcfc9f6b9ec8.webp",
+      "fingerprint": "a74edcfc9f6b9ec803808ecae83a87e8a9fc404925933ce4955fc656946ca63c",
+      "request_fingerprint": "e897b9350c00e6de2b226825b437d279c1d89fdec8e694ff1a51ab96856294d9",
+      "sha256": "08faf92c8e8c724763a4c657c8fe7e329421dcd727eba1ec773bbae3cf63191d",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -941,13 +1159,12 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 201,
-              "outside_fraction": 0.0017562561163148329,
+              "outside_pixels": 197,
+              "outside_fraction": 0.001721305745840906,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8b895",
                 "#766f62",
                 "#cac1ad"
               ],
@@ -974,6 +1191,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -985,7 +1212,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -1015,6 +1253,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1025,10 +1273,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 83,
         "misses": 4
@@ -1036,13 +1306,14 @@
     },
     {
       "id": "0006",
+      "row": 1,
       "values": {
         "name": "Ember Warden",
         "element": "Ember",
         "element_color": "#ff6b35",
         "element_dark": "#2a0905",
         "element_light": "#ffd166",
-        "art": "assets/1e7958055ca456d0acd9b59e25c68935ef33e1e4cda95da0b22888697cf03545.jpg",
+        "art": "assets/9b4a489e77062b71b88f7da8782555eef73f3b5ca537a95a32e18c646e849445.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Ember spirits you control get +1 DEF.",
@@ -1051,9 +1322,10 @@
       },
       "artboard": "rare",
       "status": "completed",
-      "output": "0006-619e9626f5275013.webp",
-      "fingerprint": "619e9626f527501364faaf3ac58f49090d3b2f934f15fa539271899646a3f893",
-      "sha256": "ae7a8a08367bf591e6771b704f65a93ab4b2f343d08eaa8caae81d9a1d836835",
+      "output": "0006-f12b5e78d470598a.webp",
+      "fingerprint": "f12b5e78d470598a33f9ffff92e5660207aa5b967b39069ef3dcb69108cd00f2",
+      "request_fingerprint": "4ae4afab23afc5f3aa3230b954c00245abd3604b790058664dd16d6017008ebc",
+      "sha256": "0af7b89aeac45b27cb279887e38ef3e1ece7ab39cee25aafd6aa4b174b3d4552",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -1147,13 +1419,12 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 201,
-              "outside_fraction": 0.0017562561163148329,
+              "outside_pixels": 197,
+              "outside_fraction": 0.001721305745840906,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8b895",
                 "#766f62",
                 "#cac1ad"
               ],
@@ -1180,6 +1451,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1191,7 +1472,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -1221,6 +1513,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1231,10 +1533,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
@@ -1242,13 +1566,14 @@
     },
     {
       "id": "0007",
+      "row": 1,
       "values": {
         "name": "Ember Warden",
         "element": "Ember",
         "element_color": "#ff6b35",
         "element_dark": "#2a0905",
         "element_light": "#ffd166",
-        "art": "assets/1e7958055ca456d0acd9b59e25c68935ef33e1e4cda95da0b22888697cf03545.jpg",
+        "art": "assets/9b4a489e77062b71b88f7da8782555eef73f3b5ca537a95a32e18c646e849445.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Ember spirits you control get +1 DEF.",
@@ -1257,9 +1582,10 @@
       },
       "artboard": "epic",
       "status": "completed",
-      "output": "0007-cae4abd356842fc0.webp",
-      "fingerprint": "cae4abd356842fc02c68861d3b028b43d8bce268c07cfa4c94ce389a9d428864",
-      "sha256": "635bac0220128b3878f4dd8a484571b1d70863141d2b2e8bd050583351ba1a52",
+      "output": "0007-28590b81a3db6812.webp",
+      "fingerprint": "28590b81a3db68126026eb1fa7fdd9e2d10047e434671c384154a29bb483edeb",
+      "request_fingerprint": "6ef3a114910e9fadcff948d7c0f660357babb62cd55bc138a97c490d46be6937",
+      "sha256": "08e9366a90ca7368033b2593103da4ef3537bef54514341e52e77f87a22c6f81",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -1353,13 +1679,12 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 201,
-              "outside_fraction": 0.0017562561163148329,
+              "outside_pixels": 197,
+              "outside_fraction": 0.001721305745840906,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8b895",
                 "#766f62",
                 "#cac1ad"
               ],
@@ -1386,6 +1711,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1397,7 +1732,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -1427,6 +1773,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1437,10 +1793,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
@@ -1448,13 +1826,14 @@
     },
     {
       "id": "0008",
+      "row": 1,
       "values": {
         "name": "Ember Warden",
         "element": "Ember",
         "element_color": "#ff6b35",
         "element_dark": "#2a0905",
         "element_light": "#ffd166",
-        "art": "assets/1e7958055ca456d0acd9b59e25c68935ef33e1e4cda95da0b22888697cf03545.jpg",
+        "art": "assets/9b4a489e77062b71b88f7da8782555eef73f3b5ca537a95a32e18c646e849445.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Ember spirits you control get +1 DEF.",
@@ -1463,9 +1842,10 @@
       },
       "artboard": "legendary",
       "status": "completed",
-      "output": "0008-3b5cdca9bff9fc8a.webp",
-      "fingerprint": "3b5cdca9bff9fc8ad90e752f8ca1b2d8f0275aacd0111bce90f3680293012907",
-      "sha256": "e2ab1bfcdee28269c614d38d94647cd5c30a26c6b747c691321396832d0838e8",
+      "output": "0008-a26a1b5470ac3ef2.webp",
+      "fingerprint": "a26a1b5470ac3ef272289c168c51b6a3e41dd4129f01d2dc5a7cab395500f493",
+      "request_fingerprint": "9071c46a9379e5f579487eb6c3d21420f3aa8fcf5faf734c969b81bbfb6d4685",
+      "sha256": "47bfbd5fc4f6b13a5f40c868b35dd072e00d88f2e571f18e506d681ea8be4526",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -1559,13 +1939,12 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 201,
-              "outside_fraction": 0.0017562561163148329,
+              "outside_pixels": 197,
+              "outside_fraction": 0.001721305745840906,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 61,
+              "maximum_distance": 45,
               "examples": [
-                "#f8b895",
                 "#766f62",
                 "#cac1ad"
               ],
@@ -1592,6 +1971,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1603,7 +1992,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -1633,6 +2033,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1643,10 +2053,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
@@ -1654,13 +2086,14 @@
     },
     {
       "id": "0009",
+      "row": 2,
       "values": {
         "name": "Tide Warden",
         "element": "Tide",
         "element_color": "#2ec4ff",
         "element_dark": "#03182b",
         "element_light": "#c9f6ff",
-        "art": "assets/361adb2f1934f093e62bba3620d23c151984becd3aabceb9177ec876ad6fe1dd.jpg",
+        "art": "assets/caeb23a939a30e93763287f0328e4ff859106be6904d9939b578a0b89eed2b45.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Tide spirits you control get +1 DEF.",
@@ -1669,9 +2102,10 @@
       },
       "artboard": "common",
       "status": "completed",
-      "output": "0009-98d80f45540d6000.webp",
-      "fingerprint": "98d80f45540d60000ca28b6316fe149be13e5f9a4c7f643f8cac931033977d0d",
-      "sha256": "3d7b1dd3552c8bbd3e39e3a056decac2a8cc7191fc03ec33e255a164714a7229",
+      "output": "0009-64ac2e512ee63f30.webp",
+      "fingerprint": "64ac2e512ee63f30c08b3a454ea7fd5e473d6d246434b26cbbbf5c6784c5fbd5",
+      "request_fingerprint": "2a7bc0f33757a6722f1ce583ebbf76bc71df355eba426d6d9e61ae02a3cb76ea",
+      "sha256": "93ecc4f99382c25732278196cb8873e615687e86765cf38d9326b097f7c03da1",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -1765,15 +2199,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 195,
-              "outside_fraction": 0.0017038305606039423,
+              "outside_pixels": 191,
+              "outside_fraction": 0.0016688801901300154,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 78,
+              "maximum_distance": 45,
               "examples": [
-                "#a6dbe4",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -1799,6 +2232,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1810,7 +2253,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -1840,6 +2294,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -1850,24 +2314,47 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
-        "hits": 38,
-        "misses": 32
+        "hits": 54,
+        "misses": 27
       }
     },
     {
       "id": "0010",
+      "row": 2,
       "values": {
         "name": "Tide Warden",
         "element": "Tide",
         "element_color": "#2ec4ff",
         "element_dark": "#03182b",
         "element_light": "#c9f6ff",
-        "art": "assets/361adb2f1934f093e62bba3620d23c151984becd3aabceb9177ec876ad6fe1dd.jpg",
+        "art": "assets/caeb23a939a30e93763287f0328e4ff859106be6904d9939b578a0b89eed2b45.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Tide spirits you control get +1 DEF.",
@@ -1876,9 +2363,10 @@
       },
       "artboard": "rare",
       "status": "completed",
-      "output": "0010-32375ee4f2e6e08c.webp",
-      "fingerprint": "32375ee4f2e6e08c6633412eabe228f1c517a54d0ba75dc025f7f4008e981c1b",
-      "sha256": "162d9f8399df2910e05b3c3f5723bf7964f41db844e6780704a9dcc9db878d81",
+      "output": "0010-535d4a3b092c6cac.webp",
+      "fingerprint": "535d4a3b092c6caca5340d03fe52c06ce2c55bc107d840383822cc92fc86e11d",
+      "request_fingerprint": "5e7feb81a413b0470b5f2c87af54776f5b4d12c3ca0dd0288ed6e4fe082e259c",
+      "sha256": "0f62a0f34c4398762b092e6629906191484257101b21dddfe975965bcf32e986",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -1972,15 +2460,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 195,
-              "outside_fraction": 0.0017038305606039423,
+              "outside_pixels": 191,
+              "outside_fraction": 0.0016688801901300154,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 78,
+              "maximum_distance": 45,
               "examples": [
-                "#a6dbe4",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -2006,6 +2493,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2017,7 +2514,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -2047,6 +2555,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2057,24 +2575,47 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
-        "hits": 54,
-        "misses": 23
+        "hits": 76,
+        "misses": 10
       }
     },
     {
       "id": "0011",
+      "row": 2,
       "values": {
         "name": "Tide Warden",
         "element": "Tide",
         "element_color": "#2ec4ff",
         "element_dark": "#03182b",
         "element_light": "#c9f6ff",
-        "art": "assets/361adb2f1934f093e62bba3620d23c151984becd3aabceb9177ec876ad6fe1dd.jpg",
+        "art": "assets/caeb23a939a30e93763287f0328e4ff859106be6904d9939b578a0b89eed2b45.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Tide spirits you control get +1 DEF.",
@@ -2083,9 +2624,10 @@
       },
       "artboard": "epic",
       "status": "completed",
-      "output": "0011-846f8d9d4044dda8.webp",
-      "fingerprint": "846f8d9d4044dda865b4fedb07646fea8c6117decb91df2f1abe67232823b0df",
-      "sha256": "828c409028c60ca737ad78f1fcb13b4deb01a852c5fa815392e4659738e5b41a",
+      "output": "0011-4a8d670ee97a4fc5.webp",
+      "fingerprint": "4a8d670ee97a4fc5248376e3c6b90203c6252f0789d474d1ae08f20d2a3ebdd4",
+      "request_fingerprint": "0f1bff8c84c4263d476fd5d86cb669790d0b1519983a8b0321a82abb54d3a1b1",
+      "sha256": "8fb1dd2c9136d0482eeb52a867f986eca90b4d5cb7a5f2ec6ac4778c9d6159c0",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -2179,15 +2721,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 195,
-              "outside_fraction": 0.0017038305606039423,
+              "outside_pixels": 191,
+              "outside_fraction": 0.0016688801901300154,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 78,
+              "maximum_distance": 45,
               "examples": [
-                "#a6dbe4",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -2213,6 +2754,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2224,7 +2775,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -2254,6 +2816,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2264,24 +2836,47 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
-        "hits": 83,
-        "misses": 4
+        "hits": 85,
+        "misses": 3
       }
     },
     {
       "id": "0012",
+      "row": 2,
       "values": {
         "name": "Tide Warden",
         "element": "Tide",
         "element_color": "#2ec4ff",
         "element_dark": "#03182b",
         "element_light": "#c9f6ff",
-        "art": "assets/361adb2f1934f093e62bba3620d23c151984becd3aabceb9177ec876ad6fe1dd.jpg",
+        "art": "assets/caeb23a939a30e93763287f0328e4ff859106be6904d9939b578a0b89eed2b45.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Tide spirits you control get +1 DEF.",
@@ -2290,9 +2885,10 @@
       },
       "artboard": "legendary",
       "status": "completed",
-      "output": "0012-0b824d3275d125da.webp",
-      "fingerprint": "0b824d3275d125da7de046f76fbffba4b09114ca91187f930e8be93399aa5593",
-      "sha256": "6181717007b092821c52c633e04002fa4cb2591400c200387874332d89d59c51",
+      "output": "0012-03f7cdc6b9876d43.webp",
+      "fingerprint": "03f7cdc6b9876d43c214d915b0c9c0091dd892babfab90ec47a179d3add8d64a",
+      "request_fingerprint": "13d608fa545fbfda34c1b8e4bdadaeaaa01b7c8178ed3dd04815f8849758fdcf",
+      "sha256": "d8d1ced115bdf86e3c42bbf1b2ffd2e5134bd0d14230ebf87cb7d2907d7f48c8",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -2386,15 +2982,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 195,
-              "outside_fraction": 0.0017038305606039423,
+              "outside_pixels": 191,
+              "outside_fraction": 0.0016688801901300154,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 78,
+              "maximum_distance": 45,
               "examples": [
-                "#a6dbe4",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -2420,6 +3015,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2431,7 +3036,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -2461,6 +3077,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2471,10 +3097,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 83,
         "misses": 4
@@ -2482,13 +3130,14 @@
     },
     {
       "id": "0013",
+      "row": 2,
       "values": {
         "name": "Tide Warden",
         "element": "Tide",
         "element_color": "#2ec4ff",
         "element_dark": "#03182b",
         "element_light": "#c9f6ff",
-        "art": "assets/361adb2f1934f093e62bba3620d23c151984becd3aabceb9177ec876ad6fe1dd.jpg",
+        "art": "assets/caeb23a939a30e93763287f0328e4ff859106be6904d9939b578a0b89eed2b45.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Tide spirits you control get +1 DEF.",
@@ -2497,9 +3146,10 @@
       },
       "artboard": "common",
       "status": "completed",
-      "output": "0013-bd219454109ce85a.webp",
-      "fingerprint": "bd219454109ce85a4cf25b13b13788b8de2387692e696fcc1c52307a7e3bc16c",
-      "sha256": "301ecd6d1a1622a765195741c7867893fd348eba312d083a2fe2d10b2be62df3",
+      "output": "0013-73224179e9b18ed2.webp",
+      "fingerprint": "73224179e9b18ed2cbaf6536f5e23cf3150a969c68a5b3abf7e958423120d3ba",
+      "request_fingerprint": "bc9eedcd6de1431d9c640f107356d94b1b1ec8b02a667a4f33e2f89b83a75e46",
+      "sha256": "6b0b6127c051cdf6af3a1a15e424293d47675a94539a925f77c6d7689d8536b1",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -2593,15 +3243,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 195,
-              "outside_fraction": 0.0017038305606039423,
+              "outside_pixels": 191,
+              "outside_fraction": 0.0016688801901300154,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 78,
+              "maximum_distance": 45,
               "examples": [
-                "#a6dbe4",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -2627,6 +3276,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2638,7 +3297,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -2668,6 +3338,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2678,10 +3358,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
@@ -2689,13 +3391,14 @@
     },
     {
       "id": "0014",
+      "row": 2,
       "values": {
         "name": "Tide Warden",
         "element": "Tide",
         "element_color": "#2ec4ff",
         "element_dark": "#03182b",
         "element_light": "#c9f6ff",
-        "art": "assets/361adb2f1934f093e62bba3620d23c151984becd3aabceb9177ec876ad6fe1dd.jpg",
+        "art": "assets/caeb23a939a30e93763287f0328e4ff859106be6904d9939b578a0b89eed2b45.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Tide spirits you control get +1 DEF.",
@@ -2704,9 +3407,10 @@
       },
       "artboard": "rare",
       "status": "completed",
-      "output": "0014-83888d8c6c4f12d7.webp",
-      "fingerprint": "83888d8c6c4f12d745ec709943a176451d93304aad339b0c1445866e5a10f0b0",
-      "sha256": "20207dccd0d0f1571050b87a0e7ffe6cc136d6aae200ca6f7a163df300dff364",
+      "output": "0014-0c401b8f0d164c98.webp",
+      "fingerprint": "0c401b8f0d164c98e15bd84d07995de6d7326ccd5c5028a63015bfb677a5423f",
+      "request_fingerprint": "9240ae6777876c594ea035283e153db43f735596031dde255fc10429b07940bb",
+      "sha256": "1a03252b7eeaa126b98c9b0dc4ebb6ddff305d3e7c8d0898a2c1e33196f79b1c",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -2800,15 +3504,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 195,
-              "outside_fraction": 0.0017038305606039423,
+              "outside_pixels": 191,
+              "outside_fraction": 0.0016688801901300154,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 78,
+              "maximum_distance": 45,
               "examples": [
-                "#a6dbe4",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -2834,6 +3537,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2845,7 +3558,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -2875,6 +3599,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -2885,10 +3619,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
@@ -2896,13 +3652,14 @@
     },
     {
       "id": "0015",
+      "row": 2,
       "values": {
         "name": "Tide Warden",
         "element": "Tide",
         "element_color": "#2ec4ff",
         "element_dark": "#03182b",
         "element_light": "#c9f6ff",
-        "art": "assets/361adb2f1934f093e62bba3620d23c151984becd3aabceb9177ec876ad6fe1dd.jpg",
+        "art": "assets/caeb23a939a30e93763287f0328e4ff859106be6904d9939b578a0b89eed2b45.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Tide spirits you control get +1 DEF.",
@@ -2911,9 +3668,10 @@
       },
       "artboard": "epic",
       "status": "completed",
-      "output": "0015-9efa5a2e04a6423f.webp",
-      "fingerprint": "9efa5a2e04a6423f04b213764f7694553afe668dc52139a35d32f30417c66a6f",
-      "sha256": "17fbca92336d073faeb3c2e71de24be44792509ca642372b24376bc000c3da32",
+      "output": "0015-73ea3ca67024bf0e.webp",
+      "fingerprint": "73ea3ca67024bf0ef10967da6e1b9939839b981dd814427876ae15d80dc324be",
+      "request_fingerprint": "a1611369f7159efa5c38958db419b25af6adac84114210734a26408039de23ef",
+      "sha256": "0ab1cfc79f6a95aaca45b929248928ef6835b5a7256cb8a73460131c7051db27",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -3007,15 +3765,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 195,
-              "outside_fraction": 0.0017038305606039423,
+              "outside_pixels": 191,
+              "outside_fraction": 0.0016688801901300154,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 78,
+              "maximum_distance": 45,
               "examples": [
-                "#a6dbe4",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -3041,6 +3798,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -3052,7 +3819,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -3082,6 +3860,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -3092,10 +3880,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
@@ -3103,13 +3913,14 @@
     },
     {
       "id": "0016",
+      "row": 2,
       "values": {
         "name": "Tide Warden",
         "element": "Tide",
         "element_color": "#2ec4ff",
         "element_dark": "#03182b",
         "element_light": "#c9f6ff",
-        "art": "assets/361adb2f1934f093e62bba3620d23c151984becd3aabceb9177ec876ad6fe1dd.jpg",
+        "art": "assets/caeb23a939a30e93763287f0328e4ff859106be6904d9939b578a0b89eed2b45.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Tide spirits you control get +1 DEF.",
@@ -3118,9 +3929,10 @@
       },
       "artboard": "legendary",
       "status": "completed",
-      "output": "0016-3b6ec7e21001d091.webp",
-      "fingerprint": "3b6ec7e21001d09173d16a1036fa4b488f071cf944ac292d8de4004966130cb9",
-      "sha256": "b62cff7fbe40f6c520fa5ea948d4ea18829dd711a40cb0aa3535d571443f9290",
+      "output": "0016-451f73af5e28b175.webp",
+      "fingerprint": "451f73af5e28b17579b9c430f1bd58350d7010d53a220a20ff3fb9f018b1a353",
+      "request_fingerprint": "95a64530192dc3680b0219bdd80326df492ea516fe58b7436ba69009716f590d",
+      "sha256": "757a57349bc1d6ff4e3c62f7c4a9aee9df09668c0579bea23f217e85d1cb2351",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -3214,15 +4026,14 @@
                 "#a99a80"
               ],
               "pixels_checked": 114448,
-              "outside_pixels": 195,
-              "outside_fraction": 0.0017038305606039423,
+              "outside_pixels": 191,
+              "outside_fraction": 0.0016688801901300154,
               "max_fraction": 0.04,
               "tolerance": 40,
-              "maximum_distance": 78,
+              "maximum_distance": 45,
               "examples": [
-                "#a6dbe4",
                 "#cac1ad",
-                "#777063",
+                "#767063",
                 "#766f62"
               ],
               "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
@@ -3248,6 +4059,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -3259,7 +4080,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -3289,6 +4121,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -3299,10 +4141,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
@@ -3310,13 +4174,14 @@
     },
     {
       "id": "0017",
+      "row": 3,
       "values": {
         "name": "Storm Warden",
         "element": "Storm",
         "element_color": "#b388ff",
         "element_dark": "#130a2e",
         "element_light": "#f1e6ff",
-        "art": "assets/2a31272048182e590e5d3ca43dea0661d49246fc3b11b2e34981a95175ebc050.jpg",
+        "art": "assets/a7dfaadf80258553c1d384f5e2fe3421b5c45cf34bd76ad713f0f46a429c9c67.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Storm spirits you control get +1 DEF.",
@@ -3325,9 +4190,10 @@
       },
       "artboard": "common",
       "status": "completed",
-      "output": "0017-2d8b5aa6f8122bba.webp",
-      "fingerprint": "2d8b5aa6f8122bbae900fac3bbab72a87eac1b8e65d0fc2703b7266d257940f1",
-      "sha256": "a777261566f5232a28f7d9ca18016ba5d6d8ee500c7aecf559381711d0f42990",
+      "output": "0017-f372f87380198eac.webp",
+      "fingerprint": "f372f87380198eac41c779497408127bea041d152402912881a170806867a8bf",
+      "request_fingerprint": "310d5583df0468b463837f65d636ad3fae5609d13baf9f782b6840a402a497ca",
+      "sha256": "cbf25a155f1165bf85cd21b2ab79cf192ef98f7428f0fd0872e94bd99525b441",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -3453,6 +4319,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -3464,7 +4340,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -3494,6 +4381,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -3504,24 +4401,47 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
-        "hits": 43,
-        "misses": 29
+        "hits": 61,
+        "misses": 21
       }
     },
     {
       "id": "0018",
+      "row": 3,
       "values": {
         "name": "Storm Warden",
         "element": "Storm",
         "element_color": "#b388ff",
         "element_dark": "#130a2e",
         "element_light": "#f1e6ff",
-        "art": "assets/2a31272048182e590e5d3ca43dea0661d49246fc3b11b2e34981a95175ebc050.jpg",
+        "art": "assets/a7dfaadf80258553c1d384f5e2fe3421b5c45cf34bd76ad713f0f46a429c9c67.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Storm spirits you control get +1 DEF.",
@@ -3530,9 +4450,10 @@
       },
       "artboard": "rare",
       "status": "completed",
-      "output": "0018-05e839b9a1c05e8b.webp",
-      "fingerprint": "05e839b9a1c05e8bbf0a19bc3fb45b07007ef5c52e1bc05bc57087ce06a69444",
-      "sha256": "0421ee0eb0d81a6c3acf18e5f11ba0c5570d321fb87592fb0144bb498e47f537",
+      "output": "0018-6c4e7e271abe0f8e.webp",
+      "fingerprint": "6c4e7e271abe0f8ee061af3699a643b572dfb074a6b30ce42339c9907503f9b3",
+      "request_fingerprint": "a9ed5938aec57a19db46c20b2a38ccc9f20ab79fbf1a472ffd98fb9f7b747fa5",
+      "sha256": "027146f6574f7fab68a29660f688329a3d9a9fb53aec4ed4cf51b61f2e0010a6",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -3658,6 +4579,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -3669,7 +4600,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -3699,6 +4641,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -3709,24 +4661,47 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
-        "hits": 44,
-        "misses": 29
+        "hits": 76,
+        "misses": 12
       }
     },
     {
       "id": "0019",
+      "row": 3,
       "values": {
         "name": "Storm Warden",
         "element": "Storm",
         "element_color": "#b388ff",
         "element_dark": "#130a2e",
         "element_light": "#f1e6ff",
-        "art": "assets/2a31272048182e590e5d3ca43dea0661d49246fc3b11b2e34981a95175ebc050.jpg",
+        "art": "assets/a7dfaadf80258553c1d384f5e2fe3421b5c45cf34bd76ad713f0f46a429c9c67.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Storm spirits you control get +1 DEF.",
@@ -3735,9 +4710,10 @@
       },
       "artboard": "epic",
       "status": "completed",
-      "output": "0019-46bcdd5e577f1273.webp",
-      "fingerprint": "46bcdd5e577f1273f5ad47c43e68183766ce131df87a0e2d8ad7dc79257b34be",
-      "sha256": "495463243d690cca3395b4c4a5b728d5ea7bec4945458a5d7d4f4d25097879df",
+      "output": "0019-3d39529c1e011093.webp",
+      "fingerprint": "3d39529c1e011093dd75e2c9a20a4407c0ae1977fa47a0659b7e9141377cc3af",
+      "request_fingerprint": "e05facf50f0e84e955e592d63430feea7042f9e5278a680ba744c698d04addad",
+      "sha256": "323b38b249ba804dee041df730d6c4448316c53391e67aa1c6b824c57e20ecce",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -3863,6 +4839,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -3874,7 +4860,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -3904,6 +4901,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -3914,24 +4921,47 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
-        "hits": 83,
-        "misses": 4
+        "hits": 85,
+        "misses": 3
       }
     },
     {
       "id": "0020",
+      "row": 3,
       "values": {
         "name": "Storm Warden",
         "element": "Storm",
         "element_color": "#b388ff",
         "element_dark": "#130a2e",
         "element_light": "#f1e6ff",
-        "art": "assets/2a31272048182e590e5d3ca43dea0661d49246fc3b11b2e34981a95175ebc050.jpg",
+        "art": "assets/a7dfaadf80258553c1d384f5e2fe3421b5c45cf34bd76ad713f0f46a429c9c67.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Storm spirits you control get +1 DEF.",
@@ -3940,9 +4970,10 @@
       },
       "artboard": "legendary",
       "status": "completed",
-      "output": "0020-ac0261606e53082d.webp",
-      "fingerprint": "ac0261606e53082db84e8fbbf207c3c3726d4c20bd15157fbecb5d394d4e51ab",
-      "sha256": "fa0f34797a4a2982cfb6430ff461c56712c3ebf298e3e4d0d2df477a96920f5a",
+      "output": "0020-d88775a3cc347e09.webp",
+      "fingerprint": "d88775a3cc347e092844b44a3334f9537524bcd1b870b180d103be3f1bb69cf5",
+      "request_fingerprint": "8fa515082c3cd26e8c1cd683f44b51c22701596b2a40009508cd870ccdc453e2",
+      "sha256": "61daa8959ad54b69d28ac99b60a9b0c86f6775cc4d658494105a751e050ab9ae",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -4068,6 +5099,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -4079,7 +5120,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -4109,6 +5161,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -4119,10 +5181,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 83,
         "misses": 4
@@ -4130,13 +5214,14 @@
     },
     {
       "id": "0021",
+      "row": 3,
       "values": {
         "name": "Storm Warden",
         "element": "Storm",
         "element_color": "#b388ff",
         "element_dark": "#130a2e",
         "element_light": "#f1e6ff",
-        "art": "assets/2a31272048182e590e5d3ca43dea0661d49246fc3b11b2e34981a95175ebc050.jpg",
+        "art": "assets/a7dfaadf80258553c1d384f5e2fe3421b5c45cf34bd76ad713f0f46a429c9c67.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Storm spirits you control get +1 DEF.",
@@ -4145,9 +5230,10 @@
       },
       "artboard": "common",
       "status": "completed",
-      "output": "0021-63a50648e227232f.webp",
-      "fingerprint": "63a50648e227232f9923dbda6f4eaf471bca97bbf009deba2c27ec55e5c9c742",
-      "sha256": "56216fb865f65d3087b020d530452592e9cdd231c72ef4d972440bc3262dc050",
+      "output": "0021-ac086aa3c7c75d6f.webp",
+      "fingerprint": "ac086aa3c7c75d6f163b637a7a9454156c84935db43ed078376f496620e8881f",
+      "request_fingerprint": "9802c80ad09b067b0f0888b276ccb8ea3564d7634bef8fdc94c2f89bdfb97fe6",
+      "sha256": "10065762e68743b3f9be4af59d5dcaafe547ad190ff9c20c42719e65092c589a",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -4273,6 +5359,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -4284,7 +5380,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -4314,6 +5421,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -4324,10 +5441,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
@@ -4335,13 +5474,14 @@
     },
     {
       "id": "0022",
+      "row": 3,
       "values": {
         "name": "Storm Warden",
         "element": "Storm",
         "element_color": "#b388ff",
         "element_dark": "#130a2e",
         "element_light": "#f1e6ff",
-        "art": "assets/2a31272048182e590e5d3ca43dea0661d49246fc3b11b2e34981a95175ebc050.jpg",
+        "art": "assets/a7dfaadf80258553c1d384f5e2fe3421b5c45cf34bd76ad713f0f46a429c9c67.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Storm spirits you control get +1 DEF.",
@@ -4350,9 +5490,10 @@
       },
       "artboard": "rare",
       "status": "completed",
-      "output": "0022-b2d1afffef3c90c7.webp",
-      "fingerprint": "b2d1afffef3c90c7145297757b89099f5b108f9561a6d04026f30089653f07fb",
-      "sha256": "a9716430818fa7cd22ea0b29917bd59f88e4fea0a71b6224dd282c2cc47c4470",
+      "output": "0022-3995e3594830fe21.webp",
+      "fingerprint": "3995e3594830fe21cf854b9e99c0ab7ca524b89b5ff85297fac6c62383466240",
+      "request_fingerprint": "d9e84affdfedfc864c838969e49bb2ece088f9b6825c5062ce0dd48a9c02f16d",
+      "sha256": "5adb610f9ab51cd4ad03393a9274bd97dd273ef361070f3d4a1d3261babfc2ec",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -4478,6 +5619,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -4489,7 +5640,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -4519,6 +5681,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -4529,10 +5701,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
@@ -4540,13 +5734,14 @@
     },
     {
       "id": "0023",
+      "row": 3,
       "values": {
         "name": "Storm Warden",
         "element": "Storm",
         "element_color": "#b388ff",
         "element_dark": "#130a2e",
         "element_light": "#f1e6ff",
-        "art": "assets/2a31272048182e590e5d3ca43dea0661d49246fc3b11b2e34981a95175ebc050.jpg",
+        "art": "assets/a7dfaadf80258553c1d384f5e2fe3421b5c45cf34bd76ad713f0f46a429c9c67.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Storm spirits you control get +1 DEF.",
@@ -4555,9 +5750,10 @@
       },
       "artboard": "epic",
       "status": "completed",
-      "output": "0023-27b2b21d4b6d35cb.webp",
-      "fingerprint": "27b2b21d4b6d35cba38c0e6847ca5e44515aa9f46832be3b80813ffc1b1811ba",
-      "sha256": "d11979b963fb9d7a8ce8260c5e8811f591de5162e57fc5ccaabeb3bf834a511e",
+      "output": "0023-1874bbe87931d1cf.webp",
+      "fingerprint": "1874bbe87931d1cfe5b8ad765150d7ec1de22d5a73c63ffe5f84a4033ae56987",
+      "request_fingerprint": "b3b7cb5a64613ad150f66b2c1e93548905dcd9495d6dda33e692d244d826d354",
+      "sha256": "1da0dbe11de1e0ec981d8464a425755104bf65ee98bec25da34b83299264b28f",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -4683,6 +5879,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -4694,7 +5900,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -4724,6 +5941,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -4734,10 +5961,32 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
@@ -4745,13 +5994,14 @@
     },
     {
       "id": "0024",
+      "row": 3,
       "values": {
         "name": "Storm Warden",
         "element": "Storm",
         "element_color": "#b388ff",
         "element_dark": "#130a2e",
         "element_light": "#f1e6ff",
-        "art": "assets/2a31272048182e590e5d3ca43dea0661d49246fc3b11b2e34981a95175ebc050.jpg",
+        "art": "assets/a7dfaadf80258553c1d384f5e2fe3421b5c45cf34bd76ad713f0f46a429c9c67.jpg",
         "kind": "Spirit \u2014 Warden",
         "ability_name": "Ward",
         "ability": "Other Storm spirits you control get +1 DEF.",
@@ -4760,9 +6010,10 @@
       },
       "artboard": "legendary",
       "status": "completed",
-      "output": "0024-554c8b3bfa5d944a.webp",
-      "fingerprint": "554c8b3bfa5d944a1490113dd18d81f7c29de1995e47205ae70b820c58b95c70",
-      "sha256": "ba1809758e7aaffa779884ef1e153b30e939acdc13a42c8ea0a3a502b32734b0",
+      "output": "0024-851cb4dafe82ed13.webp",
+      "fingerprint": "851cb4dafe82ed134b363734dda829a1df3cc13d3cf7c6f9eb1dd3108a405ed0",
+      "request_fingerprint": "897d72d75855524b6f18a1cadb0ba7c7c848fab1e65f5aefbc55956630cf5a99",
+      "sha256": "2a2adcf7dc98dd8feec48206080434a36082a0fdb87ddb37606b697665ff9601",
       "checks": {
         "card-qa": {
           "version": 1,
@@ -4888,6 +6139,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -4899,7 +6160,18 @@
                 "text_layers": 2
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         },
         "no-placeholders": {
           "version": 1,
@@ -4929,6 +6201,16 @@
                 "review": [],
                 "informational": []
               },
+              "outcome": {
+                "state": "validated",
+                "execution": "completed",
+                "validation": "passed",
+                "review": "not_required",
+                "review_reasons": [],
+                "validated_by": [
+                  "design checks"
+                ]
+              },
               "issues": [],
               "checked": {
                 "checks": [
@@ -4939,15 +6221,45 @@
                 "text_layers": 13
               }
             }
-          ]
+          ],
+          "source": "document",
+          "outcome": {
+            "state": "validated",
+            "execution": "completed",
+            "validation": "passed",
+            "review": "not_required",
+            "review_reasons": [],
+            "validated_by": [
+              "suite"
+            ]
+          }
         }
       },
       "repairs": [],
+      "outcome": {
+        "state": "validated",
+        "execution": "completed",
+        "validation": "passed",
+        "review": "not_required",
+        "review_reasons": [],
+        "validated_by": [
+          "suite card-qa",
+          "suite no-placeholders"
+        ]
+      },
       "cache": {
         "hits": 86,
         "misses": 2
       }
     }
   ],
+  "outcome": {
+    "state": "validated",
+    "total": 24,
+    "counts": {
+      "validated": 24
+    },
+    "validated": true
+  },
   "contact_sheet": "contact-sheet.png"
 }

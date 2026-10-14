@@ -28,25 +28,36 @@
           "#004443",
           "#CBBEAF"
         ],
-        "pixels_checked": 186284,
-        "outside_pixels": 2681,
-        "outside_fraction": 0.01439200360739516,
+        "pixels_checked": 186232,
+        "outside_pixels": 2140,
+        "outside_fraction": 0.011491043429700589,
         "max_fraction": 0.03,
         "tolerance": 8,
-        "maximum_distance": 41,
+        "maximum_distance": 40,
         "examples": [
-          "#843f23",
-          "#8b4921",
-          "#834120",
-          "#814120",
-          "#7e3f20",
-          "#763c1f",
-          "#6f3a1e",
-          "#6e381e"
+          "#7f3f20",
+          "#743b1f",
+          "#70391e",
+          "#66361d",
+          "#5b311c",
+          "#874321",
+          "#4d2b1a",
+          "#854221"
         ],
         "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
       }
-    ]
+    ],
+    "source": "document",
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "suite"
+      ]
+    }
   },
   "logo/horizontal/brand-colors-frozen": {
     "version": 1,
@@ -73,25 +84,36 @@
           "#3B2418",
           "#D9642B"
         ],
-        "pixels_checked": 186284,
-        "outside_pixels": 2681,
-        "outside_fraction": 0.01439200360739516,
+        "pixels_checked": 186232,
+        "outside_pixels": 2140,
+        "outside_fraction": 0.011491043429700589,
         "max_fraction": 0.03,
         "tolerance": 8,
         "maximum_distance": 79,
         "examples": [
-          "#843f23",
-          "#8b4921",
-          "#834120",
-          "#814120",
-          "#7e3f20",
-          "#763c1f",
-          "#6f3a1e",
-          "#6e381e"
+          "#7f3f20",
+          "#743b1f",
+          "#70391e",
+          "#66361d",
+          "#5b311c",
+          "#874321",
+          "#4d2b1a",
+          "#854221"
         ],
         "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
       }
-    ]
+    ],
+    "source": "document",
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "suite"
+      ]
+    }
   },
   "logo/stacked/brand-colors": {
     "version": 1,
@@ -122,25 +144,36 @@
           "#004443",
           "#CBBEAF"
         ],
-        "pixels_checked": 276659,
-        "outside_pixels": 3442,
-        "outside_fraction": 0.012441308614576067,
+        "pixels_checked": 276613,
+        "outside_pixels": 2930,
+        "outside_fraction": 0.01059241611927133,
         "max_fraction": 0.03,
         "tolerance": 8,
         "maximum_distance": 40,
         "examples": [
-          "#924921",
-          "#8b4522",
-          "#834120",
-          "#814020",
-          "#7e3f20",
-          "#7d3e20",
-          "#6e391e",
-          "#6d381e"
+          "#854221",
+          "#7f3f20",
+          "#7c3e20",
+          "#70391e",
+          "#5b311c",
+          "#442819",
+          "#66361d",
+          "#743b1f"
         ],
         "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
       }
-    ]
+    ],
+    "source": "document",
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "suite"
+      ]
+    }
   },
   "logo/stacked/brand-colors-frozen": {
     "version": 1,
@@ -167,25 +200,36 @@
           "#3B2418",
           "#D9642B"
         ],
-        "pixels_checked": 276659,
-        "outside_pixels": 3442,
-        "outside_fraction": 0.012441308614576067,
+        "pixels_checked": 276613,
+        "outside_pixels": 2930,
+        "outside_fraction": 0.01059241611927133,
         "max_fraction": 0.03,
         "tolerance": 8,
         "maximum_distance": 79,
         "examples": [
-          "#924921",
-          "#8b4522",
-          "#834120",
-          "#814020",
-          "#7e3f20",
-          "#7d3e20",
-          "#6e391e",
-          "#6d381e"
+          "#854221",
+          "#7f3f20",
+          "#7c3e20",
+          "#70391e",
+          "#5b311c",
+          "#442819",
+          "#66361d",
+          "#743b1f"
         ],
         "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
       }
-    ]
+    ],
+    "source": "document",
+    "outcome": {
+      "state": "validated",
+      "execution": "completed",
+      "validation": "passed",
+      "review": "not_required",
+      "review_reasons": [],
+      "validated_by": [
+        "suite"
+      ]
+    }
   },
   "mark/palette-check": {
     "passed": true,
@@ -198,21 +242,21 @@
       "#004443",
       "#CBBEAF"
     ],
-    "pixels_checked": 181716,
-    "outside_pixels": 2856,
-    "outside_fraction": 0.015716832860067358,
+    "pixels_checked": 181653,
+    "outside_pixels": 2660,
+    "outside_fraction": 0.014643303441176309,
     "max_fraction": 0.03,
     "tolerance": 8,
     "maximum_distance": 40,
     "examples": [
-      "#924921",
-      "#8b4522",
-      "#81401f",
       "#824121",
-      "#7e3f20",
-      "#793d20",
-      "#6f391f",
-      "#6d381e"
+      "#7f3f20",
+      "#783d1f",
+      "#70391e",
+      "#6b381e",
+      "#5b311c",
+      "#66361d",
+      "#854221"
     ],
     "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
   },
@@ -227,21 +271,21 @@
       "#004443",
       "#CBBEAF"
     ],
-    "pixels_checked": 761176,
-    "outside_pixels": 8109,
-    "outside_fraction": 0.010653252335859249,
+    "pixels_checked": 759375,
+    "outside_pixels": 8020,
+    "outside_fraction": 0.010561316872427983,
     "max_fraction": 0.03,
     "tolerance": 8,
-    "maximum_distance": 75,
+    "maximum_distance": 74,
     "examples": [
-      "#ddd1c2",
-      "#a39486",
-      "#6a5549",
-      "#8c7b6e",
-      "#bbad9f",
-      "#806f61",
-      "#523e30",
-      "#5e4a3d"
+      "#dcd0c2",
+      "#a39386",
+      "#695549",
+      "#8c7b6d",
+      "#baac9e",
+      "#806e61",
+      "#523d30",
+      "#5e493d"
     ],
     "metric": "maximum RGB channel distance (0\u2013255); alpha below alpha_min excluded"
   }

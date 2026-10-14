@@ -1,43 +1,2397 @@
 [
   {
     "row": 1,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0001.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0001.png",
+    "check": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 7,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 369 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 369,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 369,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 234 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 234,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 234,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 319 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 319,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 319,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "legibility",
+          "severity": "warning",
+          "layers": [
+            "flavor"
+          ],
+          "message": "'flavor' wraps with 'led.' alone on its last line (6% of the longest line); set text-layout wrap 'pretty' (or 'balance' for a heading), widen the box, add an explicit line break or run fit-text",
+          "layer_ids": [
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            78,
+            853,
+            594,
+            60
+          ],
+          "code": "runt",
+          "action": "review",
+          "line": "led.",
+          "share": 0.059,
+          "rule": "legibility.runt"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            88.7
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            58.7
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   },
   {
     "row": 2,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0002.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0002.png",
+    "check": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 6,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 369 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 369,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 369,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 319 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 319,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 319,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 313 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 313,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 313,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            88.7
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            31.0
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   },
   {
     "row": 3,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0003.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0003.png",
+    "check": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 6,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 313 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 313,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 313,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 399 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 399,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 399,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 234 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 234,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 234,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            88.7
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            31.0
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   },
   {
     "row": 4,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0004.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0004.png",
+    "check": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 7,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 399 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 399,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 399,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 313 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 313,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 313,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 399 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 399,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 399,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "legibility",
+          "severity": "warning",
+          "layers": [
+            "flavor"
+          ],
+          "message": "'flavor' wraps with 'counting.' alone on its last line (16% of the longest line); set text-layout wrap 'pretty' (or 'balance' for a heading), widen the box, add an explicit line break or run fit-text",
+          "layer_ids": [
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            78,
+            853,
+            594,
+            60
+          ],
+          "code": "runt",
+          "action": "review",
+          "line": "counting.",
+          "share": 0.158,
+          "rule": "legibility.runt"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            90.3
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            65.3
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   },
   {
     "row": 5,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0005.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0005.png",
+    "check": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 6,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 319 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 319,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 319,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 369 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 369,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 369,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 347 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 347,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 347,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            88.7
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            31.0
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   },
   {
     "row": 6,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0006.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0006.png",
+    "check": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 6,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 399 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 399,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 399,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 447 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 447,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 447,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 319 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 319,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 319,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            90.9
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            31.0
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   },
   {
     "row": 7,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0007.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0007.png",
+    "check": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 6,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 347 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 347,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 347,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 313 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 313,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 313,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 319 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 319,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 319,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            88.7
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            31.0
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   },
   {
     "row": 8,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0008.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0008.png",
+    "check": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 7,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 234 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 234,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 234,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 369 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 369,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 369,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 347 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 347,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 347,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "legibility",
+          "severity": "warning",
+          "layers": [
+            "ability"
+          ],
+          "message": "'ability' wraps with 'card.' alone on its last line (9% of the longest line); set text-layout wrap 'pretty' (or 'balance' for a heading), widen the box, add an explicit line break or run fit-text",
+          "layer_ids": [
+            "lyr_ef2ce0c96dc3481a"
+          ],
+          "box": [
+            78,
+            738,
+            594,
+            104
+          ],
+          "code": "runt",
+          "action": "review",
+          "line": "card.",
+          "share": 0.091,
+          "rule": "legibility.runt"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            88.7
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            63.5
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   },
   {
     "row": 9,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0009.png",
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0009.png",
     "check": {
       "passed": false,
-      "errors": 3,
-      "warnings": 0,
+      "errors": 2,
+      "warnings": 6,
       "issues": [
         {
           "check": "fonts",
@@ -45,15 +2399,30 @@
           "layers": [
             "card-name"
           ],
-          "message": "'card-name' has characters no font can draw (✨の光狐); they render as empty boxes. Import a font that covers them and add it with font-fallbacks",
+          "message": "'card-name' has characters no font can draw (の光狐); they render as empty boxes. Import a font that covers them and add it with font-fallbacks",
+          "layer_ids": [
+            "lyr_428122822c0f99ff"
+          ],
+          "box": [
+            70,
+            60,
+            520,
+            76
+          ],
           "missing": [
-            "✨",
             "の",
             "光",
             "狐"
           ],
           "fallback": [],
-          "action": "fix"
+          "action": "fix",
+          "rule": "fonts",
+          "repair": {
+            "kind": null,
+            "available": false,
+            "operations": [],
+            "reason": "no mechanical repair for this rule; see the message for the next step"
+          }
         },
         {
           "check": "fonts",
@@ -62,6 +2431,15 @@
             "flavor"
           ],
           "message": "'flavor' has characters no font can draw (、「」うにはを光影者迷追); they render as empty boxes. Import a font that covers them and add it with font-fallbacks",
+          "layer_ids": [
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            78,
+            853,
+            594,
+            60
+          ],
           "missing": [
             "、",
             "「",
@@ -77,83 +2455,1536 @@
             "追"
           ],
           "fallback": [],
-          "action": "fix"
+          "action": "fix",
+          "rule": "fonts",
+          "repair": {
+            "kind": null,
+            "available": false,
+            "operations": [],
+            "reason": "no mechanical repair for this rule; see the message for the next step"
+          }
         },
         {
-          "check": "contrast",
-          "severity": "error",
+          "check": "overlap",
+          "severity": "warning",
           "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 347 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 347,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 347,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 319 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 319,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 319,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
             "spd-value"
           ],
-          "message": "'spd-value' contrast is 1.73:1 or lower for a tenth of its glyph pixels (minimum 1.73:1, weakest at x 590–609, y 931–931); needs 3:1",
-          "region": [
-            590,
-            931,
-            20,
-            1
+          "message": "'panel' and 'spd-value' overlap by 240 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
           ],
-          "contrast": 1.73,
-          "required": 3.0,
-          "action": "fix"
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 240,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 240,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            90.3
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            30.9
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
         }
       ]
     }
   },
   {
     "row": 10,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0010.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0010.png",
+    "check": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 6,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 313 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 313,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 313,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 399 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 399,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 399,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 234 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 234,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 234,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            90.3
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            30.9
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   },
   {
     "row": 11,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0011.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0011.png",
+    "check": {
+      "passed": false,
+      "errors": 0,
+      "warnings": 9,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 428 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 428,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 428,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 428 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 428,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 428,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 428 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 428,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 428,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "placeholders",
+          "severity": "warning",
+          "layers": [
+            "type-line"
+          ],
+          "message": "'type-line' still holds placeholder copy 'TBD' (marker); replace it, or mark intended text with layer-intent literal_text",
+          "layer_ids": [
+            "lyr_2275e793cc60cbc3"
+          ],
+          "box": [
+            70,
+            634,
+            470,
+            40
+          ],
+          "code": "leftover",
+          "match": "TBD",
+          "action": "fix",
+          "rule": "placeholders.leftover",
+          "repair": {
+            "kind": null,
+            "available": false,
+            "operations": [],
+            "reason": "no mechanical repair for this rule; see the message for the next step"
+          }
+        },
+        {
+          "check": "placeholders",
+          "severity": "warning",
+          "layers": [
+            "ability"
+          ],
+          "message": "'ability' still holds placeholder copy 'Lorem ipsum' (lorem ipsum); replace it, or mark intended text with layer-intent literal_text",
+          "layer_ids": [
+            "lyr_ef2ce0c96dc3481a"
+          ],
+          "box": [
+            78,
+            738,
+            594,
+            104
+          ],
+          "code": "leftover",
+          "match": "Lorem ipsum",
+          "action": "fix",
+          "rule": "placeholders.leftover",
+          "repair": {
+            "kind": null,
+            "available": false,
+            "operations": [],
+            "reason": "no mechanical repair for this rule; see the message for the next step"
+          }
+        },
+        {
+          "check": "placeholders",
+          "severity": "warning",
+          "layers": [
+            "flavor"
+          ],
+          "message": "'flavor' still holds placeholder copy 'TODO' (marker); replace it, or mark intended text with layer-intent literal_text",
+          "layer_ids": [
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            78,
+            853,
+            594,
+            60
+          ],
+          "code": "leftover",
+          "match": "TODO",
+          "action": "fix",
+          "rule": "placeholders.leftover",
+          "repair": {
+            "kind": null,
+            "available": false,
+            "operations": [],
+            "reason": "no mechanical repair for this rule; see the message for the next step"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            88.7
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            31.0
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   },
   {
     "row": 12,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0012.png",
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0012.png",
     "check": {
-      "passed": false,
-      "errors": 2,
-      "warnings": 0,
+      "passed": true,
+      "errors": 0,
+      "warnings": 6,
       "issues": [
         {
-          "check": "contrast",
-          "severity": "error",
+          "check": "overlap",
+          "severity": "warning",
           "layers": [
+            "panel",
             "atk-value"
           ],
-          "message": "'atk-value' contrast is 2.59:1 or lower for a tenth of its glyph pixels (minimum 2.59:1, weakest at x 198–217, y 931–931); needs 3:1",
-          "region": [
-            198,
-            931,
-            20,
-            1
+          "message": "'panel' and 'atk-value' overlap by 240 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
           ],
-          "contrast": 2.593,
-          "required": 3.0,
-          "action": "fix"
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 240,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 240,
+            "expected": null,
+            "unit": "px"
+          }
         },
         {
-          "check": "contrast",
-          "severity": "error",
+          "check": "overlap",
+          "severity": "warning",
           "layers": [
+            "panel",
             "def-value"
           ],
-          "message": "'def-value' contrast is 2.59:1 or lower for a tenth of its glyph pixels (minimum 2.59:1, weakest at x 394–413, y 931–931); needs 3:1",
-          "region": [
-            394,
-            931,
-            20,
-            1
+          "message": "'panel' and 'def-value' overlap by 240 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
           ],
-          "contrast": 2.593,
-          "required": 3.0,
-          "action": "fix"
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 240,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 240,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 399 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 399,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 399,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            90.9
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            31.0
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
         }
       ]
     }
   },
   {
     "row": 13,
-    "output": "/home/user/Vixl/explorations/07-trading-cards/output/set/standard/0013.png"
+    "output": "/home/user/VixlExamples/explorations/07-trading-cards/output/set/standard/0013.png",
+    "check": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 6,
+      "issues": [
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "atk-value"
+          ],
+          "message": "'panel' and 'atk-value' overlap by 234 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_84ebf450495a2396"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            170,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 234,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 234,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "def-value"
+          ],
+          "message": "'panel' and 'def-value' overlap by 234 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_be439fa0daa7f13e"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            366,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 234,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 234,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "overlap",
+          "severity": "warning",
+          "layers": [
+            "panel",
+            "spd-value"
+          ],
+          "message": "'panel' and 'spd-value' overlap by 399 px (100.0% of the smaller layer)",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307",
+            "lyr_a48932f346db4cf1"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "region": [
+            562,
+            931,
+            76,
+            53
+          ],
+          "code": "text-object",
+          "pixels": 399,
+          "action": "review",
+          "rule": "overlap.text-object",
+          "measured": {
+            "actual": 399,
+            "expected": null,
+            "unit": "px"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "warning",
+          "layers": [
+            "panel"
+          ],
+          "message": "'panel' extends outside the safe area",
+          "layer_ids": [
+            "lyr_34d3fcf335b4a307"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "action": "review",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "safe_area",
+          "severity": "info",
+          "layers": [
+            "panel-glow"
+          ],
+          "message": "'panel-glow' extends outside the safe area (intentional crop or bleed)",
+          "layer_ids": [
+            "lyr_14d0ddbfd282eea4"
+          ],
+          "box": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "bounds": [
+            22,
+            22,
+            706,
+            962
+          ],
+          "safe_area": [
+            38,
+            38,
+            674,
+            974
+          ],
+          "code": "outside",
+          "intentional": true,
+          "action": "informational",
+          "rule": "safe_area.outside",
+          "measured": {
+            "actual": [
+              22,
+              22,
+              706,
+              962
+            ],
+            "expected": [
+              38,
+              38,
+              674,
+              974
+            ],
+            "unit": "box"
+          }
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "type-bar",
+            "rarity"
+          ],
+          "message": "The band 'type-bar' is 2 px above 'rarity', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_83ffc0bcfa6774de",
+            "lyr_968ee05133c687a8"
+          ],
+          "box": [
+            40,
+            620,
+            670,
+            64
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            40.0,
+            620.0,
+            670.0,
+            88.7
+          ],
+          "measured": {
+            "actual": 2.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 2.0,
+            "kind": "band"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        },
+        {
+          "check": "composition",
+          "severity": "warning",
+          "layers": [
+            "rule-divider",
+            "flavor"
+          ],
+          "message": "The rule 'rule-divider' is 5 px above 'flavor', under half a spacing unit (8 px): it presses onto the block below. Leave at least 16 px",
+          "layer_ids": [
+            "lyr_82b7b7e3af310301",
+            "lyr_b4bb4c1f8d78adb8"
+          ],
+          "box": [
+            115,
+            846,
+            520,
+            2
+          ],
+          "code": "crowding",
+          "action": "review",
+          "region": [
+            78.0,
+            846.0,
+            594.0,
+            30.9
+          ],
+          "measured": {
+            "actual": 5.0,
+            "expected": 8.0,
+            "unit": "px"
+          },
+          "values": {
+            "gap": 5.0,
+            "kind": "rule"
+          },
+          "threshold": {
+            "min_gap_px": 8.0
+          },
+          "spacing_unit": 16.0,
+          "rule": "composition.crowding"
+        }
+      ]
+    }
   }
 ]

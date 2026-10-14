@@ -8,7 +8,7 @@ import math
 
 from kit import (BAD, BLUE, BODY, CODE_KEY, CODE_NUM, CODE_STR, DEEP, GOOD, HEAD, LINE, MONO,
                  MUTED, PANEL, SEMI, SKY, WHITE, Scene, backdrop, centered, chip, ellipse, glow, group,
-                 image, mark, rect, rich, ripple_in, shadow, text, wordmark)
+                 image, mark, rect, rich, ripple_in, shadow, text, wordmark, VIXL)
 
 # The poster the agent builds in shots 3-5: a desert festival card, drawn from plain layers.
 DUSK = [(0, "#1B1446"), (0.45, "#6B2C91"), (0.75, "#F2709C"), (1, "#FFB36B")]
@@ -324,6 +324,8 @@ def s05_check(before, needs):
 
 # ----------------------------------------------------------------------------------------------- 6-8
 SHOW = "explorations/{}/output/{}"
+# The documentation illustrations live in the Vixl repository.
+DOCS = str(VIXL / "docs/assets/generated")
 
 
 def montage(name, words, tiles, number="04"):
@@ -368,10 +370,10 @@ def s06_graphics():
 def s07_data():
     return montage("07-data", [("Charts, decks ", None), ("& forms.", SKY)], [
         ("donut", SHOW.format("08-infographic", "social-donut-1080.png"), 760, 120, 440, 440, "Infographics"),
-        ("chart", "docs/assets/generated/chart.png", 1220, 120, 620, 348, "Editable charts"),
-        ("slides", "docs/assets/generated/slides.png", 1220, 488, 620, 200, "Slide decks"),
-        ("form", "docs/assets/generated/registration-filled.png", 760, 580, 440, 380, "PDFs people fill in"),
-        ("flow", "docs/assets/generated/workflow.png", 1220, 708, 620, 252, "Routed diagrams"),
+        ("chart", DOCS + "/chart.png", 1220, 120, 620, 348, "Editable charts"),
+        ("slides", DOCS + "/slides.png", 1220, 488, 620, 200, "Slide decks"),
+        ("form", DOCS + "/registration-filled.png", 760, 580, 440, 380, "PDFs people fill in"),
+        ("flow", DOCS + "/workflow.png", 1220, 708, 620, 252, "Routed diagrams"),
     ])
 
 
@@ -380,7 +382,7 @@ def s08_art():
         ("paint", SHOW.format("05-generative-painting", "painting.jpg"), 760, 120, 640, 400, "Brush painting",
          SHOW.format("05-generative-painting", "variant-watercolor.jpg"), "Watercolor filter", 2300),
         ("map", SHOW.format("04-pixel-rpg", "map@3x.png"), 1420, 120, 420, 252, "Pixel-art games"),
-        ("emoji", "docs/assets/generated/emojis.png", 1420, 392, 420, 568, "Emoji sets"),
+        ("emoji", DOCS + "/emojis.png", 1420, 392, 420, 568, "Emoji sets"),
         ("film", "promo/assets/germ-king.png", 760, 540, 640, 420, "Animated films"),
     ])
 
