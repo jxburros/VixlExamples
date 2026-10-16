@@ -8,7 +8,7 @@ Writes, next to this script:
 - coast-raw.jpg   a copy of explorations/06-photo-lab/photos/coast-raw.jpg for T10;
 - sketch.jpg      only with --sketch (needs Pillow): regenerates the committed T11 sketch.
 
-The song is the same synthesized arpeggio as examples/lyric-video, so no third-party audio is used.
+The song is the same synthesized arpeggio as showcases/lyric-video, so no third-party audio is used.
 """
 
 import array

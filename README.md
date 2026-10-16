@@ -1,9 +1,10 @@
 # VixlExamples
 
 A showcase of what [Vixl](https://github.com/jxburros/Vixl) can do: long creative projects, films, the
-marketing pack, and the evaluation results and kits that measure Vixl against other tools. The engine,
-its documentation and the agent skill live in the [Vixl repository](https://github.com/jxburros/Vixl);
-this one holds the media, so the engine repository stays small.
+marketing pack, the evaluation results and kits that measure Vixl against other tools, and the content
+packs Vixl downloads on demand. The engine, its documentation and the agent skill live in the
+[Vixl repository](https://github.com/jxburros/Vixl); this one holds the media, so the engine repository
+stays small.
 
 | Folder | What it is |
 | --- | --- |
@@ -16,6 +17,8 @@ this one holds the media, so the engine repository stays small.
 | [`evals/tool-comparison/`](evals/tool-comparison/README.md) | The hand-run tool comparison kit: briefs, fixtures, runs and the re-judging packages |
 | [`evals/live-runs/`](evals/live-runs) | Recorded live agent runs that the Vixl agent-eval baseline budgets are based on |
 | [`qa-reports/`](qa-reports) | Release QA reports |
+| [`packs/`](packs/README.md) | Content packs Vixl downloads when needed, such as the [emoji artwork](packs/emojis/README.md) |
+| [`showcases/`](showcases/README.md) | Small demonstrations moved out of Vixl's `examples/`: the lyric video and the cut-paper scene |
 
 ## Running the builds
 
@@ -34,6 +37,6 @@ VIXL_REPO=../Vixl python promo/build/make_video.py
 
 ## Adding to this repository
 
-New showcases, experiments, generated media and evaluation results go here rather than into Vixl. Vixl
-links to them. Keep only what Vixl's tests, docs or packaging need in the Vixl repository (its
-`docs/assets`, `assets/` and `examples/`).
+New showcases, experiments, generated media, evaluation results and large content packs go here rather
+than into Vixl. Vixl links to them. Keep only what Vixl's tests, docs or packaging need in the Vixl
+repository (its `docs/assets`, `assets/` and `examples/`).
