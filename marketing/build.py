@@ -988,7 +988,7 @@ def build_overview():
 
 
 def build_proof():
-    from vixl.proof import proof_page
+    from vixl.plugins.workspace_qa.proof import proof_page
 
     items = [
         ("social/og-card-1200x630.png", "Link preview"),
