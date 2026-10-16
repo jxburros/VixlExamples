@@ -16,7 +16,7 @@ import wave
 import numpy as np
 
 from vixl import Project
-from vixl import lyrics
+from vixl.plugins.lyrics import lyrics
 
 HERE = Path(__file__).resolve().parent
 
