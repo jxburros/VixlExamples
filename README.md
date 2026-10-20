@@ -19,6 +19,7 @@ stays small.
 | [`qa-reports/`](qa-reports) | Release QA reports |
 | [`packs/`](packs/README.md) | Content packs Vixl downloads when needed, such as the [emoji artwork](packs/emojis/README.md) |
 | [`showcases/`](showcases/README.md) | Small demonstrations moved out of Vixl's `examples/`: the lyric video and the cut-paper scene |
+| [`fonts/`](fonts/README.md) | 23 installable fonts (OTF and TTF) drawn with Vixl's font maker: a [display set](fonts/display/README.md) and a [botanical set](fonts/botanical/README.md), with the generator scripts |
 
 ## Running the builds
 
