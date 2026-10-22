@@ -202,8 +202,9 @@ saved checks, and the build refuses to export anything with a `fix` finding.
 - **[A lyric video](showcases/README.md)** from an `.lrc` file and original lyrics: styled template, synthesised
   melody, synced words.
 - **[A cut-paper scene](showcases/README.md)** with held-frame animation and rough paper edges.
-- **[An emoji pack](packs/emojis/README.md)** of about 4,000 emoji and 100 originals, each an editable layered
-  master. Vixl downloads it the first time you put an emoji in text.
+- **[An emoji pack](https://github.com/jxburros/VixlPacks/tree/main/emojis)** of about 4,000 emoji and 100 originals,
+  each an editable layered master. It lives in [VixlPacks](https://github.com/jxburros/VixlPacks), and Vixl downloads it
+  the first time you put an emoji in text.
 - **[A QA report](qa-reports/README.md)** typeset in Vixl: 24 pages on a stress test of release 0.22.0 that
   found 100 issues, and the data behind it.
 
@@ -256,7 +257,6 @@ Some notes before you start:
 | [`art/`](art/README.md) | *Rain girl* and *Heyoka: Mirrors & Paradox* |
 | [`marketing/`](marketing/README.md) | The 17-piece marketing pack with its build and verify scripts |
 | [`showcases/`](showcases/README.md) | The lyric video and the cut-paper scene |
-| [`packs/`](packs/README.md) | Content packs Vixl downloads on demand, such as the emoji artwork |
 | [`evals/`](evals/README.md) | The tool-comparison kit and recordings of live agent runs |
 | [`eval-results/`](eval-results/README.md) | Written evaluation reports and the blind re-judging |
 | [`qa-reports/`](qa-reports/README.md) | Release QA reports |
@@ -273,5 +273,5 @@ Vixl never needs it to run: nothing in the engine imports from here.
 
 The Vixl engine is [source-available](https://github.com/jxburros/Vixl/blob/main/LICENSE) under PolyForm Small
 Business 1.0.0. Fonts keep their own licences (see `marketing/output/licenses/`), the emoji pack is
-[CC BY-SA 4.0](packs/emojis/LICENSE.txt), and the *Heyoka* illustrations are generated artwork placed by Vixl. Please
+[CC BY-SA 4.0](https://github.com/jxburros/VixlPacks/blob/main/emojis/LICENSE.txt), and the *Heyoka* illustrations are generated artwork placed by Vixl. Please
 credit work you make with Vixl.
