@@ -54,7 +54,7 @@ already resolved.
 
 ## Rebuilding
 
-Install Vixl (or set `VIXL_REPO` to a checkout), ffmpeg and Pillow, then run from the root of this repository:
+Install Vixl (`python -m pip install vixl-engine`), ffmpeg and Pillow, then run from the root of this repository:
 
 ```bash
 python promo/vixl-is-fun/build/prepare_assets.py     # pictures for the "real stuff" scenes, from this repo

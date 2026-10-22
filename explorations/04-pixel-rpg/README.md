@@ -15,6 +15,8 @@ integer upscale.
 
 Rebuild from the repo root: `python explorations/04-pixel-rpg/build.py` (it wipes and recreates
 `output/`; 25 s with 0.21.0 on a shared 4-core container; about 2 min CPU with 0.16.0, mostly the timeline export).
+The two fonts (Press Start 2P and Space Mono) come from the [fonts pack](https://github.com/jxburros/VixlPacks/tree/main/fonts)
+through `vixl.packs` when your Vixl has it, and are downloaded from Google Fonts otherwise.
 
 ## Title screen and HUD
 

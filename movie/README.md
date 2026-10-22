@@ -47,7 +47,7 @@ Fredoka Bold font from Google Fonts and caches it).
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-python -m pip install -e .            # Vixl itself (numpy and Pillow come with it)
+python -m pip install vixl-engine   # Vixl itself (numpy and Pillow come with it)
 cd movie/build
 python build.py                       # scenes/*.vixl (add scene names to rebuild one)
 python make_film.py                   # audio/*.wav, film-spec.json, ../the-germ-king.mp4

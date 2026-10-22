@@ -53,7 +53,7 @@ You need Python 3.11+, ffmpeg on `PATH`, and network access the first time, when
 Inter Tight, Inter and JetBrains Mono.
 
 ```bash
-python -m pip install -e .
+python -m pip install vixl-engine
 python promo/it-does-that/build/make_video.py            # assets, scenes, score and the MP4
 python promo/it-does-that/build/make_video.py --scenes   # rebuild only the masters
 python promo/it-does-that/build/preview.py /tmp 04 06    # contact sheets for selected shots

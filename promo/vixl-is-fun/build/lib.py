@@ -2,8 +2,6 @@ import os, sys, json
 BUILD = os.path.dirname(os.path.abspath(__file__))
 HERE = os.path.dirname(BUILD)                      # promo/vixl-is-fun
 REPO = os.path.dirname(os.path.dirname(HERE))      # this repository
-if os.environ.get("VIXL_REPO"):                    # a Vixl checkout, when vixl is not installed
-    sys.path.insert(0, os.path.join(os.environ["VIXL_REPO"], "src"))
 sys.path.insert(0, BUILD)
 from vixl import Project, VixlError
 W, H = 1280, 720

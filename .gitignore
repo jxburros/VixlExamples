@@ -21,3 +21,6 @@ promo/it-does-that/.film-*/
 # vixl-is-fun build scratch
 promo/vixl-is-fun/work/
 promo/vixl-is-fun/.film-*/
+
+# font caches (the pixel RPG seeds its own from the VixlPacks fonts pack)
+.font-cache/
