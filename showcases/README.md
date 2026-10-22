@@ -7,3 +7,4 @@ root of this repository with Vixl installed.
 | --- | --- |
 | [`lyric-video/`](lyric-video) | A synced lyric video from original lyrics (`lighthouse.lrc`) and a styled template: `python showcases/lyric-video/build_lyric_video.py --draft` |
 | [`cut-paper-demo.py`](cut-paper-demo.py) | A cut-paper character scene with a preview and an animated WebP: `python showcases/cut-paper-demo.py OUTPUT_DIR` |
+| [`paper-unicorn/`](paper-unicorn) | A looping construction-paper unicorn that gallops and jumps a fence, as a GIF and an MP4: `python showcases/paper-unicorn/build.py` |
