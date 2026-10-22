@@ -32,7 +32,7 @@ copy before export. Choose a visible poster at 2.5 seconds; the loop starts on t
 
 ## Rebuild
 
-Install Vixl from this checkout and put ffmpeg on PATH, then run:
+Install Vixl (`python -m pip install vixl-engine`), put ffmpeg on PATH, then run:
 
 ```bash
 python promo/build/make_variety.py --out /tmp/my-promo-pack

@@ -9,13 +9,9 @@ from __future__ import annotations
 import csv
 import json
 import subprocess
-import sys
 from functools import cache
 
 from film import INK, WORK
-from kit import VIXL
-
-sys.path.insert(0, str(VIXL / "examples"))
 
 FIRST = ["Ada", "Grace", "Alan", "Edsger", "Barbara", "Ken", "Margaret", "Donald", "Frances", "Radia",
          "Hedy", "Claude", "Katherine", "Tim", "Sophie", "Linus", "Joan", "Dennis", "Annie", "Guido"]

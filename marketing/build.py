@@ -19,8 +19,6 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-# The brand kit and examples/ live in the Vixl repository: set VIXL_REPO, or clone Vixl beside this repository.
-VIXL = Path(os.environ.get("VIXL_REPO", ROOT.parent / "Vixl")).resolve()
 OUT = HERE / "output"
 os.environ.setdefault("VIXL_NO_UPDATE", "1")
 os.chdir(ROOT)  # link sources resolve against the workspace (repo root)
@@ -44,7 +42,7 @@ CODE_KEY = "#8FB4FF"
 CODE_STR = "#9FE3B4"
 CODE_NUM = "#FFC37A"
 
-LOGOS = "assets/brand/ripple/Editable-Vixl"
+LOGOS = ROOT / "assets/brand/ripple/Editable-Vixl"  # a copy of the Vixl brand kit, see assets/README.md
 HEAD, BODY, SEMI, MONO = "inter-tight-800", "inter-400", "inter-600", "jetbrains-mono-500"
 
 
@@ -103,7 +101,7 @@ def logo(name, variant, x, y, width=None, height=None):
     # Symbol/stacked masters contain a path extending 0.4 px beyond its local viewport.
     # Use the native geometry for these lockups, keeping Vixl's own clipping and path view.
     if variant.startswith(("mark-", "stacked-")):
-        source = Project.load(VIXL / LOGOS / f"{variant}.vixl")
+        source = Project.load(LOGOS / f"{variant}.vixl")
         c = source.state["canvas"]
         scale = min(width / c["width"] if width else float("inf"),
                     height / c["height"] if height else float("inf"))
@@ -125,7 +123,7 @@ def logo(name, variant, x, y, width=None, height=None):
             {"type": "move", "target": name, "x": x + left * scale, "y": y + top * scale},
         ])
         return operations
-    root = ET.fromstring((VIXL / "assets/brand/ripple/SVG" / f"{variant}.svg").read_bytes())
+    root = ET.fromstring((ROOT / "assets/brand/ripple/SVG" / f"{variant}.svg").read_bytes())
     sw, sh = float(root.get("width")), float(root.get("height"))
     scale = min(width / sw if width else float("inf"), height / sh if height else float("inf"))
     root.set("width", str(sw * scale))
@@ -291,7 +289,7 @@ SHOW = {
     "film": ("Character animation", "explorations/10-character-film/output/film-shot2.png"),
     "photo": ("Photo editing", "explorations/06-photo-lab/output/after.jpg"),
     "campaign": ("Brand campaign", "explorations/09-collab-campaign/output/00-overview.png"),
-    "chart": ("Editable charts", "docs/assets/generated/chart.png"),
+    "chart": ("Editable charts", "assets/vixl-docs/chart.png"),
     "watercolor": ("Artistic filters", "explorations/05-generative-painting/output/variant-watercolor.jpg"),
 }
 

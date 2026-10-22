@@ -15,8 +15,6 @@ from vixl import Project  # noqa: E402
 from vixl.typefaces import install_font  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-# The brand kit and examples/ live in the Vixl repository: set VIXL_REPO, or clone Vixl beside this repository.
-VIXL = Path(os.environ.get("VIXL_REPO", ROOT.parent / "Vixl")).resolve()
 PROMO = ROOT / "promo"
 W, H, FPS = 1920, 1080, 30
 os.chdir(ROOT)  # image paths in the scenes are repository-relative
@@ -37,7 +35,7 @@ GOOD = "#5FD38D"
 BAD = "#FF6B6B"
 
 HEAD, BODY, SEMI, MONO = "inter-tight-800", "inter-400", "inter-600", "jetbrains-mono-500"
-LOGOS = VIXL / "assets/brand/ripple/Editable-Vixl"
+LOGOS = ROOT / "assets/brand/ripple/Editable-Vixl"  # a copy of the Vixl brand kit, see assets/README.md
 
 
 class Scene:

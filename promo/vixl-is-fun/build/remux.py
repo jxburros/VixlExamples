@@ -1,6 +1,5 @@
 import sys, os, shutil, tempfile, subprocess
 BUILD=os.path.dirname(os.path.abspath(__file__)); ROOT=os.path.dirname(BUILD)
-if os.environ.get("VIXL_REPO"): sys.path.insert(0,os.path.join(os.environ["VIXL_REPO"],"src"))
 sys.path.insert(0,BUILD)
 import numpy as np
 def remux(video, out, scale=1.0):

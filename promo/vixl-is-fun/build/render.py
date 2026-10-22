@@ -1,6 +1,5 @@
 import sys, os, json, shutil, subprocess, tempfile, time
 BUILD=os.path.dirname(os.path.abspath(__file__))
-if os.environ.get("VIXL_REPO"): sys.path.insert(0,os.path.join(os.environ["VIXL_REPO"],"src"))
 sys.path.insert(0,BUILD)
 from multiprocessing import Pool
 from pathlib import Path

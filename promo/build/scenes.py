@@ -8,7 +8,7 @@ import math
 
 from kit import (BAD, BLUE, BODY, CODE_KEY, CODE_NUM, CODE_STR, DEEP, GOOD, HEAD, LINE, MONO,
                  MUTED, PANEL, SEMI, SKY, WHITE, Scene, backdrop, centered, chip, ellipse, glow, group,
-                 image, mark, rect, rich, ripple_in, shadow, text, wordmark, VIXL)
+                 image, mark, rect, rich, ripple_in, shadow, text, wordmark, ROOT)
 
 # The poster the agent builds in shots 3-5: a desert festival card, drawn from plain layers.
 DUSK = [(0, "#1B1446"), (0.45, "#6B2C91"), (0.75, "#F2709C"), (1, "#FFB36B")]
@@ -325,7 +325,7 @@ def s05_check(before, needs):
 # ----------------------------------------------------------------------------------------------- 6-8
 SHOW = "explorations/{}/output/{}"
 # The documentation illustrations live in the Vixl repository.
-DOCS = str(VIXL / "docs/assets/generated")
+DOCS = str(ROOT / "assets/vixl-docs")
 
 
 def montage(name, words, tiles, number="04"):

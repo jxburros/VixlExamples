@@ -45,7 +45,7 @@ preference. The pack supplies working artwork and a demo consumer; the host app 
 From the repository root with Python 3.11+:
 
 ```bash
-python -m pip install -e '.[dev,server,pdf]'
+python -m pip install 'vixl-engine[server,pdf]'
 python marketing/build.py
 python marketing/verify.py
 ```

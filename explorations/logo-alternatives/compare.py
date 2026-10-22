@@ -17,8 +17,8 @@ from build_m import wordmark
 from build_r import ripple_reflection
 from vixl import Project
 
-# The brand kit and examples/ live in the Vixl repository: set VIXL_REPO, or clone Vixl beside this repository.
-KIT = Path(os.environ.get("VIXL_REPO", "../Vixl")) / "assets/brand/digital-shift/PNG"
+# The retired Digital Shift kit, a copy of the Vixl brand artwork (see assets/README.md).
+KIT = Path(__file__).resolve().parents[2] / "assets/brand/digital-shift/PNG"
 WORK = OUT / "compare-parts"
 MUTED = "#6B7080"
 
