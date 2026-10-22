@@ -24,6 +24,30 @@ os.environ["VIXL_NO_UPDATE"] = "1"
 from vixl import Project  # noqa: E402
 from vixl.typefaces import pair_fonts  # noqa: E402
 
+
+def seed_font_cache():
+    """Fill the font cache from the VixlPacks fonts pack (Press Start 2P, Space Mono) when this Vixl has it.
+
+    Without it the fonts are downloaded from Google Fonts on first use, as in every other build here."""
+    import zipfile
+
+    from vixl import packs
+
+    if "fonts" not in getattr(packs, "PACKS", {}):
+        return
+    cache = Path(os.environ["VIXL_FONT_CACHE"])
+    cache.mkdir(parents=True, exist_ok=True)
+    try:
+        with zipfile.ZipFile(packs.path("fonts")) as archive:
+            for name in archive.namelist():
+                if name.endswith(".ttf") and not (cache / name).exists():
+                    (cache / name).write_bytes(archive.read(name))
+    except Exception as exc:  # offline, or downloads off: the font installer takes over
+        print(f"fonts pack unavailable ({exc}); downloading fonts instead")
+
+
+seed_font_cache()
+
 # Sweetie-16 palette (GrafxKid), the whole pack shares it.
 C = {
     "ink": "#1a1c2c", "plum": "#5d275d", "red": "#b13e53", "orange": "#ef7d57",
