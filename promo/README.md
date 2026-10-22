@@ -9,6 +9,8 @@ comes from an editable Vixl document, and the soundtrack is synthesised in code.
 
 A companion film, [*It does that?*](it-does-that/README.md), shows nine of Vixl's less obvious features.
 
+[*Vixl is fun*](vixl-is-fun/README.md) is a 1:50 film for someone who has not tried Vixl yet: eleven playful scenes, then a tour of real work from this repository with the code that made it.
+
 A [promo variety pack](variety/README.md) adds six distinct treatments with editable masters and a
 36-second preview reel. Built-in templates also offer portrait and widescreen versions.
 
